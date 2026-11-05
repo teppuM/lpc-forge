@@ -1,0 +1,56 @@
+{
+  "name": "Agent",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 115,
+    "male": "chargen/glasses/glasses3/agent_m/",
+    "muscular": "chargen/glasses/glasses3/agent_m/",
+    "female": "chargen/glasses/glasses3/agent_f/",
+    "pregnant": "chargen/glasses/glasses3/agent_f/",
+    "teen": "chargen/glasses/glasses3/agent_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "variants": [
+    "default"
+  ],
+  "type_name": "facial_eyes",
+  "credits": [
+    {
+      "file": "chargen/glasses/glasses3/agent_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Skorpio",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack"
+      ]
+    },
+    {
+      "file": "chargen/glasses/glasses3/agent_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Skorpio",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack"
+      ]
+    }
+  ]
+}

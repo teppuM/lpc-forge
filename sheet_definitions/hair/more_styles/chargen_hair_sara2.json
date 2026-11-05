@@ -1,0 +1,64 @@
+{
+  "name": "Sara Jewel",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/sara2/sara2_m/",
+    "muscular": "chargen/hair/sara2/sara2_m/",
+    "female": "chargen/hair/sara2/sara2_f/",
+    "pregnant": "chargen/hair/sara2/sara2_f/",
+    "teen": "chargen/hair/sara2/sara2_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/sara2/sara2_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Mandi Paugh",
+        "Stephen Challener (Redshrike)",
+        "William.Thompsonj"
+      ],
+      "licenses": [
+        "OGA-BY 3.0"
+      ],
+      "urls": [
+        "http://opengameart.org/content/sara-wizard",
+        "https://opengameart.org/content/lpc-sara"
+      ]
+    },
+    {
+      "file": "chargen/hair/sara2/sara2_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Mandi Paugh",
+        "Stephen Challener (Redshrike)",
+        "William.Thompsonj"
+      ],
+      "licenses": [
+        "OGA-BY 3.0"
+      ],
+      "urls": [
+        "http://opengameart.org/content/sara-wizard",
+        "https://opengameart.org/content/lpc-sara"
+      ]
+    }
+  ]
+}

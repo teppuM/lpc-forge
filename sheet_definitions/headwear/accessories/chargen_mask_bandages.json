@@ -1,0 +1,61 @@
+{
+  "name": "Bandages",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 114,
+    "male": "chargen/mask/bandages/bandages_m1/",
+    "muscular": "chargen/mask/bandages/bandages_m1/",
+    "female": "chargen/mask/bandages/bandages_f1/",
+    "pregnant": "chargen/mask/bandages/bandages_f1/",
+    "teen": "chargen/mask/bandages/bandages_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "slate",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "facial_mask",
+  "credits": [
+    {
+      "file": "chargen/mask/bandages/bandages_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-bandages"
+      ]
+    },
+    {
+      "file": "chargen/mask/bandages/bandages_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-bandages"
+      ]
+    }
+  ]
+}

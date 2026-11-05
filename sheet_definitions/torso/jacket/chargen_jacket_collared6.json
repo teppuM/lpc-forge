@@ -1,0 +1,54 @@
+{
+  "name": "Jacket 6",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 55,
+    "male": "chargen/jacket/collared6/collared6_m1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "cloth",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "jacket_second",
+      "label": "Second color",
+      "material": "cloth",
+      "base": "charcoal",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "jacket",
+  "credits": [
+    {
+      "file": "chargen/jacket/collared6/collared6_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-gentleman",
+        "https://opengameart.org/content/lpc-pirates"
+      ]
+    }
+  ]
+}

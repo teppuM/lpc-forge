@@ -1,0 +1,56 @@
+{
+  "name": "Bloody Face",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 115,
+    "male": "chargen/add1/bloodyface/bloodyface_m1/",
+    "muscular": "chargen/add1/bloodyface/bloodyface_m1/",
+    "female": "chargen/add1/bloodyface/bloodyface_f1/",
+    "pregnant": "chargen/add1/bloodyface/bloodyface_f1/",
+    "teen": "chargen/add1/bloodyface/bloodyface_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "variants": [
+    "default"
+  ],
+  "type_name": "wound_face",
+  "credits": [
+    {
+      "file": "chargen/add1/bloodyface/bloodyface_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Benjamin K. Smith (BenCreating)",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-zombie"
+      ]
+    },
+    {
+      "file": "chargen/add1/bloodyface/bloodyface_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Benjamin K. Smith (BenCreating)",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-zombie"
+      ]
+    }
+  ]
+}

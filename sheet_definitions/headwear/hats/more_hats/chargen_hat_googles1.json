@@ -1,0 +1,77 @@
+{
+  "name": "Goggles",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 130,
+    "male": "chargen/hat/googles1/googles1_m/",
+    "muscular": "chargen/hat/googles1/googles1_m/",
+    "female": "chargen/hat/googles1/googles1_f/",
+    "pregnant": "chargen/hat/googles1/googles1_f/",
+    "teen": "chargen/hat/googles1/googles1_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "cloth",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "hat_second",
+      "label": "Second color",
+      "material": "cloth",
+      "base": "white",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "hat",
+  "credits": [
+    {
+      "file": "chargen/hat/googles1/googles1_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "AntumDeluge",
+        "pflat"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "CC-BY 3.0",
+        "CC-BY 4.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/goggles"
+      ]
+    },
+    {
+      "file": "chargen/hat/googles1/googles1_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "AntumDeluge",
+        "pflat"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "CC-BY 3.0",
+        "CC-BY 4.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/goggles"
+      ]
+    }
+  ]
+}

@@ -34,6 +34,7 @@ import {
   newAnimationFromSheet,
   zipExportTimestamp,
   zipGenerateBlobWithProfiler,
+  zipNotice,
 } from "../utils/zip-helpers.ts";
 import type { ZipFolder } from "../utils/zip-helpers.ts";
 import m from "mithril";
@@ -198,17 +199,17 @@ export const exportSplitAnimations = async (
     downloadZipBlob(zipBlob, `lpc_${bodyType}_animations_${timestamp}.zip`);
 
     if (failedStandard.length > 0 || failedCustom.length > 0) {
-      alert(
+      zipNotice(
         `Export completed with some issues:\nFailed to export animations: ${failedStandard.join(
           ", ",
         )}`,
       );
     } else {
-      alert("Export complete!");
+      zipNotice("Export complete!");
     }
   } catch (err) {
     console.error("Export failed:", err);
-    alert(`Export failed: ${(err as Error).message}`);
+    zipNotice(`Export failed: ${(err as Error).message}`);
   } finally {
     endZipExportUiSuspend(state);
     if (state) {

@@ -1,0 +1,60 @@
+{
+  "name": "Plate 3",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 35,
+    "male": "chargen/shirt/plate3/plate3_m1/",
+    "female": "chargen/shirt/plate3/plate3_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "metal",
+    "base": "brass",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "clothes",
+  "credits": [
+    {
+      "file": "chargen/shirt/plate3/plate3_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Matthew Krohn (makrohn)",
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    },
+    {
+      "file": "chargen/shirt/plate3/plate3_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)",
+        "Matthew Krohn (makrohn)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    }
+  ]
+}

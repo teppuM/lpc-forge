@@ -1,0 +1,81 @@
+{
+  "name": "Armet 5",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 130,
+    "male": "chargen/hat/helmet55/armet12_m/",
+    "muscular": "chargen/hat/helmet55/armet12_m/",
+    "female": "chargen/hat/helmet55/armet12_f/",
+    "pregnant": "chargen/hat/helmet55/armet12_f/",
+    "teen": "chargen/hat/helmet55/armet12_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "metal",
+      "base": "brass",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "cloth.ulpc",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "hat_second",
+      "label": "Second color",
+      "material": "metal",
+      "base": "steel",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "cloth.ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "hat",
+  "credits": [
+    {
+      "file": "chargen/hat/helmet55/armet12_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "bluecarrot16",
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0",
+        "OGA-BY 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-helmets"
+      ]
+    },
+    {
+      "file": "chargen/hat/helmet55/armet12_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "bluecarrot16",
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0",
+        "OGA-BY 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-helmets"
+      ]
+    }
+  ]
+}

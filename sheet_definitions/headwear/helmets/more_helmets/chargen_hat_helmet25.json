@@ -1,0 +1,79 @@
+{
+  "name": "Morion 3",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 130,
+    "male": "chargen/hat/helmet25/morion03_m/",
+    "muscular": "chargen/hat/helmet25/morion03_m/",
+    "female": "chargen/hat/helmet25/morion03_f/",
+    "pregnant": "chargen/hat/helmet25/morion03_f/",
+    "teen": "chargen/hat/helmet25/morion03_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "metal",
+    "base": "brass",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hat",
+  "credits": [
+    {
+      "file": "chargen/hat/helmet25/morion03_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Eliza Wyatt (ElizaWy)",
+        "Sander Frenken (castelonia)",
+        "bluecarrot16",
+        "DCSS artists (see https://github.com/crawl/tiles/blob/master/ARTISTS.md)"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "CC-BY-SA 4.0",
+        "CC-BY-SA 3.0",
+        "GPL 3.0",
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-realistic-helmet-pack",
+        "http://opengameart.org/content/dungeon-crawl-32x32-tiles",
+        "https://opengameart.org/content/cc0-headgear-icons",
+        "https://opengameart.org/content/lpc-helmets-mega-pack"
+      ]
+    },
+    {
+      "file": "chargen/hat/helmet25/morion03_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Eliza Wyatt (ElizaWy)",
+        "Sander Frenken (castelonia)",
+        "bluecarrot16",
+        "DCSS artists (see https://github.com/crawl/tiles/blob/master/ARTISTS.md)"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "CC-BY-SA 4.0",
+        "CC-BY-SA 3.0",
+        "GPL 3.0",
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-realistic-helmet-pack",
+        "http://opengameart.org/content/dungeon-crawl-32x32-tiles",
+        "https://opengameart.org/content/cc0-headgear-icons",
+        "https://opengameart.org/content/lpc-helmets-mega-pack"
+      ]
+    }
+  ]
+}

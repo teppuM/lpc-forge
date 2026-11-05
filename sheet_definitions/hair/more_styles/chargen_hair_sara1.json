@@ -1,0 +1,68 @@
+{
+  "name": "Sara 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/sara1/sara1_m/",
+    "muscular": "chargen/hair/sara1/sara1_m/",
+    "female": "chargen/hair/sara1/sara1_f/",
+    "pregnant": "chargen/hair/sara1/sara1_f/",
+    "teen": "chargen/hair/sara1/sara1_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/sara1/sara1_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Stephen Challener (Redshrike)",
+        "William.Thompsonj",
+        "Mandi Paugh",
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "CC-BY 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-sara",
+        "https://opengameart.org/content/lpc-hair"
+      ]
+    },
+    {
+      "file": "chargen/hair/sara1/sara1_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Stephen Challener (Redshrike)",
+        "William.Thompsonj",
+        "Mandi Paugh",
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "CC-BY 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-sara",
+        "https://opengameart.org/content/lpc-hair"
+      ]
+    }
+  ]
+}

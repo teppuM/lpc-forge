@@ -1,0 +1,115 @@
+{
+  "name": "Drake",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 125,
+    "male": "chargen/tail/draketail/tail_mf/",
+    "muscular": "chargen/tail/draketail/tail_mf/",
+    "female": "chargen/tail/draketail/tail_ff/",
+    "pregnant": "chargen/tail/draketail/tail_ff/"
+  },
+  "layer_2": {
+    "zPos": 5,
+    "male": "chargen/tail/draketail/tail_mb/",
+    "muscular": "chargen/tail/draketail/tail_mb/",
+    "female": "chargen/tail/draketail/tail_fb/",
+    "pregnant": "chargen/tail/draketail/tail_fb/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "match_body_color": true,
+  "recolors": {
+    "material": "body",
+    "base": "light",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "tail",
+  "credits": [
+    {
+      "file": "chargen/tail/draketail/tail_fb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "Stephen Challener (Redshrike)",
+        "Johannes SjÃ¶lund (wulax)",
+        "Matthew Krohn (makrohn)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-ladies",
+        "https://opengameart.org/content/drakes-and-lizardfolk"
+      ]
+    },
+    {
+      "file": "chargen/tail/draketail/tail_ff",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "Stephen Challener (Redshrike)",
+        "Johannes SjÃ¶lund (wulax)",
+        "Matthew Krohn (makrohn)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-ladies",
+        "https://opengameart.org/content/drakes-and-lizardfolk"
+      ]
+    },
+    {
+      "file": "chargen/tail/draketail/tail_mb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "Johannes SjÃ¶lund (wulax)",
+        "Stephen Challener (Redshrike)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/drakes-and-lizardfolk"
+      ]
+    },
+    {
+      "file": "chargen/tail/draketail/tail_mf",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "Johannes SjÃ¶lund (wulax)",
+        "Stephen Challener (Redshrike)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/drakes-and-lizardfolk"
+      ]
+    }
+  ]
+}

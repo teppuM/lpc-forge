@@ -1,0 +1,60 @@
+{
+  "name": "Page 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/page/page_m/",
+    "muscular": "chargen/hair/page/page_m/",
+    "female": "chargen/hair/page/page_f/",
+    "pregnant": "chargen/hair/page/page_f/",
+    "teen": "chargen/hair/page/page_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/page/page_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    },
+    {
+      "file": "chargen/hair/page/page_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    }
+  ]
+}

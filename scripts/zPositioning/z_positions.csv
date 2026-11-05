@@ -51,6 +51,122 @@ cape_solid,layer_2,5,cape/solid/bg/ cape/solid/bg/ cape/solid/bg/ cape/solid/bg/
 cape_tattered,layer_1,85,cape/tattered/fg/ cape/tattered/fg/ cape/tattered/fg/ cape/tattered/fg/
 cape_tattered,layer_2,5,cape/tattered/bg/ cape/tattered/bg/ cape/tattered/bg/ cape/tattered/bg/
 cape_trim,layer_1,90,cape/trim/ cape/trim/ cape/trim/ cape/trim/
+chargen_add1_bloodyface,layer_1,115,chargen/add1/bloodyface/bloodyface_m1/ chargen/add1/bloodyface/bloodyface_f1/ chargen/add1/bloodyface/bloodyface_m1/ chargen/add1/bloodyface/bloodyface_f1/
+chargen_add2_bloodytorso,layer_1,15,chargen/add2/bloodytorso/bloodytorso_m/
+chargen_add3_pirate,layer_1,100,chargen/add3/pirate/pirate_m/mask/ chargen/add3/pirate/pirate_m/mask/
+chargen_add3_pirate,layer_2,100,chargen/add3/pirate/pirate_m/ chargen/add3/pirate/pirate_m/
+chargen_back_backpack1,layer_1,110,chargen/back/backpack1/backpack1_m/ chargen/back/backpack1/backpack1_f/ chargen/back/backpack1/backpack1_m/ chargen/back/backpack1/backpack1_f/
+chargen_back_backpack2,layer_1,110,chargen/back/backpack2/backpack2_m/ chargen/back/backpack2/backpack2_f/ chargen/back/backpack2/backpack2_m/ chargen/back/backpack2/backpack2_f/
+chargen_back_basket3,layer_1,110,chargen/back/basket3/round_logs2_mf/ chargen/back/basket3/round_logs2_ff/ chargen/back/basket3/round_logs2_mf/ chargen/back/basket3/round_logs2_ff/
+chargen_back_basket3,layer_2,5,chargen/back/basket3/round_logs2_mb/ chargen/back/basket3/round_logs2_fb/ chargen/back/basket3/round_logs2_mb/ chargen/back/basket3/round_logs2_fb/
+chargen_back_basket7,layer_1,110,chargen/back/basket7/square_logs1_mf/ chargen/back/basket7/square_logs1_ff/ chargen/back/basket7/square_logs1_mf/ chargen/back/basket7/square_logs1_ff/
+chargen_back_basket7,layer_2,5,chargen/back/basket7/square_logs1_mb/ chargen/back/basket7/square_logs1_fb/ chargen/back/basket7/square_logs1_mb/ chargen/back/basket7/square_logs1_fb/
+chargen_back_basket8,layer_1,110,chargen/back/basket8/square_logs2_mf/ chargen/back/basket8/square_logs2_ff/ chargen/back/basket8/square_logs2_mf/ chargen/back/basket8/square_logs2_ff/
+chargen_back_basket8,layer_2,5,chargen/back/basket8/square_logs2_mb/ chargen/back/basket8/square_logs2_fb/ chargen/back/basket8/square_logs2_mb/ chargen/back/basket8/square_logs2_fb/
+chargen_back_jetpack,layer_1,110,chargen/back/jetpack/jetpack_m/ chargen/back/jetpack/jetpack_f/ chargen/back/jetpack/jetpack_m/ chargen/back/jetpack/jetpack_f/
+chargen_back_quiver1,layer_1,5,chargen/back/quiver1/quiver1_mb/ chargen/back/quiver1/quiver1_fb/ chargen/back/quiver1/quiver1_mb/ chargen/back/quiver1/quiver1_fb/
+chargen_belt_obi2,layer_1,70,chargen/belt/obi2/obi2_m1/ chargen/belt/obi2/obi2_f1/ chargen/belt/obi2/obi2_m1/
+chargen_glasses_glasses3,layer_1,115,chargen/glasses/glasses3/agent_m/ chargen/glasses/glasses3/agent_f/ chargen/glasses/glasses3/agent_m/ chargen/glasses/glasses3/agent_f/
+chargen_hair_bangs,layer_1,120,chargen/hair/bangs/bangs_m/ chargen/hair/bangs/bangs_f/ chargen/hair/bangs/bangs_m/ chargen/hair/bangs/bangs_f/
+chargen_hair_bunches2,layer_1,120,chargen/hair/bunches2/summer_m/ chargen/hair/bunches2/summer_f/ chargen/hair/bunches2/summer_m/ chargen/hair/bunches2/summer_f/
+chargen_hair_hawkmo,layer_1,120,chargen/hair/hawkmo/hawkmo_m/ chargen/hair/hawkmo/hawkmo_f/ chargen/hair/hawkmo/hawkmo_m/ chargen/hair/hawkmo/hawkmo_f/
+chargen_hair_knotlong2,layer_1,120,chargen/hair/knotlong2/knotlong2_m/ chargen/hair/knotlong2/knotlong2_f/ chargen/hair/knotlong2/knotlong2_m/ chargen/hair/knotlong2/knotlong2_f/
+chargen_hair_long2,layer_1,120,chargen/hair/long2/long2_m/ chargen/hair/long2/long2_ff/ chargen/hair/long2/long2_m/ chargen/hair/long2/long2_ff/
+chargen_hair_long2,layer_2,9,null chargen/hair/long2/long2_fb/ null chargen/hair/long2/long2_fb/
+chargen_hair_long6,layer_1,120,chargen/hair/long6/long6_m/ chargen/hair/long6/long6_f/ chargen/hair/long6/long6_m/ chargen/hair/long6/long6_f/
+chargen_hair_long7,layer_1,120,chargen/hair/long7/long7_f/ chargen/hair/long7/long7_f/
+chargen_hair_messy6,layer_1,120,chargen/hair/messy6/messy6_m/ chargen/hair/messy6/messy6_f/ chargen/hair/messy6/messy6_m/ chargen/hair/messy6/messy6_f/
+chargen_hair_page,layer_1,120,chargen/hair/page/page_m/ chargen/hair/page/page_f/ chargen/hair/page/page_m/ chargen/hair/page/page_f/
+chargen_hair_parted2,layer_1,120,chargen/hair/parted2/parted2_m/ chargen/hair/parted2/parted2_f/ chargen/hair/parted2/parted2_m/ chargen/hair/parted2/parted2_f/
+chargen_hair_parted3,layer_1,120,chargen/hair/parted3/parted3_m/ chargen/hair/parted3/parted3_f/ chargen/hair/parted3/parted3_m/ chargen/hair/parted3/parted3_f/
+chargen_hair_princess,layer_1,120,chargen/hair/princess/princess_m/ chargen/hair/princess/princess_f/ chargen/hair/princess/princess_m/ chargen/hair/princess/princess_f/
+chargen_hair_relm2,layer_1,120,chargen/hair/relm2/relm2_mf/ chargen/hair/relm2/relm2_ff/ chargen/hair/relm2/relm2_mf/ chargen/hair/relm2/relm2_ff/ chargen/hair/relm2/relm2_cf/
+chargen_hair_relm2,layer_2,9,chargen/hair/relm2/relm2_mb/ chargen/hair/relm2/relm2_fb/ chargen/hair/relm2/relm2_mb/ chargen/hair/relm2/relm2_fb/ chargen/hair/relm2/relm2_cb/
+chargen_hair_sara1,layer_1,120,chargen/hair/sara1/sara1_m/ chargen/hair/sara1/sara1_f/ chargen/hair/sara1/sara1_m/ chargen/hair/sara1/sara1_f/
+chargen_hair_sara2,layer_1,120,chargen/hair/sara2/sara2_m/ chargen/hair/sara2/sara2_f/ chargen/hair/sara2/sara2_m/ chargen/hair/sara2/sara2_f/
+chargen_hair_wavy,layer_1,120,chargen/hair/wavy/wavy_m/ chargen/hair/wavy/wavy_f/ chargen/hair/wavy/wavy_m/ chargen/hair/wavy/wavy_f/ chargen/hair/wavy/wavy_c/
+chargen_hat_cowboy1,layer_1,130,chargen/hat/cowboy1/cowboy1_m/ chargen/hat/cowboy1/cowboy1_f/ chargen/hat/cowboy1/cowboy1_m/ chargen/hat/cowboy1/cowboy1_f/
+chargen_hat_googles1,layer_1,130,chargen/hat/googles1/googles1_m/ chargen/hat/googles1/googles1_f/ chargen/hat/googles1/googles1_m/ chargen/hat/googles1/googles1_f/
+chargen_hat_headband3,layer_1,130,chargen/hat/headband3/headband_m/ chargen/hat/headband3/headband_f/ chargen/hat/headband3/headband_m/ chargen/hat/headband3/headband_f/
+chargen_hat_helmet03,layer_1,130,chargen/hat/helmet03/barbarian01_m/ chargen/hat/helmet03/barbarian01_f/ chargen/hat/helmet03/barbarian01_m/ chargen/hat/helmet03/barbarian01_f/
+chargen_hat_helmet04,layer_1,130,chargen/hat/helmet04/barbarian02_m/ chargen/hat/helmet04/barbarian02_f/ chargen/hat/helmet04/barbarian02_m/ chargen/hat/helmet04/barbarian02_f/
+chargen_hat_helmet05,layer_1,130,chargen/hat/helmet05/barbarian11_m/ chargen/hat/helmet05/barbarian11_f/ chargen/hat/helmet05/barbarian11_m/ chargen/hat/helmet05/barbarian11_f/
+chargen_hat_helmet06,layer_1,130,chargen/hat/helmet06/barbarian12_m/ chargen/hat/helmet06/barbarian12_f/ chargen/hat/helmet06/barbarian12_m/ chargen/hat/helmet06/barbarian12_f/
+chargen_hat_helmet07,layer_1,130,chargen/hat/helmet07/barbarian21_m/ chargen/hat/helmet07/barbarian21_f/ chargen/hat/helmet07/barbarian21_m/ chargen/hat/helmet07/barbarian21_f/
+chargen_hat_helmet08,layer_1,130,chargen/hat/helmet08/barbarian22_m/ chargen/hat/helmet08/barbarian22_f/ chargen/hat/helmet08/barbarian22_m/ chargen/hat/helmet08/barbarian22_f/
+chargen_hat_helmet10,layer_1,130,chargen/hat/helmet10/spangenhelm02_m/ chargen/hat/helmet10/spangenhelm02_f/ chargen/hat/helmet10/spangenhelm02_m/ chargen/hat/helmet10/spangenhelm02_f/
+chargen_hat_helmet11,layer_1,130,chargen/hat/helmet11/spangenhelm03_m/ chargen/hat/helmet11/spangenhelm03_f/ chargen/hat/helmet11/spangenhelm03_m/ chargen/hat/helmet11/spangenhelm03_f/
+chargen_hat_helmet13,layer_1,130,chargen/hat/helmet13/spangenhelm12_m/ chargen/hat/helmet13/spangenhelm12_f/ chargen/hat/helmet13/spangenhelm12_m/ chargen/hat/helmet13/spangenhelm12_f/
+chargen_hat_helmet14,layer_1,130,chargen/hat/helmet14/spangenhelm13_m/ chargen/hat/helmet14/spangenhelm13_f/ chargen/hat/helmet14/spangenhelm13_m/ chargen/hat/helmet14/spangenhelm13_f/
+chargen_hat_helmet22,layer_1,130,chargen/hat/helmet22/nasal02_m/ chargen/hat/helmet22/nasal02_f/ chargen/hat/helmet22/nasal02_m/ chargen/hat/helmet22/nasal02_f/
+chargen_hat_helmet24,layer_1,130,chargen/hat/helmet24/morion02_m/ chargen/hat/helmet24/morion02_f/ chargen/hat/helmet24/morion02_m/ chargen/hat/helmet24/morion02_f/
+chargen_hat_helmet25,layer_1,130,chargen/hat/helmet25/morion03_m/ chargen/hat/helmet25/morion03_f/ chargen/hat/helmet25/morion03_m/ chargen/hat/helmet25/morion03_f/
+chargen_hat_helmet26,layer_1,130,chargen/hat/helmet26/morion11_m/ chargen/hat/helmet26/morion11_f/ chargen/hat/helmet26/morion11_m/ chargen/hat/helmet26/morion11_f/
+chargen_hat_helmet27,layer_1,130,chargen/hat/helmet27/morion12_m/ chargen/hat/helmet27/morion12_f/ chargen/hat/helmet27/morion12_m/ chargen/hat/helmet27/morion12_f/
+chargen_hat_helmet28,layer_1,130,chargen/hat/helmet28/morion13_m/ chargen/hat/helmet28/morion13_f/ chargen/hat/helmet28/morion13_m/ chargen/hat/helmet28/morion13_f/
+chargen_hat_helmet30,layer_1,130,chargen/hat/helmet30/pointed02_m/ chargen/hat/helmet30/pointed02_f/ chargen/hat/helmet30/pointed02_m/ chargen/hat/helmet30/pointed02_f/
+chargen_hat_helmet31,layer_1,130,chargen/hat/helmet31/pointed03_m/ chargen/hat/helmet31/pointed03_f/ chargen/hat/helmet31/pointed03_m/ chargen/hat/helmet31/pointed03_f/
+chargen_hat_helmet33,layer_1,130,chargen/hat/helmet33/norman02_m/ chargen/hat/helmet33/norman02_f/ chargen/hat/helmet33/norman02_m/ chargen/hat/helmet33/norman02_f/
+chargen_hat_helmet34,layer_1,130,chargen/hat/helmet34/norman03_m/ chargen/hat/helmet34/norman03_f/ chargen/hat/helmet34/norman03_m/ chargen/hat/helmet34/norman03_f/
+chargen_hat_helmet35,layer_1,130,chargen/hat/helmet35/bascinet01_m/ chargen/hat/helmet35/bascinet01_f/ chargen/hat/helmet35/bascinet01_m/ chargen/hat/helmet35/bascinet01_f/
+chargen_hat_helmet37,layer_1,130,chargen/hat/helmet37/bascinet03_m/ chargen/hat/helmet37/bascinet03_f/ chargen/hat/helmet37/bascinet03_m/ chargen/hat/helmet37/bascinet03_f/
+chargen_hat_helmet37a,layer_1,130,chargen/hat/helmet37a/bascinet03a_m/ chargen/hat/helmet37a/bascinet03a_f/ chargen/hat/helmet37a/bascinet03a_m/ chargen/hat/helmet37a/bascinet03a_f/
+chargen_hat_helmet38,layer_1,130,chargen/hat/helmet38/bascinet04_m/ chargen/hat/helmet38/bascinet04_f/ chargen/hat/helmet38/bascinet04_m/ chargen/hat/helmet38/bascinet04_f/
+chargen_hat_helmet38a,layer_1,130,chargen/hat/helmet38a/bascinet04a_m/ chargen/hat/helmet38a/bascinet04a_f/ chargen/hat/helmet38a/bascinet04a_m/ chargen/hat/helmet38a/bascinet04a_f/
+chargen_hat_helmet40,layer_1,130,chargen/hat/helmet40/bascinet12_m/ chargen/hat/helmet40/bascinet12_f/ chargen/hat/helmet40/bascinet12_m/ chargen/hat/helmet40/bascinet12_f/
+chargen_hat_helmet41,layer_1,130,chargen/hat/helmet41/bascinet13_m/ chargen/hat/helmet41/bascinet13_f/ chargen/hat/helmet41/bascinet13_m/ chargen/hat/helmet41/bascinet13_f/
+chargen_hat_helmet41a,layer_1,130,chargen/hat/helmet41a/bascinet13a_m/ chargen/hat/helmet41a/bascinet13a_f/ chargen/hat/helmet41a/bascinet13a_m/ chargen/hat/helmet41a/bascinet13a_f/
+chargen_hat_helmet42,layer_1,130,chargen/hat/helmet42/bascinet14_m/ chargen/hat/helmet42/bascinet14_f/ chargen/hat/helmet42/bascinet14_m/ chargen/hat/helmet42/bascinet14_f/
+chargen_hat_helmet42a,layer_1,130,chargen/hat/helmet42a/bascinet14a_m/ chargen/hat/helmet42a/bascinet14a_f/ chargen/hat/helmet42a/bascinet14a_m/ chargen/hat/helmet42a/bascinet14a_f/
+chargen_hat_helmet44,layer_1,130,chargen/hat/helmet44/legion02_m/ chargen/hat/helmet44/legion02_f/ chargen/hat/helmet44/legion02_m/ chargen/hat/helmet44/legion02_f/
+chargen_hat_helmet45,layer_1,130,chargen/hat/helmet45/legion03_m/ chargen/hat/helmet45/legion03_f/ chargen/hat/helmet45/legion03_m/ chargen/hat/helmet45/legion03_f/
+chargen_hat_helmet46,layer_1,130,chargen/hat/helmet46/legion04_m/ chargen/hat/helmet46/legion04_f/ chargen/hat/helmet46/legion04_m/ chargen/hat/helmet46/legion04_f/
+chargen_hat_helmet47,layer_1,130,chargen/hat/helmet47/legion05_m/ chargen/hat/helmet47/legion05_f/ chargen/hat/helmet47/legion05_m/ chargen/hat/helmet47/legion05_f/
+chargen_hat_helmet52,layer_1,130,chargen/hat/helmet52/armet02_m/ chargen/hat/helmet52/armet02_f/ chargen/hat/helmet52/armet02_m/ chargen/hat/helmet52/armet02_f/
+chargen_hat_helmet53,layer_1,130,chargen/hat/helmet53/armet03_m/ chargen/hat/helmet53/armet03_f/ chargen/hat/helmet53/armet03_m/ chargen/hat/helmet53/armet03_f/
+chargen_hat_helmet53a,layer_1,130,chargen/hat/helmet53a/armet03a_m/ chargen/hat/helmet53a/armet03a_f/ chargen/hat/helmet53a/armet03a_m/ chargen/hat/helmet53a/armet03a_f/
+chargen_hat_helmet55,layer_1,130,chargen/hat/helmet55/armet12_m/ chargen/hat/helmet55/armet12_f/ chargen/hat/helmet55/armet12_m/ chargen/hat/helmet55/armet12_f/
+chargen_hat_helmet56,layer_1,130,chargen/hat/helmet56/armet13_m/ chargen/hat/helmet56/armet13_f/ chargen/hat/helmet56/armet13_m/ chargen/hat/helmet56/armet13_f/
+chargen_hat_helmet57,layer_1,130,chargen/hat/helmet57/armet14_m/ chargen/hat/helmet57/armet14_f/ chargen/hat/helmet57/armet14_m/ chargen/hat/helmet57/armet14_f/
+chargen_hat_helmet57a,layer_1,130,chargen/hat/helmet57a/armet14a_m/ chargen/hat/helmet57a/armet14a_f/ chargen/hat/helmet57a/armet14a_m/ chargen/hat/helmet57a/armet14a_f/
+chargen_hat_helmet58,layer_1,130,chargen/hat/helmet58/armet15_m/ chargen/hat/helmet58/armet15_f/ chargen/hat/helmet58/armet15_m/ chargen/hat/helmet58/armet15_f/
+chargen_hat_helmet60,layer_1,130,chargen/hat/helmet60/grated02_m/ chargen/hat/helmet60/grated02_f/ chargen/hat/helmet60/grated02_m/ chargen/hat/helmet60/grated02_f/
+chargen_hat_helmet61,layer_1,130,chargen/hat/helmet61/grated03_m/ chargen/hat/helmet61/grated03_f/ chargen/hat/helmet61/grated03_m/ chargen/hat/helmet61/grated03_f/
+chargen_hat_helmet61a,layer_1,130,chargen/hat/helmet61a/grated03a_m/ chargen/hat/helmet61a/grated03a_f/ chargen/hat/helmet61a/grated03a_m/ chargen/hat/helmet61a/grated03a_f/
+chargen_hat_helmet63,layer_1,130,chargen/hat/helmet63/barbuta02_m/ chargen/hat/helmet63/barbuta02_f/ chargen/hat/helmet63/barbuta02_m/ chargen/hat/helmet63/barbuta02_f/
+chargen_hat_helmet65,layer_1,130,chargen/hat/helmet65/barbuta12_m/ chargen/hat/helmet65/barbuta12_f/ chargen/hat/helmet65/barbuta12_m/ chargen/hat/helmet65/barbuta12_f/
+chargen_hat_helmet66,layer_1,130,chargen/hat/helmet66/barbuta13_m/ chargen/hat/helmet66/barbuta13_f/ chargen/hat/helmet66/barbuta13_m/ chargen/hat/helmet66/barbuta13_f/
+chargen_hat_helmet67,layer_1,130,chargen/hat/helmet67/barbuta14_m/ chargen/hat/helmet67/barbuta14_f/ chargen/hat/helmet67/barbuta14_m/ chargen/hat/helmet67/barbuta14_f/
+chargen_hat_helmet68,layer_1,130,chargen/hat/helmet68/barbuta15_m/ chargen/hat/helmet68/barbuta15_f/ chargen/hat/helmet68/barbuta15_m/ chargen/hat/helmet68/barbuta15_f/
+chargen_hat_helmet71,layer_1,130,chargen/hat/helmet71/maximus02_m/ chargen/hat/helmet71/maximus02_f/ chargen/hat/helmet71/maximus02_m/ chargen/hat/helmet71/maximus02_f/
+chargen_hat_helmet74,layer_1,130,chargen/hat/helmet74/greathelm02_m/ chargen/hat/helmet74/greathelm02_f/ chargen/hat/helmet74/greathelm02_m/ chargen/hat/helmet74/greathelm02_f/
+chargen_hat_helmet75,layer_1,130,chargen/hat/helmet75/greathelm03_m/ chargen/hat/helmet75/greathelm03_f/ chargen/hat/helmet75/greathelm03_m/ chargen/hat/helmet75/greathelm03_f/
+chargen_hat_helmet77,layer_1,130,chargen/hat/helmet77/sugarloaf02_m/ chargen/hat/helmet77/sugarloaf02_f/ chargen/hat/helmet77/sugarloaf02_m/ chargen/hat/helmet77/sugarloaf02_f/
+chargen_hat_helmet78,layer_1,130,chargen/hat/helmet78/sugarloaf03_m/ chargen/hat/helmet78/sugarloaf03_f/ chargen/hat/helmet78/sugarloaf03_m/ chargen/hat/helmet78/sugarloaf03_f/
+chargen_hat_helmet80,layer_1,130,chargen/hat/helmet80/sugarloaf12_m/ chargen/hat/helmet80/sugarloaf12_f/ chargen/hat/helmet80/sugarloaf12_m/ chargen/hat/helmet80/sugarloaf12_f/
+chargen_hat_helmet81,layer_1,130,chargen/hat/helmet81/sugarloaf13_m/ chargen/hat/helmet81/sugarloaf13_f/ chargen/hat/helmet81/sugarloaf13_m/ chargen/hat/helmet81/sugarloaf13_f/
+chargen_horns_drakehorns2,layer_1,126,chargen/horns/drakehorns2/drake2_mf/ chargen/horns/drakehorns2/drake2_ff/ chargen/horns/drakehorns2/drake2_mf/ chargen/horns/drakehorns2/drake2_ff/
+chargen_horns_drakehorns2,layer_2,7,chargen/horns/drakehorns2/drake2_mb/ chargen/horns/drakehorns2/drake2_fb/ chargen/horns/drakehorns2/drake2_mb/ chargen/horns/drakehorns2/drake2_fb/
+chargen_jacket_collared6,layer_1,55,chargen/jacket/collared6/collared6_m1/
+chargen_jacket_skirt3,layer_1,55,chargen/jacket/skirt3/dress_f1/
+chargen_mask_bandages,layer_1,114,chargen/mask/bandages/bandages_m1/ chargen/mask/bandages/bandages_f1/ chargen/mask/bandages/bandages_m1/ chargen/mask/bandages/bandages_f1/
+chargen_mask_cable,layer_1,90,chargen/mask/cable/cable_mf/ chargen/mask/cable/cable_ff/ chargen/mask/cable/cable_mf/ chargen/mask/cable/cable_ff/
+chargen_mask_cable,layer_2,5,chargen/mask/cable/cable_mb/ chargen/mask/cable/cable_fb/ chargen/mask/cable/cable_mb/ chargen/mask/cable/cable_fb/
+chargen_pants_legion,layer_1,20,chargen/pants/legion/skirt_m1/ chargen/pants/legion/skirt_f1/
+chargen_shirt_fancy1,layer_1,35,chargen/shirt/fancy1/fancy1_f1/
+chargen_shirt_fancy2,layer_1,35,chargen/shirt/fancy2/fancy2_f1/
+chargen_shirt_fancy3,layer_1,35,chargen/shirt/fancy3/fancy3_f1/
+chargen_shirt_fancy4,layer_1,35,chargen/shirt/fancy4/fancy4_f1/
+chargen_shirt_kimono1,layer_1,35,chargen/shirt/kimono1/kimono1_f1/
+chargen_shirt_kimono2,layer_1,35,chargen/shirt/kimono2/kimono2_f1/
+chargen_shirt_kimono3,layer_1,35,chargen/shirt/kimono3/kimono3_f1/
+chargen_shirt_kimono4,layer_1,35,chargen/shirt/kimono4/kimono4_f1/
+chargen_shirt_leather2,layer_1,35,chargen/shirt/leather2/leather2_m1/ chargen/shirt/leather2/leather2_f1/
+chargen_shirt_legion2,layer_1,35,chargen/shirt/legion2/legion2_m1/ chargen/shirt/legion2/legion2_f1/
+chargen_shirt_plate3,layer_1,35,chargen/shirt/plate3/plate3_m1/ chargen/shirt/plate3/plate3_f1/
+chargen_suit_bandages,layer_1,35,chargen/suit/bandages/bandages_m1/ chargen/suit/bandages/bandages_f1/
+chargen_tail_draketail,layer_1,125,chargen/tail/draketail/tail_mf/ chargen/tail/draketail/tail_ff/ chargen/tail/draketail/tail_mf/ chargen/tail/draketail/tail_ff/
+chargen_tail_draketail,layer_2,5,chargen/tail/draketail/tail_mb/ chargen/tail/draketail/tail_fb/ chargen/tail/draketail/tail_mb/ chargen/tail/draketail/tail_fb/
 dress_bodice,layer_1,45,dress/bodice/female/
 dress_kimono,layer_1,30,dress/kimono/normal/universal/female/
 dress_kimono_longsleeve,layer_1,31,dress/kimono/sleeves/universal/female/

@@ -1,0 +1,64 @@
+{
+  "name": "Princess 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/princess/princess_m/",
+    "muscular": "chargen/hair/princess/princess_m/",
+    "female": "chargen/hair/princess/princess_f/",
+    "pregnant": "chargen/hair/princess/princess_f/",
+    "teen": "chargen/hair/princess/princess_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/princess/princess_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)",
+        "Lanea Zimmerman (Sharm)",
+        "Manuel Riecke (MrBeast)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles"
+      ]
+    },
+    {
+      "file": "chargen/hair/princess/princess_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)",
+        "Lanea Zimmerman (Sharm)",
+        "Manuel Riecke (MrBeast)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles"
+      ]
+    }
+  ]
+}

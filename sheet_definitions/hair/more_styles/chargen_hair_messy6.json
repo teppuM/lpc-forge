@@ -1,0 +1,74 @@
+{
+  "name": "Messy Long 3",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/messy6/messy6_m/",
+    "muscular": "chargen/hair/messy6/messy6_m/",
+    "female": "chargen/hair/messy6/messy6_f/",
+    "pregnant": "chargen/hair/messy6/messy6_f/",
+    "teen": "chargen/hair/messy6/messy6_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "hair",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "hair_second",
+      "label": "Second color",
+      "material": "cloth",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/messy6/messy6_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "thecilekli",
+        "BaÅto",
+        "pflat"
+      ],
+      "licenses": [
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-female-hair-w-ribbon"
+      ]
+    },
+    {
+      "file": "chargen/hair/messy6/messy6_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "thecilekli",
+        "BaÅto",
+        "pflat"
+      ],
+      "licenses": [
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-female-hair-w-ribbon"
+      ]
+    }
+  ]
+}

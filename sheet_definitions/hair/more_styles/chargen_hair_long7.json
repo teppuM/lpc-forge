@@ -1,0 +1,44 @@
+{
+  "name": "Grace",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "female": "chargen/hair/long7/long7_f/",
+    "pregnant": "chargen/hair/long7/long7_f/",
+    "teen": "chargen/hair/long7/long7_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/long7/long7_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "thecilekli",
+        "pflat"
+      ],
+      "licenses": [
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-grace-hair"
+      ]
+    }
+  ]
+}

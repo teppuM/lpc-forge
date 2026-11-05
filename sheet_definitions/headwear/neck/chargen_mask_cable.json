@@ -1,0 +1,94 @@
+{
+  "name": "Cable",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 90,
+    "male": "chargen/mask/cable/cable_mf/",
+    "muscular": "chargen/mask/cable/cable_mf/",
+    "female": "chargen/mask/cable/cable_ff/",
+    "pregnant": "chargen/mask/cable/cable_ff/",
+    "teen": "chargen/mask/cable/cable_ff/"
+  },
+  "layer_2": {
+    "zPos": 5,
+    "male": "chargen/mask/cable/cable_mb/",
+    "muscular": "chargen/mask/cable/cable_mb/",
+    "female": "chargen/mask/cable/cable_fb/",
+    "pregnant": "chargen/mask/cable/cable_fb/",
+    "teen": "chargen/mask/cable/cable_fb/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "variants": [
+    "default"
+  ],
+  "type_name": "neck",
+  "credits": [
+    {
+      "file": "chargen/mask/cable/cable_fb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Skorpio",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack"
+      ]
+    },
+    {
+      "file": "chargen/mask/cable/cable_ff",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Skorpio",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack"
+      ]
+    },
+    {
+      "file": "chargen/mask/cable/cable_mb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Skorpio",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack"
+      ]
+    },
+    {
+      "file": "chargen/mask/cable/cable_mf",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Skorpio",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack"
+      ]
+    }
+  ]
+}

@@ -183,13 +183,21 @@ async function renderThumbnail(
   const customPaths = new Set(
     customLayers.map((layer) => `spritesheets/${layer[state.bodyType]}.png`),
   );
+  // A cut-out only erases what is beneath it, so a thumbnail never shows one.
+  const cutOutFolders = Object.values(meta.layers)
+    .filter((layer) => (layer as { is_mask?: boolean }).is_mask === true)
+    .map((layer) => `spritesheets/${layer[state.bodyType]}`);
   const standard = getLayersToLoad(
     catalog,
     meta,
     state.bodyType,
     state.selections,
     variant,
-  ).filter((layer) => !customPaths.has(layer.path));
+  ).filter(
+    (layer) =>
+      !customPaths.has(layer.path) &&
+      !cutOutFolders.some((folder) => layer.path.startsWith(folder)),
+  );
   const images = await loadRecolored(
     attrs,
     standard.map((layer) => layer.path),

@@ -1,0 +1,74 @@
+{
+  "name": "Leather 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 35,
+    "male": "chargen/shirt/leather2/leather2_m1/",
+    "female": "chargen/shirt/leather2/leather2_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "cloth",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "clothes_second",
+      "label": "Second color",
+      "material": "metal",
+      "base": "brass",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "cloth.ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "clothes",
+  "credits": [
+    {
+      "file": "chargen/shirt/leather2/leather2_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)",
+        "Matthew Krohn (makrohn)",
+        "David Conway Jr. (JaidynReiman)",
+        "Marcel van de Steeg (MadMarcel)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-combat-armor-for-women"
+      ]
+    },
+    {
+      "file": "chargen/shirt/leather2/leather2_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Long Knot 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/knotlong2/knotlong2_m/",
+    "muscular": "chargen/hair/knotlong2/knotlong2_m/",
+    "female": "chargen/hair/knotlong2/knotlong2_f/",
+    "pregnant": "chargen/hair/knotlong2/knotlong2_f/",
+    "teen": "chargen/hair/knotlong2/knotlong2_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/knotlong2/knotlong2_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more",
+        "https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24"
+      ]
+    },
+    {
+      "file": "chargen/hair/knotlong2/knotlong2_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more"
+      ]
+    }
+  ]
+}

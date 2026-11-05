@@ -1,0 +1,43 @@
+{
+  "name": "Fancy 1",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 35,
+    "female": "chargen/shirt/fancy1/fancy1_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "clothes",
+  "credits": [
+    {
+      "file": "chargen/shirt/fancy1/fancy1_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Matthew Krohn (makrohn)",
+        "Lanea Zimmerman (Sharm)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-dress-in-combat-poses"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 // LPC Forge interface: character list, live preview, and part browser side by side.
 import m from "mithril";
-import { renderCharacter } from "../canvas/renderer.ts";
+import { applyTransparencyMaskToCanvas } from "../canvas/mask.ts";
+import { canvas, ctx, renderCharacter } from "../canvas/renderer.ts";
 import {
   getCustomAnimations,
   paintStillPreviewFrame,
@@ -37,6 +38,7 @@ import {
   type State,
 } from "../state/state.ts";
 import { capitalize } from "../utils/helpers.ts";
+import { setZipSink } from "../utils/zip-helpers.ts";
 import {
   canSetEyeColor,
   chipColor,
@@ -105,6 +107,7 @@ type Ui = {
   remembered: Record<string, string>;
   hovered: string | null;
   playing: boolean;
+  sending: boolean;
   tryOnTimer: number | null;
   undo: Snapshot[];
   redo: Snapshot[];
@@ -247,16 +250,37 @@ function requestRender(env: Env, selections: () => Selections): void {
     return;
   }
   ui.renderBusy = true;
-  void renderCharacter(catalog, state, selections(), state.bodyType).finally(
-    () => {
+  const drawn = selections();
+  void renderCharacter(catalog, state, drawn, state.bodyType)
+    .then(() => eraseCutOuts(env, drawn))
+    .finally(() => {
       ui.renderBusy = false;
       if (ui.renderAgain) {
         ui.renderAgain = false;
         requestRender(env, () => currentPreviewSelections(env));
       }
       m.redraw();
-    },
-  );
+    });
+}
+
+/**
+ * Parts such as a peg leg paint magenta over what they replace. Erasing it on the
+ * drawn sheet means the preview and every download built from that sheet agree.
+ */
+function eraseCutOuts(env: Env, drawn: Selections): void {
+  const { catalog, state } = env;
+  const hasCutOut = Object.values(drawn).some((selection) => {
+    const meta = catalog.getItemMerged(selection.itemId).unwrapOr(null);
+    return (
+      meta !== null &&
+      Object.values(meta.layers).some(
+        (layer) => (layer as { is_mask?: boolean }).is_mask === true,
+      )
+    );
+  });
+  if (!hasCutOut || !canvas || !ctx) return;
+  applyTransparencyMaskToCanvas(canvas, ctx);
+  paintStillPreviewFrame(state);
 }
 
 /** What the preview should show: the character, plus the part under the pointer. */
@@ -1121,6 +1145,16 @@ function header(env: Env) {
         },
         "Start over",
       ),
+      window.parent !== window
+        ? m(
+            "button.forge-pill.is-primary",
+            {
+              disabled: ui.sending,
+              onclick: () => void sendToFoundry(env),
+            },
+            ui.sending ? "Sending…" : "Send to Foundry",
+          )
+        : null,
       m(
         "button.forge-pill.is-primary",
         {
@@ -1132,6 +1166,32 @@ function header(env: Env) {
       ),
     ]),
   ]);
+}
+
+/** Hands the page hosting Forge the same ZIP the "ZIP by animation" download makes. */
+async function sendToFoundry(env: Env) {
+  const { models, ui } = env;
+  ui.sending = true;
+  m.redraw();
+  window.parent.postMessage({ type: "lpc-forge-export-started" }, "*");
+  let sent = false;
+  setZipSink((blob, filename) => {
+    sent = true;
+    window.parent.postMessage(
+      { type: "lpc-forge-export", blob, filename },
+      "*",
+    );
+  });
+  try {
+    await models.createDownloadModel().exportZipByAnimation();
+  } finally {
+    setZipSink(null);
+    if (!sent) {
+      window.parent.postMessage({ type: "lpc-forge-export-failed" }, "*");
+    }
+    ui.sending = false;
+    m.redraw();
+  }
 }
 
 function downloadDrawer(env: Env) {
@@ -1330,7 +1390,7 @@ function aboutDrawer() {
     m("h3.forge-heading", link(SOURCES.pflat)),
     m(
       "p",
-      "The inspiration for race presets, which are planned. No pflat art or preset data is in LPC Forge at this time.",
+      "The source of 107 parts not found elsewhere, mostly helmets and hairstyles, converted to recolor here, and the inspiration for race presets, which are planned. These parts cover its six animations: spellcast, thrust, walk, slash, shoot and hurt.",
     ),
     m("h3.forge-heading", "The artists"),
     m("p", [
@@ -1416,6 +1476,7 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
       remembered: {},
       hovered: null,
       playing: false,
+      sending: false,
       tryOnTimer: null,
       undo: [],
       redo: [],

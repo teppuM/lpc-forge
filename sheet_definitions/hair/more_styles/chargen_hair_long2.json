@@ -1,0 +1,89 @@
+{
+  "name": "Extra Long",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/long2/long2_m/",
+    "muscular": "chargen/hair/long2/long2_m/",
+    "female": "chargen/hair/long2/long2_ff/",
+    "pregnant": "chargen/hair/long2/long2_ff/",
+    "teen": "chargen/hair/long2/long2_ff/"
+  },
+  "layer_2": {
+    "zPos": 9,
+    "male": null,
+    "muscular": null,
+    "female": "chargen/hair/long2/long2_fb/",
+    "pregnant": "chargen/hair/long2/long2_fb/",
+    "teen": "chargen/hair/long2/long2_fb/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/long2/long2_fb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "Johannes SjÃ¶lund (wulax)",
+        "Stephen Challener (Redshrike)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-clothes-and-hair"
+      ]
+    },
+    {
+      "file": "chargen/hair/long2/long2_ff",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "Johannes SjÃ¶lund (wulax)",
+        "Stephen Challener (Redshrike)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-clothes-and-hair"
+      ]
+    },
+    {
+      "file": "chargen/hair/long2/long2_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-clothes-and-hair"
+      ]
+    }
+  ]
+}

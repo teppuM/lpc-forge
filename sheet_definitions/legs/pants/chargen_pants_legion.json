@@ -1,0 +1,59 @@
+{
+  "name": "Legion Skirt 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 20,
+    "male": "chargen/pants/legion/skirt_m1/",
+    "female": "chargen/pants/legion/skirt_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "variants": [
+    "default"
+  ],
+  "type_name": "legs",
+  "credits": [
+    {
+      "file": "chargen/pants/legion/skirt_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "David Conway Jr. (JaidynReiman)",
+        "Matthew Krohn (makrohn)",
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-roman-armor"
+      ]
+    },
+    {
+      "file": "chargen/pants/legion/skirt_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "David Conway Jr. (JaidynReiman)",
+        "Matthew Krohn (makrohn)",
+        "Johannes SjÃ¶lund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-roman-armor"
+      ]
+    }
+  ]
+}

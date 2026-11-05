@@ -4,7 +4,7 @@
 
 LPC Forge is a friendlier interface for building Liberated Pixel Cup characters. It is a fork of the [Universal LPC Spritesheet Character Generator](https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator), and everything below this section is that project's own documentation. Its contributors built the art library, palettes, draw rules, export and credit data that LPC Forge runs on, and every image keeps its own license and authors.
 
-With thanks also to [Vitruvian LPC Studio](https://vitruvianstudio.github.io/), which inspired this flat layout and its shared colors, and [pflat's LPC Character Generator](https://pflat.itch.io/lpc-character-generator), which inspired the planned race presets. No Vitruvian or pflat code or art is in LPC Forge at this time.
+With thanks also to [Vitruvian LPC Studio](https://vitruvianstudio.github.io/), which inspired this flat layout and its shared colors, and [pflat's LPC Character Generator](https://pflat.itch.io/lpc-character-generator), which inspired the planned race presets and supplies 107 parts converted to recolor here, each with its own license and authors. No Vitruvian code or art is in LPC Forge at this time.
 
 ---
 
@@ -183,7 +183,7 @@ Requires **Node.js 22.19+** (`package.json` `engines`; CI uses Node 24) so `node
 - **Format:** `npm run format:check` (verify) or `npm run format` (apply)
 - **Tests:** `npm test` (Node checks plus browser tests). Visual regression: `npm run test:visual`. Details are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-**Generated files:** [CREDITS.csv](CREDITS.csv) and the z-position CSV under **`scripts/zPositioning/`** are updated by **`npm run validate-site-sources`**. **Vite** runs the metadata plugin; when inputs or **`dist/`** output warrant it, it can refresh those CSVs and always writes the **five** modules under **`dist/`** (`index-`, `palette-`, `item-`, `credits-`, `layers-metadata.js`). The app registers them in **[`sources/install-item-metadata.ts`](sources/install-item-metadata.ts)** into a **`CatalogReader`**. The **`dist/`** tree is gitignored—do not edit generated files by hand. **`npm run dev`** pretty-prints embedded JSON; **`npm run build`** writes compact (see [PR #432](https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator/pull/432)). See [CONTRIBUTING.md](CONTRIBUTING.md#catalog-and-state) for the catalog API and staged loading, and [File Generation](CONTRIBUTING.md#file-generation) for the full workflow.
+**Generated files:** [CREDITS.csv](CREDITS.csv) and the z-position CSV under **`scripts/zPositioning/`** are updated by **`npm run validate-site-sources`**. **Vite** runs the metadata plugin; when inputs or **`dist/`** output warrant it, it can refresh those CSVs and always writes the **five** modules under **`dist/`** (`index-`, `palette-`, `item-`, `credits-`, `layers-metadata.js`). The app registers them in **[`sources/install-item-metadata.ts`](sources/install-item-metadata.ts)** into a **`CatalogReader`**. The **`dist/`** tree is gitignored-do not edit generated files by hand. **`npm run dev`** pretty-prints embedded JSON; **`npm run build`** writes compact (see [PR #432](https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator/pull/432)). See [CONTRIBUTING.md](CONTRIBUTING.md#catalog-and-state) for the catalog API and staged loading, and [File Generation](CONTRIBUTING.md#file-generation) for the full workflow.
 
 #### Performance Profiling
 
@@ -196,7 +196,7 @@ The generator includes built-in performance profiling tools to help identify ren
 - View metrics in Chrome DevTools → Performance tab
 - Run `profiler.report()` in the console for a summary
 - Catalog load (production preview): `npm run profile:load`
-- Lab CLS (Lighthouse, production preview): `npm run profile:cls` — see [CLS.md](CLS.md)
+- Lab CLS (Lighthouse, production preview): `npm run profile:cls` - see [CLS.md](CLS.md)
 - Metadata bytes (CI budget): `npm run metadata:size` / `npm run metadata:size:check`
 
 **What it tracks:**

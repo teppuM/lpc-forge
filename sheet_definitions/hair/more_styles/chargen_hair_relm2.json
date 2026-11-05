@@ -1,0 +1,158 @@
+{
+  "name": "Relm Ponytail",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/relm2/relm2_mf/",
+    "muscular": "chargen/hair/relm2/relm2_mf/",
+    "female": "chargen/hair/relm2/relm2_ff/",
+    "pregnant": "chargen/hair/relm2/relm2_ff/",
+    "teen": "chargen/hair/relm2/relm2_ff/",
+    "child": "chargen/hair/relm2/relm2_cf/"
+  },
+  "layer_2": {
+    "zPos": 9,
+    "male": "chargen/hair/relm2/relm2_mb/",
+    "muscular": "chargen/hair/relm2/relm2_mb/",
+    "female": "chargen/hair/relm2/relm2_fb/",
+    "pregnant": "chargen/hair/relm2/relm2_fb/",
+    "teen": "chargen/hair/relm2/relm2_fb/",
+    "child": "chargen/hair/relm2/relm2_cb/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "hair",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "hair_second",
+      "label": "Second color",
+      "material": "cloth",
+      "base": "black",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/relm2/relm2_cb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-update-now-animated-relm-hairstyle-pieces-xlong-ponytail-bangs-and-braids-headband"
+      ]
+    },
+    {
+      "file": "chargen/hair/relm2/relm2_cf",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-update-now-animated-relm-hairstyle-pieces-xlong-ponytail-bangs-and-braids-headband"
+      ]
+    },
+    {
+      "file": "chargen/hair/relm2/relm2_fb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-update-now-animated-relm-hairstyle-pieces-xlong-ponytail-bangs-and-braids-headband"
+      ]
+    },
+    {
+      "file": "chargen/hair/relm2/relm2_ff",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-update-now-animated-relm-hairstyle-pieces-xlong-ponytail-bangs-and-braids-headband"
+      ]
+    },
+    {
+      "file": "chargen/hair/relm2/relm2_mb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-update-now-animated-relm-hairstyle-pieces-xlong-ponytail-bangs-and-braids-headband"
+      ]
+    },
+    {
+      "file": "chargen/hair/relm2/relm2_mf",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-update-now-animated-relm-hairstyle-pieces-xlong-ponytail-bangs-and-braids-headband"
+      ]
+    }
+  ]
+}

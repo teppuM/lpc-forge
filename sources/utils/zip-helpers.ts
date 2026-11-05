@@ -619,7 +619,30 @@ export async function zipGenerateBlobWithProfiler(
   return zipBlob as Blob;
 }
 
+/** Receives a finished ZIP instead of the browser's download. */
+export type ZipSink = (zipBlob: Blob, filename: string) => void;
+
+let zipSink: ZipSink | null = null;
+
+/** Sends finished ZIPs to `sink` until cleared with null. */
+export function setZipSink(sink: ZipSink | null): void {
+  zipSink = sink;
+}
+
+/** A pop-up would block the page hosting the export, so a sink silences them. */
+export function zipNotice(message: string): void {
+  if (zipSink) {
+    debugWarn(message);
+    return;
+  }
+  alert(message);
+}
+
 export function downloadZipBlob(zipBlob: Blob, filename: string): void {
+  if (zipSink) {
+    zipSink(zipBlob, filename);
+    return;
+  }
   const url = URL.createObjectURL(zipBlob);
   const a = document.createElement("a");
   a.href = url;

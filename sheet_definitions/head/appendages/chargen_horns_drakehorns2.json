@@ -1,0 +1,94 @@
+{
+  "name": "Horns 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 126,
+    "male": "chargen/horns/drakehorns2/drake2_mf/",
+    "muscular": "chargen/horns/drakehorns2/drake2_mf/",
+    "female": "chargen/horns/drakehorns2/drake2_ff/",
+    "pregnant": "chargen/horns/drakehorns2/drake2_ff/",
+    "teen": "chargen/horns/drakehorns2/drake2_ff/"
+  },
+  "layer_2": {
+    "zPos": 7,
+    "male": "chargen/horns/drakehorns2/drake2_mb/",
+    "muscular": "chargen/horns/drakehorns2/drake2_mb/",
+    "female": "chargen/horns/drakehorns2/drake2_fb/",
+    "pregnant": "chargen/horns/drakehorns2/drake2_fb/",
+    "teen": "chargen/horns/drakehorns2/drake2_fb/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "variants": [
+    "default"
+  ],
+  "type_name": "horns",
+  "credits": [
+    {
+      "file": "chargen/horns/drakehorns2/drake2_fb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-lizard-headgear"
+      ]
+    },
+    {
+      "file": "chargen/horns/drakehorns2/drake2_ff",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-lizard-headgear"
+      ]
+    },
+    {
+      "file": "chargen/horns/drakehorns2/drake2_mb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-lizard-headgear"
+      ]
+    },
+    {
+      "file": "chargen/horns/drakehorns2/drake2_mf",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-lizard-headgear"
+      ]
+    }
+  ]
+}

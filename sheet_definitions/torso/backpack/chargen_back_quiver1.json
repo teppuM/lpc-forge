@@ -1,0 +1,60 @@
+{
+  "name": "Quiver Empty",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 5,
+    "male": "chargen/back/quiver1/quiver1_mb/",
+    "muscular": "chargen/back/quiver1/quiver1_mb/",
+    "female": "chargen/back/quiver1/quiver1_fb/",
+    "pregnant": "chargen/back/quiver1/quiver1_fb/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "quiver",
+  "credits": [
+    {
+      "file": "chargen/back/quiver1/quiver1_fb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    },
+    {
+      "file": "chargen/back/quiver1/quiver1_mb",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Johannes SjÃ¶lund (wulax)",
+        "pflat"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
+      ]
+    }
+  ]
+}

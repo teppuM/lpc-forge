@@ -1,0 +1,60 @@
+{
+  "name": "Bunches 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/bunches2/summer_m/",
+    "muscular": "chargen/hair/bunches2/summer_m/",
+    "female": "chargen/hair/bunches2/summer_f/",
+    "pregnant": "chargen/hair/bunches2/summer_f/",
+    "teen": "chargen/hair/bunches2/summer_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/bunches2/summer_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "thecilekli",
+        "pflat"
+      ],
+      "licenses": [
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-summer-hair-female"
+      ]
+    },
+    {
+      "file": "chargen/hair/bunches2/summer_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "thecilekli",
+        "pflat"
+      ],
+      "licenses": [
+        "CC0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-summer-hair-female"
+      ]
+    }
+  ]
+}

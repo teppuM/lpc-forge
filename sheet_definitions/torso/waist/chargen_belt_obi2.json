@@ -1,0 +1,63 @@
+{
+  "name": "Obi",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 70,
+    "male": "chargen/belt/obi2/obi2_m1/",
+    "muscular": "chargen/belt/obi2/obi2_m1/",
+    "female": "chargen/belt/obi2/obi2_f1/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "belt",
+  "credits": [
+    {
+      "file": "chargen/belt/obi2/obi2_f1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-relm-outfit-pieces-2-kimonos-2-sleeves-2-boots-tabi-socks-updated-4924"
+      ]
+    },
+    {
+      "file": "chargen/belt/obi2/obi2_m1",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "David Conway Jr. (JaidynReiman)"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "OGA-BY 4.0",
+        "CC-BY 3.0",
+        "CC-BY 4.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-relm-outfit-pieces-2-kimonos-2-sleeves-2-boots-tabi-socks-updated-4924"
+      ]
+    }
+  ]
+}

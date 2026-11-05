@@ -1,0 +1,37 @@
+{
+  "name": "Bloody Torso",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 15,
+    "male": "chargen/add2/bloodytorso/bloodytorso_m/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "variants": [
+    "default"
+  ],
+  "type_name": "wound_ribs",
+  "credits": [
+    {
+      "file": "chargen/add2/bloodytorso/bloodytorso_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Benjamin K. Smith (BenCreating)",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-zombie"
+      ]
+    }
+  ]
+}

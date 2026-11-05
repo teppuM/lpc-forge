@@ -1,0 +1,77 @@
+{
+  "name": "Wavy 2",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 120,
+    "male": "chargen/hair/wavy/wavy_m/",
+    "muscular": "chargen/hair/wavy/wavy_m/",
+    "female": "chargen/hair/wavy/wavy_f/",
+    "pregnant": "chargen/hair/wavy/wavy_f/",
+    "teen": "chargen/hair/wavy/wavy_f/",
+    "child": "chargen/hair/wavy/wavy_c/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "material": "hair",
+    "base": "black",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
+  "type_name": "hair",
+  "credits": [
+    {
+      "file": "chargen/hair/wavy/wavy_c",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-clothes-for-children"
+      ]
+    },
+    {
+      "file": "chargen/hair/wavy/wavy_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/3-hairs-for-lpc"
+      ]
+    },
+    {
+      "file": "chargen/hair/wavy/wavy_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "Nila122"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 2.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/3-hairs-for-lpc"
+      ]
+    }
+  ]
+}

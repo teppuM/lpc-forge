@@ -1,0 +1,83 @@
+{
+  "name": "Bascinet Pigface 3",
+  "priority": 90,
+  "layer_1": {
+    "zPos": 130,
+    "male": "chargen/hat/helmet37a/bascinet03a_m/",
+    "muscular": "chargen/hat/helmet37a/bascinet03a_m/",
+    "female": "chargen/hat/helmet37a/bascinet03a_f/",
+    "pregnant": "chargen/hat/helmet37a/bascinet03a_f/",
+    "teen": "chargen/hat/helmet37a/bascinet03a_f/"
+  },
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt"
+  ],
+  "recolors": {
+    "color_1": {
+      "material": "metal",
+      "base": "brass",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "cloth.ulpc",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "hat_second",
+      "label": "Second color",
+      "material": "cloth",
+      "base": "red",
+      "palettes": [
+        "ulpc",
+        "all.lpcr"
+      ]
+    }
+  },
+  "type_name": "hat",
+  "credits": [
+    {
+      "file": "chargen/hat/helmet37a/bascinet03a_f",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "bluecarrot16",
+        "Eliza Wyatt (ElizaWy)",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "CC-BY-SA 4.0",
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-realistic-helmet-pack",
+        "https://opengameart.org/content/lpc-helmets-mega-pack"
+      ]
+    },
+    {
+      "file": "chargen/hat/helmet37a/bascinet03a_m",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "authors": [
+        "bluecarrot16",
+        "Eliza Wyatt (ElizaWy)",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "OGA-BY 3.0",
+        "CC-BY-SA 4.0",
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-realistic-helmet-pack",
+        "https://opengameart.org/content/lpc-helmets-mega-pack"
+      ]
+    }
+  ]
+}
