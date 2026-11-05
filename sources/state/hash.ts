@@ -9,6 +9,7 @@ import {
   type SlimByTypeNameRow,
 } from "./catalog.ts";
 import { resolveHashParamFromHashMatch } from "./resolve-hash-param.ts";
+import { isCustomColorKey } from "../forge/custom-color.ts";
 
 /**
  * Outcome of resolving a `typeName`/`nameAndVariant` pair against the
@@ -267,6 +268,22 @@ type Profiler = {
 };
 type WindowWithProfiler = Window & { profiler?: Profiler };
 
+/** A custom color names no palette, so the sub-item is found by its slot alone. */
+function findSubItemForType(
+  catalog: CatalogReader,
+  selections: Selections,
+  subType: string,
+): { itemId: string; subId: number } | undefined {
+  for (const selection of Object.values(selections)) {
+    const recolors = catalog
+      .getItemLite(selection.itemId)
+      .unwrapOr(null)?.recolors;
+    const subId = recolors?.findIndex((r) => r?.type_name === subType) ?? -1;
+    if (subId >= 0) return { itemId: selection.itemId, subId };
+  }
+  return undefined;
+}
+
 export function loadSelectionsFromHash(
   catalog: CatalogReader,
   state: State,
@@ -388,7 +405,11 @@ export function loadSelectionsFromHash(
       const variants = parts.slice(i).join("_");
       const recolorToMatch = variants.split("|")[1] ?? variants.split("|")[0];
       const lookupKey = `${subType}${subItemKeySeparator}${recolorToMatch}`;
-      const subItem = subItemLookup.get(lookupKey);
+      const subItem =
+        subItemLookup.get(lookupKey) ??
+        (isCustomColorKey(recolorToMatch)
+          ? findSubItemForType(catalog, newSelections, subType)
+          : undefined);
 
       if (subItem) {
         newSelections[subType] = buildNewSelection(

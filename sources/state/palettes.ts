@@ -9,6 +9,11 @@ import {
   type PaletteMetadata,
   type PaletteRecolor,
 } from "./catalog.ts";
+import {
+  buildCustomRamp,
+  isCustomColorKey,
+  customKeyToHex,
+} from "../forge/custom-color.ts";
 
 /** Local helpers — collapse `Result<T, _>` into `T | null` for ergonomics. */
 function liteOrNull(catalog: CatalogReader, itemId: string): ItemLite | null {
@@ -48,7 +53,7 @@ export function fixMissingRecolor(
   if (!palette) return err({ kind: "no-palette-for-type", typeName });
 
   // Recolor exists on this asset?
-  if (palette.variants?.includes(recolor)) {
+  if (palette.variants?.includes(recolor) || isCustomColorKey(recolor)) {
     return ok(recolor);
   }
 
@@ -200,6 +205,7 @@ export function getTargetPalette(
   catalog: CatalogReader,
   material: string,
   targetColor: string,
+  sourceRamp: readonly string[] | null = null,
 ): Result<string[], PaletteLookupError> {
   const paletteMeta = paletteMetaOrNull(catalog);
   let materialMeta = paletteMeta?.materials?.[material];
@@ -219,6 +225,13 @@ export function getTargetPalette(
       material = newMat;
       materialMeta = newMaterialMeta;
     }
+  }
+
+  if (isCustomColorKey(recolor)) {
+    const baseRamp =
+      sourceRamp ??
+      materialMeta.palettes[materialMeta.default]?.[materialMeta.base];
+    if (baseRamp) return ok(buildCustomRamp(customKeyToHex(recolor), baseRamp));
   }
 
   const colors =

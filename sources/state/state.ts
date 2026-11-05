@@ -4,6 +4,7 @@ import { LICENSE_CONFIG, ANIMATIONS, BODY_TYPES } from "./constants.ts";
 import { syncSelectionsToHash, loadSelectionsFromHash } from "./hash.ts";
 import type { CatalogReader, ItemMerged } from "./catalog.ts";
 import { renderCharacter } from "../canvas/renderer.ts";
+import { isCustomColorKey } from "../forge/custom-color.ts";
 
 /** A single item selection within a selection group (e.g. body, head, ears). */
 export type Selection = {
@@ -255,7 +256,8 @@ export function applyMatchBodyColor(
 
     if (
       recolorToMatch &&
-      meta.recolors?.[0]?.variants?.includes(recolorToMatch)
+      (meta.recolors?.[0]?.variants?.includes(recolorToMatch) ||
+        isCustomColorKey(recolorToMatch))
     ) {
       selection.recolor = recolorToMatch;
       selection.name = `${meta.name} (${recolorToMatch})`;

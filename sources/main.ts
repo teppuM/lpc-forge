@@ -75,9 +75,8 @@ import {
 import { initHashChangeListener } from "./state/hash.ts";
 
 // Import components
-import { App } from "./components/App.ts";
-import { AnimationPreview } from "./components/preview/AnimationPreview.ts";
-import { FullSpritesheetPreview } from "./components/preview/FullSpritesheetPreview.ts";
+import { ForgeApp } from "./forge/ForgeApp.ts";
+import "./forge/forge.scss";
 
 // Import performance profiler
 import { PerformanceProfiler } from "./performance-profiler.ts";
@@ -138,28 +137,13 @@ let hashHydrationInitDone = false;
 
 // Wait for DOM to be ready, then mount UI; catalog may already be loading or ready.
 document.addEventListener("DOMContentLoaded", () => {
-  // Mount roots are static markup in index.html; assert non-null.
-  // main.ts is the composition root; App and sibling previews receive the same catalog.
-  m.mount(document.getElementById("mithril-filters")!, {
+  // Mount root is static markup in index.html; assert non-null.
+  m.mount(document.getElementById("forge-root")!, {
     view: () =>
-      m(App, {
+      m(ForgeApp, {
         catalog: applicationCatalog,
         state: applicationState,
         models: applicationModels,
-      }),
-  });
-  m.mount(document.getElementById("mithril-preview")!, {
-    view: () =>
-      m(AnimationPreview, {
-        catalog: applicationCatalog,
-        state: applicationState,
-      }),
-  });
-  m.mount(document.getElementById("mithril-spritesheet-preview")!, {
-    view: () =>
-      m(FullSpritesheetPreview, {
-        catalog: applicationCatalog,
-        state: applicationState,
       }),
   });
 

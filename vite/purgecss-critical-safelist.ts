@@ -11,12 +11,14 @@ import type { ComplexSafelist } from "purgecss";
 
 export function getPurgeContentGlobs(repoRoot: string): string[] {
   return [
-    path.join(repoRoot, "index.html"),
+    // Globs need forward slashes: on Windows, backslashes from `path.join` match
+    // nothing, so every class outside the safelist would silently be purged.
+    path.join(repoRoot, "index.html").replaceAll("\\", "/"),
     // Scan both .js and .ts — the codebase is mid-migration. PurgeCSS-extracted
     // class names need to come from every source file regardless of extension,
     // otherwise classes used only in .ts files get purged from critical CSS.
-    path.join(repoRoot, "sources", "**", "*.{js,ts}"),
-    path.join(repoRoot, "tests", "tests_run.html"),
+    path.join(repoRoot, "sources", "**", "*.{js,ts}").replaceAll("\\", "/"),
+    path.join(repoRoot, "tests", "tests_run.html").replaceAll("\\", "/"),
   ];
 }
 

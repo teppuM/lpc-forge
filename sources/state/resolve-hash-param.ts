@@ -22,6 +22,7 @@ import type {
   PaletteRecolor,
   SlimByTypeNameRow,
 } from "./catalog.ts";
+import { isCustomColorKey } from "../forge/custom-color.ts";
 
 /**
  * Recolor as emitted with interned palette maps: `p` indexes `paletteArrays` in
@@ -341,6 +342,16 @@ export function resolveHashParamFromHashMatch({
               break;
             }
           }
+        }
+        const customKey = recolorToMatch || variantToMatch;
+        if (
+          (meta.recolors?.[0]?.variants?.length ?? 0) > 0 &&
+          isCustomColorKey(customKey)
+        ) {
+          foundItemId = itemId;
+          matchedVariant = "";
+          matchedRecolor = customKey;
+          break;
         }
         if (variantToMatch === "") {
           foundItemId = itemId;

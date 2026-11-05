@@ -1,0 +1,105 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import {
+  buildCustomRamp,
+  customColorKey,
+  customKeyToHex,
+  isCustomColorKey,
+} from "../../../sources/forge/custom-color.ts";
+import {
+  buildPartCategories,
+  humanize,
+  matchesPartSearch,
+} from "../../../sources/forge/parts-index.ts";
+import palettes from "../../../palette_definitions/body/body_ulpc.json" with { type: "json" };
+
+const LIGHT = palettes.light;
+
+function lightness(hex: string): number {
+  const v = parseInt(hex.slice(1), 16);
+  return 0.2126 * (v >> 16) + 0.7152 * ((v >> 8) & 255) + 0.0722 * (v & 255);
+}
+
+test("custom color keys round trip and reject palette names", () => {
+  assert.equal(customColorKey("#A1B2C3"), "c-a1b2c3");
+  assert.equal(customKeyToHex("c-a1b2c3"), "#a1b2c3");
+  assert.equal(isCustomColorKey("c-a1b2c3"), true);
+  for (const name of ["light", "c-a1b2c", "c-zzzzzz", "", null, undefined]) {
+    assert.equal(isCustomColorKey(name), false);
+  }
+});
+
+test("a custom ramp has the source length and contains the picked color", () => {
+  const ramp = buildCustomRamp("#7A8C9E", LIGHT);
+  assert.equal(ramp.length, LIGHT.length);
+  assert.ok(ramp.includes("#7A8C9E"));
+  for (const color of ramp) assert.match(color, /^#[0-9A-F]{6}$/);
+});
+
+test("a custom ramp keeps the source ramp's dark-to-light order", () => {
+  for (const pick of ["#7A8C9E", "#C04040", "#30A050", "#E8D0F0"]) {
+    const levels = buildCustomRamp(pick, LIGHT).map(lightness);
+    for (let i = 1; i < levels.length; i++) {
+      assert.ok(
+        levels[i] >= levels[i - 1] - 1,
+        `${pick} step ${i}: ${levels.join(", ")}`,
+      );
+    }
+  }
+});
+
+test("a grey pick produces a grey ramp, not a tinted one", () => {
+  for (const color of buildCustomRamp("#808080", LIGHT)) {
+    const v = parseInt(color.slice(1), 16);
+    const channels = [v >> 16, (v >> 8) & 255, v & 255];
+    assert.ok(Math.max(...channels) - Math.min(...channels) <= 2, color);
+  }
+});
+
+test("picking a color already in the ramp reproduces that step", () => {
+  const ramp = buildCustomRamp(LIGHT[3], LIGHT);
+  assert.equal(ramp[3], LIGHT[3].toUpperCase());
+});
+
+test("categories flatten to labeled sections in priority order", () => {
+  const categories = buildPartCategories({
+    items: [],
+    children: {
+      torso: {
+        items: ["top_item"],
+        children: {
+          later: { items: ["b"], priority: 20 } as never,
+          earlier: {
+            items: ["a"],
+            priority: 10,
+            children: { deep: { items: ["c"] } },
+          } as never,
+          empty: { items: [] } as never,
+        },
+      },
+    },
+  });
+  assert.equal(categories.length, 1);
+  assert.equal(categories[0].label, "Torso");
+  assert.deepEqual(
+    categories[0].sections.map((s) => [s.label, s.itemIds]),
+    [
+      ["", ["top_item"]],
+      ["Earlier", ["a"]],
+      ["Earlier / Deep", ["c"]],
+      ["Later", ["b"]],
+    ],
+  );
+});
+
+test("search needs every word somewhere in the part's text", () => {
+  assert.equal(matchesPartSearch("", ["anything"]), true);
+  assert.equal(matchesPartSearch("long hair", ["Long Bob", "hair"]), true);
+  assert.equal(matchesPartSearch("LONG", ["long_bob"]), true);
+  assert.equal(matchesPartSearch("long hat", ["Long Bob", "hair"]), false);
+});
+
+test("slot names read as words", () => {
+  assert.equal(humanize("facial_eyes"), "Facial Eyes");
+  assert.equal(humanize("hairextl"), "Hair Extension Left");
+});

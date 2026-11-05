@@ -1,3 +1,13 @@
+# LPC Forge
+
+**[Open LPC Forge](https://teppum.github.io/lpc-forge/)**
+
+LPC Forge is a friendlier interface for building Liberated Pixel Cup characters. It is a fork of the [Universal LPC Spritesheet Character Generator](https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator), and everything below this section is that project's own documentation. Its contributors built the art library, palettes, draw rules, export and credit data that LPC Forge runs on, and every image keeps its own license and authors.
+
+With thanks also to [Vitruvian LPC Studio](https://vitruvianstudio.github.io/), which inspired this flat layout and its shared colors, and [pflat's LPC Character Generator](https://pflat.itch.io/lpc-character-generator), which inspired the planned race presets. No Vitruvian or pflat code or art is in LPC Forge at this time.
+
+---
+
 LPC Spritesheet Character Generator
 =============================================
 

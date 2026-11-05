@@ -640,6 +640,7 @@ function collectPaletteMappings(
       catalog,
       palette.material,
       targetColor,
+      palette.colors,
     ).unwrapOr(null);
     if (!targetPalette) {
       throw new Error(
