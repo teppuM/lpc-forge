@@ -3,8 +3,10 @@ import m from "mithril";
 import { renderCharacter } from "../canvas/renderer.ts";
 import {
   getCustomAnimations,
+  paintStillPreviewFrame,
   setPreviewAnimation,
   startPreviewAnimation,
+  stepPreviewFrame,
   stopPreviewAnimation,
 } from "../canvas/preview-animation.ts";
 import { initPreviewCanvas } from "../canvas/preview-canvas.ts";
@@ -100,6 +102,7 @@ type Ui = {
   hairFallback: string;
   remembered: Record<string, string>;
   hovered: string | null;
+  playing: boolean;
   tryOnTimer: number | null;
   undo: Snapshot[];
   redo: Snapshot[];
@@ -656,25 +659,32 @@ function slotRow(env: Env, key: string, selection: Selection) {
   );
 }
 
+/** Holds still unless the viewer has pressed Play; nothing moves on its own. */
 const PreviewCanvas: m.Component<
-  { state: State; animation: string },
-  { last: string }
+  { state: State; animation: string; playing: boolean },
+  { last: string; wasPlaying: boolean }
 > = {
   oncreate(vnode) {
-    const { state, animation } = vnode.attrs;
+    const { state, animation, playing } = vnode.attrs;
     initPreviewCanvas(vnode.dom as HTMLCanvasElement);
     setPreviewAnimation(animation);
-    startPreviewAnimation(state);
+    if (playing) startPreviewAnimation(state);
+    else paintStillPreviewFrame(state);
     vnode.state.last = animation;
+    vnode.state.wasPlaying = playing;
   },
   onupdate(vnode) {
-    const { state, animation } = vnode.attrs;
-    if (vnode.state.last === animation) return;
-    stopPreviewAnimation();
-    setPreviewAnimation(animation);
-    initPreviewCanvas(vnode.dom as HTMLCanvasElement);
-    startPreviewAnimation(state);
-    vnode.state.last = animation;
+    const { state, animation, playing } = vnode.attrs;
+    const animationChanged = vnode.state.last !== animation;
+    if (animationChanged || vnode.state.wasPlaying !== playing) {
+      stopPreviewAnimation();
+      if (animationChanged) setPreviewAnimation(animation);
+      initPreviewCanvas(vnode.dom as HTMLCanvasElement);
+      if (playing) startPreviewAnimation(state);
+      vnode.state.last = animation;
+      vnode.state.wasPlaying = playing;
+    }
+    if (!playing) paintStillPreviewFrame(state);
   },
   onremove() {
     stopPreviewAnimation();
@@ -713,7 +723,36 @@ function previewPanel(env: Env) {
     .map((meta) => meta.name);
 
   return m("section.forge-preview", [
-    m("div.forge-stage", m(PreviewCanvas, { state, animation: selected })),
+    m(
+      "div.forge-stage",
+      m(PreviewCanvas, { state, animation: selected, playing: ui.playing }),
+    ),
+    m("div.forge-playback", [
+      m(
+        "button.forge-pill.forge-play",
+        {
+          class: ui.playing ? "" : "is-primary",
+          onclick: () => {
+            ui.playing = !ui.playing;
+          },
+        },
+        ui.playing ? "\u25A0 Stop animation" : "\u25B6 Play animation",
+      ),
+      ui.playing
+        ? null
+        : [
+            m(
+              "button.forge-pill",
+              { onclick: () => stepPreviewFrame(state, -1) },
+              "Previous frame",
+            ),
+            m(
+              "button.forge-pill",
+              { onclick: () => stepPreviewFrame(state, 1) },
+              "Next frame",
+            ),
+          ],
+    ]),
     m(
       "div.forge-anim-pills",
       animations.map((animation) =>
@@ -1352,6 +1391,7 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
       hairFallback: defaultHairColor(),
       remembered: {},
       hovered: null,
+      playing: false,
       tryOnTimer: null,
       undo: [],
       redo: [],

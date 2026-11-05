@@ -339,6 +339,14 @@ body {
   height: auto;
 }
 
+.forge-playback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
 .forge-anim-pills {
   margin-top: 8px;
 

@@ -154,6 +154,18 @@ function paintPreviewFrameForCycleIndex(
  * The first paint can run before `renderCharacter` finishes; call this after any redraw that
  * may follow a completed render so the preview copies fresh offscreen pixels (Argos / visual tests).
  */
+/** Paints the current frame once, for a preview that is holding still. */
+export function paintStillPreviewFrame(state: State): void {
+  paintPreviewFrameForCycleIndex(state, currentFrameIndex);
+}
+
+/** Moves a still preview forward or back through the animation by `delta` frames. */
+export function stepPreviewFrame(state: State, delta: number): void {
+  const count = animationFrames.length;
+  currentFrameIndex = (currentFrameIndex + delta + count) % count;
+  paintStillPreviewFrame(state);
+}
+
 export function repaintStaticPreviewFrameForTests(state: State): void {
   if (
     typeof window !== "undefined" &&
