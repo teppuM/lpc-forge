@@ -34,7 +34,7 @@ function fromLinear(channel: number): number {
   return Math.round(Math.min(1, Math.max(0, c)) * 255);
 }
 
-function hexToLab(hex: string): Lab {
+export function hexToLab(hex: string): Lab {
   const value = parseInt(hex.replace("#", ""), 16);
   const r = toLinear((value >> 16) & 255);
   const g = toLinear((value >> 8) & 255);

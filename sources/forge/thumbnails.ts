@@ -15,6 +15,7 @@ const THUMB_SIZE = 96;
 const MAX_ZOOM = 3;
 const MAX_CONCURRENT = 6;
 const CACHE_LIMIT = 800;
+const RETRY_DELAY_MS = 1500;
 
 type ThumbAttrs = {
   catalog: CatalogReader;
@@ -257,7 +258,13 @@ function request(vnode: m.VnodeDOM<ThumbAttrs, ThumbState>): void {
       if (vnode.state.drawnKey === key) vnode.state.drawnKey = null;
       return;
     }
-    const result = await renderThumbnail(attrs).catch(() => null);
+    // A second try before calling a part empty: a blank tile gets hidden, so one
+    // slow or dropped request must not make a real part vanish from the list.
+    let result = await renderThumbnail(attrs).catch(() => null);
+    if (!result) {
+      await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
+      result = await renderThumbnail(attrs).catch(() => null);
+    }
     if (cache.size >= CACHE_LIMIT) {
       cache.delete(cache.keys().next().value as string);
     }

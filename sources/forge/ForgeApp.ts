@@ -94,6 +94,8 @@ type Snapshot = { selections: Selections; bodyType: string; hash: string };
 
 type Ui = {
   category: string;
+  /** Narrows the category to one group of sections; null shows them all. */
+  group: string | null;
   search: string;
   subject: Subject;
   tab: "character" | "colors" | "parts";
@@ -503,7 +505,11 @@ function slotEditor(env: Env, key: string) {
                   ])
                 : null,
               customPicker(catalog, option.material, active, pick),
-              swatchTiles(swatchGroupsFor(catalog, option), active, pick),
+              swatchTiles(
+                swatchGroupsFor(catalog, itemId, option),
+                active,
+                pick,
+              ),
             ],
       ]);
     }),
@@ -807,20 +813,19 @@ function mainSlotFirst(
   ];
 }
 
-/** Top-level groups inside a category, for jumping down a long grid. */
-function jumpTargets(
-  catalog: CatalogReader,
-  category: PartCategory,
-): { label: string; anchor: string }[] {
-  const seen = new Set<string>();
-  const targets: { label: string; anchor: string }[] = [];
-  for (const section of mainSlotFirst(catalog, category)) {
-    const label = section.label.split(" / ")[0] || category.label;
-    if (seen.has(label)) continue;
-    seen.add(label);
-    targets.push({ label, anchor: `${category.key}/${section.key}` });
-  }
-  return targets;
+/** The group a section belongs to: the first level of its path. */
+function sectionGroup(category: PartCategory, section: PartSection): string {
+  return section.label.split(" / ")[0] || category.label;
+}
+
+function partGroups(catalog: CatalogReader, category: PartCategory): string[] {
+  return [
+    ...new Set(
+      mainSlotFirst(catalog, category).map((section) =>
+        sectionGroup(category, section),
+      ),
+    ),
+  ];
 }
 
 function partsPanel(env: Env) {
@@ -834,6 +839,13 @@ function partsPanel(env: Env) {
   const announcedSlots = new Set<string>();
   const sectionViews = shown.flatMap((category) =>
     mainSlotFirst(catalog, category).flatMap((section) => {
+      if (
+        !query &&
+        ui.group !== null &&
+        sectionGroup(category, section) !== ui.group
+      ) {
+        return [];
+      }
       const parts = section.itemIds
         .map((itemId) => ({ itemId, meta: lite(catalog, itemId) }))
         .filter(
@@ -900,7 +912,7 @@ function partsPanel(env: Env) {
     }),
   );
 
-  const jumps = shown[0] ? jumpTargets(catalog, shown[0]) : [];
+  const groups = shown[0] ? partGroups(catalog, shown[0]) : [];
 
   return m("section.forge-parts", [
     m("div.forge-parts-top", [
@@ -934,29 +946,40 @@ function partsPanel(env: Env) {
                 class: ui.category === category.key ? "is-on" : "",
                 onclick: () => {
                   ui.category = category.key;
+                  ui.group = null;
                 },
               },
               category.label,
             ),
           ),
         ),
-    !query && jumps.length > 3
-      ? m(
-          "div.forge-jumps",
-          jumps.map((jump) =>
-            m(
-              "button.forge-jump",
-              {
-                key: jump.anchor,
-                onclick: () =>
-                  document
-                    .querySelector(`[data-anchor="${jump.anchor}"]`)
-                    ?.scrollIntoView({ block: "start" }),
+    !query && groups.length > 1
+      ? m("div.forge-pills.forge-groups", [
+          m(
+            "button.forge-pill",
+            {
+              key: "__all",
+              class: ui.group === null ? "is-on" : "",
+              onclick: () => {
+                ui.group = null;
               },
-              jump.label,
+            },
+            "All",
+          ),
+          ...groups.map((group) =>
+            m(
+              "button.forge-pill",
+              {
+                key: group,
+                class: ui.group === group ? "is-on" : "",
+                onclick: () => {
+                  ui.group = group;
+                },
+              },
+              group,
             ),
           ),
-        )
+        ])
       : null,
     m(
       "div.forge-parts-scroll",
@@ -1383,6 +1406,7 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
     state.showTransparencyGrid = false;
     vnode.state.ui = {
       category: "body",
+      group: null,
       search: "",
       subject: { kind: "group", group: "skin" },
       tab: "parts",

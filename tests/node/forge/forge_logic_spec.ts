@@ -11,6 +11,7 @@ import {
   humanize,
   matchesPartSearch,
 } from "../../../sources/forge/parts-index.ts";
+import { arrangeSwatches } from "../../../sources/forge/swatch-sort.ts";
 import palettes from "../../../palette_definitions/body/body_ulpc.json" with { type: "json" };
 
 const LIGHT = palettes.light;
@@ -102,4 +103,61 @@ test("search needs every word somewhere in the part's text", () => {
 test("slot names read as words", () => {
   assert.equal(humanize("facial_eyes"), "Facial Eyes");
   assert.equal(humanize("hairextl"), "Hair Extension Left");
+});
+
+const tile = (key: string, ...colors: string[]) => ({
+  key,
+  label: key,
+  colors,
+});
+
+test("skin lists human tones first, light to dark, then the rest", () => {
+  const groups = arrangeSwatches(
+    [
+      tile("black", "#111111", "#221510", "#332015"),
+      tile("all.lpcr.aegean", "#102030", "#2060A0", "#90C0E0"),
+      tile("light", "#99423C", "#F9D5BA", "#FAECE7"),
+      tile("fur_tan", "#604020", "#B08050", "#E0C090"),
+    ],
+    "body",
+  );
+  assert.deepEqual(
+    groups.map((g) => [g.label, g.tiles.map((t) => t.key)]),
+    [
+      ["Human skin tones", ["light", "black"]],
+      ["Other colors", ["fur_tan", "all.lpcr.aegean"]],
+    ],
+  );
+});
+
+test("the same ramp offered by two palette families appears once", () => {
+  const [{ tiles }] = arrangeSwatches(
+    [
+      tile("lpcr.ivory", "#AABBCC", "#DDEEFF"),
+      tile("all.lpcr.ivory", "#aabbcc", "#ddeeff"),
+    ],
+    "cloth",
+  );
+  assert.deepEqual(
+    tiles.map((t) => t.key),
+    ["lpcr.ivory"],
+  );
+});
+
+test("other materials form one list with similar colors together", () => {
+  const groups = arrangeSwatches(
+    [
+      tile("dark_red", "#300000", "#600000", "#900000"),
+      tile("blue", "#000030", "#0000C0", "#6060FF"),
+      tile("gray", "#303030", "#808080", "#C0C0C0"),
+      tile("light_red", "#900000", "#E06060", "#FFC0C0"),
+    ],
+    "cloth",
+  );
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].label, "");
+  assert.deepEqual(
+    groups[0].tiles.map((t) => t.key),
+    ["gray", "light_red", "dark_red", "blue"],
+  );
 });

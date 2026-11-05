@@ -19,20 +19,15 @@ import {
 import { selectItem, type State } from "../state/state.ts";
 import { ucwords } from "../utils/helpers.ts";
 import { isCustomColorKey, customKeyToHex } from "./custom-color.ts";
+import {
+  arrangeSwatches,
+  type SwatchGroup,
+  type SwatchTile,
+} from "./swatch-sort.ts";
+
+export type { SwatchGroup };
 
 export type ColorGroup = "skin" | "hair" | "eyes";
-
-export type SwatchTile = {
-  readonly key: string;
-  readonly label: string;
-  readonly colors: readonly string[];
-};
-
-export type SwatchGroup = {
-  readonly key: string;
-  readonly label: string;
-  readonly tiles: readonly SwatchTile[];
-};
 
 const GROUP_MATERIAL: Record<ColorGroup, string> = {
   skin: "body",
@@ -149,33 +144,36 @@ export function setEyeColor(
   if (current) selectItem(state, current, color);
 }
 
-/** Lists an option's palettes for display, one group per palette family. */
+/**
+ * Lists every palette an option offers as one arranged list.
+ *
+ * Keys are compiled against the part's own palette definition. `option.material`
+ * follows the current selection, so a part wearing a color from the shared "all"
+ * family would otherwise build wrong keys for every other color, and the hash
+ * round trip then drops the selection and the part vanishes.
+ */
 export function swatchGroupsFor(
   catalog: CatalogReader,
+  itemId: string,
   option: PaletteOption,
 ): SwatchGroup[] {
   const palette = catalog.getPaletteMetadata().unwrapOr(null);
-  if (!palette) return [];
-  return option.versions.map((category) => {
+  const own = lite(catalog, itemId)?.recolors[option.idx];
+  if (!palette || !own) return [];
+  const keyOption = { ...option, material: own.material, default: own.default };
+  const tiles: SwatchTile[] = option.versions.flatMap((category) => {
     const [material, version] = category.split(".");
-    const materialMeta = palette.materials[material];
-    const versionMeta = palette.versions?.[version];
-    let recolors = materialMeta?.palettes?.[version] ?? {};
+    let recolors = palette.materials[material]?.palettes?.[version] ?? {};
     if (version === CUSTOM_VERSION && option.sourceColors?.length) {
       recolors = { [CUSTOM_KEY]: option.sourceColors };
     }
-    return {
-      key: category,
-      label:
-        (versionMeta?.label ?? "") +
-        (material !== option.material ? ` - ${materialMeta?.label}` : ""),
-      tiles: Object.entries(recolors).map(([name, colors]) => ({
-        key: compilePaletteKey(material, version, name, option),
-        label: ucwords(name.replaceAll("_", " ")),
-        colors,
-      })),
-    };
+    return Object.entries(recolors).map(([name, colors]) => ({
+      key: compilePaletteKey(material, version, name, keyOption),
+      label: ucwords(name.replaceAll("_", " ")),
+      colors,
+    }));
   });
+  return arrangeSwatches(tiles, own.material);
 }
 
 /** Any part of the right material stands in for a group's palette listing. */
@@ -183,6 +181,10 @@ function findPartWithMaterial(
   catalog: CatalogReader,
   material: string,
 ): { itemId: string; index: number } | null {
+  // Skin is applied through the body itself, so it must offer the body's list.
+  if (material === "body" && lite(catalog, "body")) {
+    return { itemId: "body", index: 0 };
+  }
   const indexes = catalog.getMetadataIndexes().unwrapOr(null);
   for (const rows of Object.values(indexes?.byTypeName ?? {})) {
     for (const row of rows) {
@@ -207,7 +209,7 @@ export function swatchGroupsForColorGroup(
   if (!part || !meta) return [];
   const [options] = getPaletteOptions(catalog, state, part.itemId, meta);
   const option = options[part.index];
-  return option ? swatchGroupsFor(catalog, option) : [];
+  return option ? swatchGroupsFor(catalog, part.itemId, option) : [];
 }
 
 /** A color that previews a recolor key: the middle step of its ramp, as CSS. */

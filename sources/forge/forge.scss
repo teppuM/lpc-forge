@@ -511,21 +511,12 @@ body {
   padding: 8px 10px 0;
 }
 
-.forge-jumps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px 10px;
+.forge-groups {
   padding: 6px 10px 0;
-}
 
-.forge .forge-jump {
-  font-size: 12px;
-  color: var(--forge-dim);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-
-  &:hover {
-    color: var(--forge-text);
+  .forge-pill {
+    padding: 2px 8px;
+    font-size: 12px;
   }
 }
 
@@ -815,7 +806,8 @@ body {
   }
 }
 
-// A listed version with no artwork of its own has nothing to pick.
-.forge .forge-variant:has(canvas[data-thumb="empty"]) {
+// A listed version or part with nothing to draw has nothing to pick.
+.forge .forge-variant:has(canvas[data-thumb="empty"]),
+.forge .forge-tile:has(canvas[data-thumb="empty"]) {
   display: none;
 }
