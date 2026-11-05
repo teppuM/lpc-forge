@@ -1,5 +1,6 @@
 // LPC Forge interface: character list, live preview, and part browser side by side.
 import m from "mithril";
+import { downloadFile } from "../canvas/download.ts";
 import { applyTransparencyMaskToCanvas } from "../canvas/mask.ts";
 import { canvas, ctx, renderCharacter } from "../canvas/renderer.ts";
 import {
@@ -23,6 +24,7 @@ import {
 import {
   createHashStringFromParams,
   getHashParamsforSelections,
+  setHash,
   syncSelectionsToHash,
 } from "../state/hash.ts";
 import {
@@ -67,7 +69,29 @@ import {
   type PartCategory,
   type PartSection,
 } from "./parts-index.ts";
-import { Thumb } from "./thumbnails.ts";
+import {
+  RECIPE_GROUPS,
+  RECIPES,
+  ROLLED_SLOTS,
+  type Recipe,
+} from "./recipes.ts";
+import {
+  colorKey,
+  matchingVariant,
+  recipeFitsBody,
+  rollRecipe,
+  type RollContext,
+} from "./roll.ts";
+import {
+  mergeSavedLists,
+  newSavedCharacter,
+  readSavedList,
+  savedListFromFile,
+  savedListToFile,
+  writeSavedList,
+  type SavedCharacter,
+} from "./saved.ts";
+import { cropPortrait, Thumb, type PortraitPart } from "./thumbnails.ts";
 
 const FORK_URL = "https://github.com/teppuM/lpc-forge";
 const SOURCES = {
@@ -94,7 +118,21 @@ type Subject =
 
 type Snapshot = { selections: Selections; bodyType: string; hash: string };
 
+const LOCK_BODY = "body-type";
+const lockForColor = (group: ColorGroup) => `color:${group}`;
+
 type Ui = {
+  panel: "parts" | "presets" | "saved";
+  /** The preset Roll again uses; it stays until another is chosen. */
+  recipe: string | null;
+  /** Slots, plus the body and colors, that a roll leaves alone. */
+  locks: Set<string>;
+  saved: SavedCharacter[];
+  saveName: string;
+  /** Why the last save or file load did not work, for the Saved panel to say. */
+  savedNote: string | null;
+  /** The saved character whose Delete has been pressed once. */
+  confirmingDelete: string | null;
   category: string;
   /** Narrows the category to one group of sections; null shows them all. */
   group: string | null;
@@ -191,6 +229,7 @@ function removeSlot(env: Env, key: string): void {
   const { state, ui } = env;
   const itemId = state.selections[key]?.itemId;
   delete state.selections[key];
+  ui.locks.delete(key);
   for (const [otherKey, other] of Object.entries(state.selections)) {
     if (other.itemId === itemId && other.subId && otherKey !== "eyes") {
       delete state.selections[otherKey];
@@ -562,6 +601,129 @@ function changeBody(env: Env, type: string): void {
   }
 }
 
+/** Whether a part can be used right now, on a body, under the viewer's filters. */
+function isUsable(env: Env, itemId: string, body: string): boolean {
+  const { catalog, state } = env;
+  const meta = lite(catalog, itemId);
+  return (
+    !!meta &&
+    meta.required.includes(body) &&
+    isItemLicenseCompatible(catalog, state, itemId) &&
+    isItemAnimationCompatible(catalog, state, itemId)
+  );
+}
+
+function rollContext(env: Env): RollContext {
+  const { catalog, state, ui } = env;
+  const indexes = catalog.getMetadataIndexes().unwrapOr(null);
+  return {
+    currentBody: state.bodyType,
+    bodyLocked: ui.locks.has(LOCK_BODY),
+    colorLocked: (group) => ui.locks.has(lockForColor(group)),
+    slotLocked: (slot) => ui.locks.has(slot),
+    usable: (itemId, body) => isUsable(env, itemId, body),
+    anyInSlot: (slot, body) =>
+      (indexes?.byTypeName[slot] ?? [])
+        .map((row) => row.itemId)
+        .filter(
+          (itemId) =>
+            isUsable(env, itemId, body) &&
+            lite(catalog, itemId)?.animations.includes("run"),
+        ),
+    slotOf: (itemId) => lite(catalog, itemId)?.type_name ?? null,
+    variantsOf: (itemId) => lite(catalog, itemId)?.variants ?? [],
+    keptParts: Object.entries(state.selections)
+      .filter(
+        ([key, selection]) =>
+          !selection.subId &&
+          key !== "body" &&
+          (!ROLLED_SLOTS.includes(key) || ui.locks.has(key)),
+      )
+      .map(([, selection]) => selection.itemId),
+  };
+}
+
+/** Rolls a new character from a recipe, leaving locked things and clothes alone. */
+function applyRecipe(env: Env, recipe: Recipe): void {
+  const { catalog, state, ui } = env;
+  const plan = rollRecipe(recipe, rollContext(env));
+  const keptSkin = getSkinColor(catalog, state);
+  const keptHair = hairColorOf(env);
+  const keptEyes = getEyeColor(state);
+
+  state.bodyType = plan.bodyType;
+  for (const key of Object.keys(state.selections)) {
+    if (ROLLED_SLOTS.includes(key) && !ui.locks.has(key)) {
+      delete state.selections[key];
+    }
+  }
+  delete state.selections.body;
+
+  const skin = plan.skin ?? (recipe.skin ? keptSkin : null);
+  const validSkin =
+    skin && fixMissingRecolor(catalog, plan.bodyItem, skin).unwrapOr(null);
+  if (validSkin) selectItem(state, plan.bodyItem, validSkin);
+  else equip(env, state, plan.bodyItem);
+
+  ui.hairFallback = plan.hair ?? keptHair;
+  for (const { itemId, color } of plan.parts) {
+    // Expressions are only drawn for human heads, which a locked head may not be.
+    if (
+      lite(catalog, itemId)?.type_name === "expression" &&
+      !state.selections.head?.itemId.startsWith("heads_human")
+    ) {
+      continue;
+    }
+    equip(env, state, itemId);
+    const meta = lite(catalog, itemId);
+    // A few heads, such as the zombie's and skeleton's, do not follow the body.
+    if (meta?.type_name === "head" && validSkin) {
+      const valid = fixMissingRecolor(catalog, itemId, validSkin).unwrapOr(
+        null,
+      );
+      if (valid) selectItem(state, itemId, valid);
+    }
+    if (!color) continue;
+    if (meta && meta.variants.length > 0) {
+      selectItem(state, itemId, color);
+    } else {
+      const valid = fixMissingRecolor(catalog, itemId, color).unwrapOr(null);
+      if (valid) selectItem(state, itemId, valid);
+    }
+  }
+
+  const eyes =
+    plan.eyes ?? (ui.locks.has(lockForColor("eyes")) ? keptEyes : null);
+  if (eyes && canSetEyeColor(catalog, state)) {
+    setEyeColor(catalog, state, eyes);
+  }
+
+  ui.recipe = recipe.id;
+  ui.subject = { kind: "group", group: "skin" };
+}
+
+function lockButton(env: Env, key: string, label: string) {
+  const { ui } = env;
+  const locked = ui.locks.has(key);
+  const help = locked
+    ? `${label} stays when rolling a preset. Click to let it roll.`
+    : `Keep ${label} when rolling a preset.`;
+  return m(
+    "button.forge-lock",
+    {
+      class: locked ? "is-on" : "",
+      title: help,
+      "aria-label": help,
+      "aria-pressed": String(locked),
+      onclick: () => {
+        if (locked) ui.locks.delete(key);
+        else ui.locks.add(key);
+      },
+    },
+    locked ? "\u{1F512}" : "\u{1F513}",
+  );
+}
+
 function characterPanel(env: Env) {
   const { catalog, state, ui } = env;
   const order = new Map<string, number>();
@@ -579,31 +741,36 @@ function characterPanel(env: Env) {
     );
 
   const groupChip = (group: ColorGroup, color: string) =>
-    m(
-      "button.forge-group-chip",
-      {
-        key: group,
-        class:
-          ui.subject.kind === "group" && ui.subject.group === group
-            ? "is-on"
-            : "",
-        onclick: () => {
-          ui.subject = { kind: "group", group };
-          ui.tab = "colors";
-        },
-      },
-      [
-        m("span.forge-chip", {
-          style: {
-            background: chipColor(catalog, materialForGroup(group), color),
+    m("div.forge-group-cell", { key: group }, [
+      m(
+        "button.forge-group-chip",
+        {
+          class:
+            ui.subject.kind === "group" && ui.subject.group === group
+              ? "is-on"
+              : "",
+          onclick: () => {
+            ui.subject = { kind: "group", group };
+            ui.tab = "colors";
           },
-        }),
-        capitalize(group),
-      ],
-    );
+        },
+        [
+          m("span.forge-chip", {
+            style: {
+              background: chipColor(catalog, materialForGroup(group), color),
+            },
+          }),
+          capitalize(group),
+        ],
+      ),
+      lockButton(env, lockForColor(group), `${capitalize(group)} color`),
+    ]);
 
   return m("section.forge-character", [
-    m("h2.forge-panel-title", "Body"),
+    m("h2.forge-panel-title.forge-title-row", [
+      "Body",
+      lockButton(env, LOCK_BODY, "This body"),
+    ]),
     m(
       "div.forge-pills",
       BODY_TYPES.map((type) =>
@@ -676,6 +843,7 @@ function slotRow(env: Env, key: string, selection: Selection) {
             : null,
         ],
       ),
+      ROLLED_SLOTS.includes(key) ? lockButton(env, key, meta.name) : null,
       m(
         "button.forge-remove",
         {
@@ -740,6 +908,7 @@ function previewPanel(env: Env) {
     state.selectedAnimation = "walk";
   }
   const selected = state.selectedAnimation;
+  const activeRecipe = RECIPES.find((recipe) => recipe.id === ui.recipe);
   const missing = Object.values(state.selections)
     .filter((selection) => !selection.subId)
     .map((selection) => lite(catalog, selection.itemId))
@@ -783,6 +952,19 @@ function previewPanel(env: Env) {
             ),
           ],
     ]),
+    activeRecipe
+      ? m("div.forge-roll", [
+          m(
+            "button.forge-pill.is-primary",
+            { onclick: () => applyRecipe(env, activeRecipe) },
+            `Roll another ${activeRecipe.name}`,
+          ),
+          m(
+            "span.forge-roll-note",
+            "Press the lock beside any part or color to keep it. Clothes never change.",
+          ),
+        ])
+      : null,
     m(
       "div.forge-anim-pills",
       animations.map((animation) =>
@@ -1021,6 +1203,314 @@ function partsPanel(env: Env) {
   ]);
 }
 
+/** The parts a preset's picture shows, colored as the recipe describes. */
+function recipePortrait(env: Env, recipe: Recipe): PortraitPart[] {
+  const { catalog } = env;
+  const { picture } = recipe;
+  const skin = picture.skin ? colorKey(picture.skin, () => 0) : null;
+  const hair = picture.hair ? colorKey(picture.hair, () => 0) : null;
+  const parts: PortraitPart[] = [];
+  for (const itemId of [recipe.bodyItem ?? "body", ...picture.parts]) {
+    const meta = lite(catalog, itemId);
+    if (!meta) continue;
+    if (meta.variants.length > 0) {
+      const variant =
+        (hair && matchingVariant(meta.variants, hair)) ||
+        (skin && matchingVariant(meta.variants, skin)) ||
+        firstVariant(meta);
+      parts.push({ itemId, variant, recolors: null });
+      continue;
+    }
+    const material = meta.recolors[0]?.material;
+    const color =
+      material === "hair"
+        ? hair
+        : material === "body" || recipe.bodyItem
+          ? skin
+          : null;
+    parts.push({
+      itemId,
+      variant: null,
+      recolors: color ? { [meta.type_name]: color } : null,
+    });
+  }
+  return parts;
+}
+
+function presetsPanel(env: Env) {
+  const { state, ui } = env;
+  const shown = (recipe: Recipe) =>
+    !ui.locks.has(LOCK_BODY) ||
+    recipeFitsBody(recipe, state.bodyType, (itemId, body) =>
+      isUsable(env, itemId, body),
+    );
+  const hidden = RECIPES.filter((recipe) => !shown(recipe)).length;
+  return m("section.forge-parts", [
+    m("div.forge-parts-scroll", [
+      m(
+        "p.forge-note",
+        "A preset rolls a new character each time: its body, skin, hair and features. Clothes stay as they are. Press Roll another under the preview to go again, and Undo to go back. Rolls land on Male, Female or Teen; lock Body to roll on another.",
+      ),
+      RECIPE_GROUPS.map((group) =>
+        m("div.forge-section", { key: group }, [
+          m("div.forge-section-head", m("h3.forge-heading", group)),
+          m(
+            "div.forge-grid",
+            RECIPES.filter(
+              (recipe) => recipe.group === group && shown(recipe),
+            ).map((recipe) =>
+              m(
+                "button.forge-tile",
+                {
+                  key: recipe.id,
+                  "data-recipe": recipe.id,
+                  class: ui.recipe === recipe.id ? "is-on" : "",
+                  title: `Roll a ${recipe.name}`,
+                  onclick: () => applyRecipe(env, recipe),
+                },
+                [
+                  m(Thumb, {
+                    catalog: env.catalog,
+                    state,
+                    itemId: `recipe:${recipe.id}`,
+                    variant: null,
+                    recolors: null,
+                    portrait: recipePortrait(env, recipe),
+                  }),
+                  m("span.forge-tile-name", recipe.name),
+                ],
+              ),
+            ),
+          ),
+        ]),
+      ),
+      hidden > 0
+        ? m(
+            "p.forge-note",
+            `${hidden} more cannot be made on this body. Unlock Body on the left to see them.`,
+          )
+        : null,
+    ]),
+  ]);
+}
+
+/** The character facing the viewer, from the finished sheet, for the saved list. */
+function characterPicture(): string {
+  if (!canvas || canvas.height < 11 * FRAME_SIZE) return "";
+  const walkingTowardViewer = 10 * FRAME_SIZE;
+  return cropPortrait(canvas, 0, walkingTowardViewer).toDataURL("image/png");
+}
+
+function storeSaved(env: Env, list: SavedCharacter[]): void {
+  const { ui } = env;
+  ui.saved = list;
+  ui.savedNote = writeSavedList(list)
+    ? null
+    : "This browser would not keep the list, so it will be gone when the page closes. Private windows do this.";
+}
+
+async function saveCharacter(env: Env, over?: SavedCharacter): Promise<void> {
+  const { ui } = env;
+  while (ui.renderBusy) {
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+  const hash = hashOf(env);
+  const picture = characterPicture();
+  if (over) {
+    storeSaved(
+      env,
+      ui.saved.map((entry) =>
+        entry.id === over.id
+          ? { ...entry, hash, picture, savedAt: new Date().toISOString() }
+          : entry,
+      ),
+    );
+  } else {
+    const name = ui.saveName.trim() || `Character ${ui.saved.length + 1}`;
+    storeSaved(env, [newSavedCharacter(name, hash, picture), ...ui.saved]);
+    ui.saveName = "";
+  }
+  m.redraw();
+}
+
+async function loadSavedFile(env: Env, file: File): Promise<void> {
+  const { ui } = env;
+  const incoming = savedListFromFile(await file.text());
+  if (incoming === null) {
+    ui.savedNote = "That file is not a saved character list.";
+  } else {
+    storeSaved(env, mergeSavedLists(ui.saved, incoming));
+  }
+  m.redraw();
+}
+
+function savedRow(env: Env, entry: SavedCharacter, currentHash: string) {
+  const { ui } = env;
+  const isCurrent = entry.hash === currentHash;
+  const confirming = ui.confirmingDelete === entry.id;
+  return m(
+    "li.forge-saved",
+    { key: entry.id, class: isCurrent ? "is-on" : "" },
+    [
+      entry.picture
+        ? m("img.forge-saved-picture", { src: entry.picture, alt: "" })
+        : m("span.forge-saved-picture"),
+      m("div.forge-saved-body", [
+        m("input.forge-saved-name[type=text]", {
+          value: entry.name,
+          "aria-label": "Character name",
+          onchange: (e: Event) => {
+            const name = (e.target as HTMLInputElement).value.trim();
+            if (!name) return;
+            storeSaved(
+              env,
+              ui.saved.map((other) =>
+                other.id === entry.id ? { ...other, name } : other,
+              ),
+            );
+          },
+        }),
+        m("div.forge-pills", [
+          m(
+            "button.forge-pill",
+            {
+              disabled: isCurrent,
+              onclick: () => {
+                ui.recipe = null;
+                ui.subject = { kind: "group", group: "skin" };
+                ui.confirmingDelete = null;
+                setHash(entry.hash);
+              },
+            },
+            isCurrent ? "Showing now" : "Open",
+          ),
+          m(
+            "button.forge-pill",
+            {
+              disabled: isCurrent,
+              title: "Replace this saved character with the one on screen",
+              onclick: () => void saveCharacter(env, entry),
+            },
+            "Save over",
+          ),
+          m(
+            "button.forge-pill",
+            {
+              class: confirming ? "is-danger" : "",
+              onclick: () => {
+                if (!confirming) {
+                  ui.confirmingDelete = entry.id;
+                  return;
+                }
+                ui.confirmingDelete = null;
+                storeSaved(
+                  env,
+                  ui.saved.filter((other) => other.id !== entry.id),
+                );
+              },
+            },
+            confirming ? "Press again to delete" : "Delete",
+          ),
+        ]),
+      ]),
+    ],
+  );
+}
+
+function savedPanel(env: Env) {
+  const { ui } = env;
+  const currentHash = hashOf(env);
+  const count = ui.saved.length;
+  return m("section.forge-parts", [
+    m("div.forge-parts-top", [
+      m("input.forge-search[type=text]", {
+        placeholder: `Character ${count + 1}`,
+        "aria-label": "Name for this character",
+        value: ui.saveName,
+        oninput: (e: Event) => {
+          ui.saveName = (e.target as HTMLInputElement).value;
+        },
+      }),
+      m(
+        "button.forge-pill.is-primary",
+        { onclick: () => void saveCharacter(env) },
+        "Save this character",
+      ),
+    ]),
+    m("div.forge-parts-scroll", [
+      ui.savedNote ? m("p.forge-warning", ui.savedNote) : null,
+      count === 0
+        ? m(
+            "p.forge-note",
+            "Nothing saved yet. Saved characters stay exactly as they are, unlike presets, which roll something new each time.",
+          )
+        : m(
+            "ul.forge-saved-list",
+            ui.saved.map((entry) => savedRow(env, entry, currentHash)),
+          ),
+      m(
+        "p.forge-note",
+        "This list lives in this browser on this device. To move it to another device, download it as a file and load the file there.",
+      ),
+      m("div.forge-pills", [
+        m(
+          "button.forge-pill",
+          {
+            disabled: count === 0,
+            onclick: () =>
+              downloadFile(
+                savedListToFile(ui.saved),
+                "lpc-forge-saved-characters.json",
+                "application/json",
+              ),
+          },
+          `Download ${count} saved as a file`,
+        ),
+        m("label.forge-pill.forge-file", [
+          "Load a saved list file",
+          m("input[type=file]", {
+            accept: ".json,application/json",
+            onchange: (e: Event) => {
+              const input = e.target as HTMLInputElement;
+              const file = input.files?.[0];
+              if (file) void loadSavedFile(env, file);
+              input.value = "";
+            },
+          }),
+        ]),
+      ]),
+    ]),
+  ]);
+}
+
+function rightPanel(env: Env) {
+  const { ui } = env;
+  const choice = (key: Ui["panel"], label: string) =>
+    m(
+      "button.forge-pill",
+      {
+        key,
+        class: ui.panel === key ? "is-on" : "",
+        onclick: () => {
+          ui.panel = key;
+        },
+      },
+      label,
+    );
+  return [
+    m("div.forge-pills.forge-panel-switch", [
+      choice("parts", "Parts"),
+      choice("presets", "Presets"),
+      choice("saved", `Saved (${ui.saved.length})`),
+    ]),
+    ui.panel === "presets"
+      ? presetsPanel(env)
+      : ui.panel === "saved"
+        ? savedPanel(env)
+        : partsPanel(env),
+  ];
+}
+
 function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
   const { catalog, state, ui } = env;
   const worn = isWorn(state, meta, itemId);
@@ -1140,6 +1630,8 @@ function header(env: Env) {
         {
           onclick: () => {
             ui.subject = { kind: "group", group: "skin" };
+            ui.recipe = null;
+            ui.locks.clear();
             void resetAll(state);
           },
         },
@@ -1390,7 +1882,7 @@ function aboutDrawer() {
     m("h3.forge-heading", link(SOURCES.pflat)),
     m(
       "p",
-      "The source of 107 parts not found elsewhere, mostly helmets and hairstyles, converted to recolor here, and the inspiration for race presets, which are planned. These parts cover its six animations: spellcast, thrust, walk, slash, shoot and hurt.",
+      "The source of 107 parts not found elsewhere, mostly helmets and hairstyles, converted to recolor here, and of the presets, which are built from its race files. These parts cover its six animations: spellcast, thrust, walk, slash, shoot and hurt.",
     ),
     m("h3.forge-heading", "The artists"),
     m("p", [
@@ -1465,6 +1957,13 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
     const { state } = vnode.attrs;
     state.showTransparencyGrid = false;
     vnode.state.ui = {
+      panel: "parts",
+      recipe: null,
+      locks: new Set(),
+      saved: readSavedList(),
+      saveName: "",
+      savedNote: null,
+      confirmingDelete: null,
       category: "body",
       group: null,
       search: "",
@@ -1582,7 +2081,7 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
           ]),
           colorsPanel(env),
         ]),
-        m("div.forge-column.forge-column-right", partsPanel(env)),
+        m("div.forge-column.forge-column-right", rightPanel(env)),
       ]),
       drawer(env),
     ]);

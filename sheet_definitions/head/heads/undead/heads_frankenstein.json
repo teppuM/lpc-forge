@@ -52,12 +52,23 @@
     }
   ],
   "recolors": {
-    "material": "body",
-    "palettes": [
-      "ulpc",
-      "lpcr",
-      "all.lpcr"
-    ]
+    "color_1": {
+      "material": "body",
+      "palettes": [
+        "ulpc",
+        "lpcr",
+        "all.lpcr"
+      ]
+    },
+    "color_2": {
+      "type_name": "eyes",
+      "label": "Eye Color",
+      "material": "eye",
+      "palettes": [
+        "ulpc",
+        "lpcr"
+      ]
+    }
   },
   "type_name": "head"
 }

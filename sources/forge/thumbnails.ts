@@ -23,6 +23,14 @@ type ThumbAttrs = {
   itemId: string;
   variant: string | null;
   recolors: Record<string, string> | null;
+  /** Draws these parts together as a head and shoulders, instead of `itemId`. */
+  portrait?: readonly PortraitPart[];
+};
+
+export type PortraitPart = {
+  itemId: string;
+  variant: string | null;
+  recolors: Record<string, string> | null;
 };
 
 type ThumbState = {
@@ -164,10 +172,91 @@ async function loadRecolored(
   return images.filter((img) => img !== null) as CanvasImageSource[];
 }
 
+const PORTRAIT_BODY = "male";
+const PORTRAIT_ROW = 2;
+const PORTRAIT_BOX = { x: 8, y: 2, size: 48 };
+
+/** Draws a frame's top middle at double size: the character from the waist up. */
+export function cropPortrait(
+  source: CanvasImageSource,
+  sourceX: number,
+  sourceY: number,
+): HTMLCanvasElement {
+  const out = document.createElement("canvas");
+  out.width = out.height = THUMB_SIZE;
+  const ctx = out.getContext("2d")!;
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(
+    source,
+    sourceX + PORTRAIT_BOX.x,
+    sourceY + PORTRAIT_BOX.y,
+    PORTRAIT_BOX.size,
+    PORTRAIT_BOX.size,
+    0,
+    0,
+    THUMB_SIZE,
+    THUMB_SIZE,
+  );
+  return out;
+}
+
+async function renderPortrait(
+  attrs: ThumbAttrs,
+  parts: readonly PortraitPart[],
+): Promise<HTMLCanvasElement | null> {
+  const { catalog } = attrs;
+  await catalog.ready.onLayersReady;
+  const layers = parts
+    .flatMap((part) => {
+      const meta = catalog.getItemMerged(part.itemId).unwrapOr(null);
+      if (!meta) return [];
+      return getLayersToLoad(
+        catalog,
+        meta,
+        PORTRAIT_BODY,
+        {},
+        part.variant,
+      ).map((layer) => ({ ...layer, part }));
+    })
+    .sort((a, b) => a.zPos - b.zPos);
+  const frame = document.createElement("canvas");
+  frame.width = frame.height = FRAME_SIZE;
+  const frameCtx = frame.getContext("2d")!;
+  let drawn = 0;
+  // One at a time: a recolored image can be a shared canvas, valid only until
+  // the next recolor, so it has to reach the frame before that one starts.
+  for (const { path, part } of layers) {
+    const img = await loadImage(path);
+    if (!img) continue;
+    const image = await getImageToDraw(
+      catalog,
+      img,
+      part.itemId,
+      part.recolors,
+      path,
+    );
+    frameCtx.drawImage(
+      image as CanvasImageSource,
+      0,
+      PORTRAIT_ROW * FRAME_SIZE,
+      FRAME_SIZE,
+      FRAME_SIZE,
+      0,
+      0,
+      FRAME_SIZE,
+      FRAME_SIZE,
+    );
+    drawn++;
+  }
+  if (drawn === 0) return null;
+  return cropPortrait(frame, 0, 0);
+}
+
 async function renderThumbnail(
   attrs: ThumbAttrs,
 ): Promise<HTMLCanvasElement | null> {
-  const { catalog, state, itemId, variant } = attrs;
+  const { catalog, state, itemId, variant, portrait } = attrs;
+  if (portrait) return renderPortrait(attrs, portrait);
   await catalog.ready.onLayersReady;
   const meta = catalog.getItemMerged(itemId).unwrapOr(null);
   if (!meta) return null;
@@ -234,6 +323,7 @@ async function renderThumbnail(
 }
 
 function thumbKey(attrs: ThumbAttrs): string {
+  if (attrs.portrait) return `portrait|${attrs.itemId}`;
   return [
     attrs.itemId,
     attrs.state.bodyType,
