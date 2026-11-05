@@ -152,6 +152,8 @@ type Ui = {
   lastHash: string;
   renderBusy: boolean;
   renderAgain: boolean;
+  /** A character has reached the sheet at least once since the page opened. */
+  drawnOnce: boolean;
   categories: PartCategory[] | null;
 };
 
@@ -291,7 +293,10 @@ function requestRender(env: Env, selections: () => Selections): void {
   ui.renderBusy = true;
   const drawn = selections();
   void renderCharacter(catalog, state, drawn, state.bodyType)
-    .then(() => eraseCutOuts(env, drawn))
+    .then(() => {
+      eraseCutOuts(env, drawn);
+      if (Object.keys(drawn).length > 0) ui.drawnOnce = true;
+    })
     .finally(() => {
       ui.renderBusy = false;
       if (ui.renderAgain) {
@@ -1572,8 +1577,20 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
   );
 }
 
+/** False until the character from the link is drawn, so nothing exports blank. */
+function canExport({ catalog, state, ui }: Env): boolean {
+  return (
+    catalog.isLiteReady() &&
+    ui.drawnOnce &&
+    Object.keys(state.selections).length > 0
+  );
+}
+
+const NOT_READY = "Waiting for the character to finish loading";
+
 function header(env: Env) {
   const { state, ui } = env;
+  const ready = canExport(env);
   return m("header.forge-header", [
     m("div.forge-brand", [
       m("h1", "LPC Forge"),
@@ -1641,7 +1658,8 @@ function header(env: Env) {
         ? m(
             "button.forge-pill.is-primary",
             {
-              disabled: ui.sending,
+              disabled: ui.sending || !ready,
+              title: ready ? undefined : NOT_READY,
               onclick: () => void sendToFoundry(env),
             },
             ui.sending ? "Sending…" : "Send to Foundry",
@@ -1650,6 +1668,8 @@ function header(env: Env) {
       m(
         "button.forge-pill.is-primary",
         {
+          disabled: !ready,
+          title: ready ? undefined : NOT_READY,
           onclick: () => {
             ui.drawer = "download";
           },
@@ -1982,6 +2002,7 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
       lastHash: "",
       renderBusy: false,
       renderAgain: false,
+      drawnOnce: false,
       categories: null,
     };
     vnode.state.prevHash = "";
