@@ -37,7 +37,7 @@
       ]
     },
     {
-      "file": "shield/round/idle.png",
+      "file": "shield/round/idle",
       "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "napsio",

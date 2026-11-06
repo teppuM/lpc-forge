@@ -85,19 +85,19 @@ def part_layers(d):
     return out
 
 
-def walks_of(path):
-    """{color or None: walk image} for a part's layer."""
-    flat = os.path.join(ART, path, "walk.png")
-    if os.path.exists(flat):
-        return {None: load(flat)}
+def walks_of(path, per_color):
+    """{color or None: walk image} for a part's layer. The app reads one image per color for parts with variants."""
+    if not per_color:
+        flat = os.path.join(ART, path, "walk.png")
+        return {None: load(flat)} if os.path.exists(flat) else {}
     folder = os.path.join(ART, path, "walk")
     if os.path.isdir(folder):
         return {n[:-4]: load(os.path.join(folder, n)) for n in sorted(os.listdir(folder)) if n.endswith(".png")}
     return {}
 
 
-def has_idle(path):
-    return os.path.exists(os.path.join(ART, path, "idle.png")) or os.path.isdir(os.path.join(ART, path, "idle"))
+def has_idle(path, per_color):
+    return os.path.isdir(os.path.join(ART, path, "idle")) if per_color else os.path.exists(os.path.join(ART, path, "idle.png"))
 
 
 def overlap(ours, theirs):
@@ -172,9 +172,9 @@ def main():
         plan = []
         reasons = []
         for path in part_layers(d):
-            if has_idle(path):
+            if has_idle(path, bool(d.get("variants"))):
                 continue
-            walks = walks_of(path)
+            walks = walks_of(path, bool(d.get("variants")))
             if not walks or not any((w[..., 3] > 0).any() for w in walks.values()):
                 continue
             for color, walk in walks.items():

@@ -188,12 +188,24 @@ def layer_paths(definition, body):
     return paths
 
 
+def per_color_paths():
+    """Layer paths of parts defined with `variants`. The app reads one image per color for these, even if a flat one exists."""
+    paths = set()
+    for p in glob.glob(DEFS + "/**/*.json", recursive=True):
+        if not os.path.basename(p).startswith("meta_"):
+            d = json.load(open(p, encoding="utf8"))
+            if d.get("variants"):
+                for body in BODIES:
+                    paths.update(layer_paths(d, body))
+    return paths
+
+
 def colors_of(path):
     """The color file names under a part with one image per color, or [None] for one flat image per sheet."""
+    if path not in PER_COLOR:
+        return [None]
     names = set()
     for sheet in SHEETS:
-        if os.path.exists(os.path.join(ART, path, sheet + ".png")):
-            return [None]
         folder = os.path.join(ART, path, sheet)
         if os.path.isdir(folder):
             names.update(n[:-4] for n in os.listdir(folder) if n.endswith(".png"))
@@ -205,8 +217,8 @@ def sheet_file(path, sheet, color):
 
 
 def has_sheet(path, sheet):
-    if os.path.exists(os.path.join(ART, path, sheet + ".png")):
-        return True
+    if path not in PER_COLOR:
+        return os.path.exists(os.path.join(ART, path, sheet + ".png"))
     folder = os.path.join(ART, path, sheet)
     return os.path.isdir(folder) and any(n.endswith(".png") for n in os.listdir(folder))
 
@@ -323,6 +335,9 @@ def add_claims(definition, sheets):
             if value not in claims:
                 claims.append(value)
     return claims
+
+
+PER_COLOR = per_color_paths()
 
 
 def main():
