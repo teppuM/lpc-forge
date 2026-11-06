@@ -42,13 +42,12 @@
   "credits": [
     {
       "file": "weapon/sword/rapier",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "Johannes Sjölund (wulax)",
         "bluecarrot16"
       ],
       "licenses": [
-        "OGA-BY 3.0",
         "CC-BY-SA 3.0"
       ],
       "urls": [

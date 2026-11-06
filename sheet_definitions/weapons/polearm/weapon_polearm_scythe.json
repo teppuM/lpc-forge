@@ -46,9 +46,10 @@
   "credits": [
     {
       "file": "weapon/polearm/scythe",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
-        "bluecarrot16"
+        "bluecarrot16",
+        "napsio"
       ],
       "licenses": [
         "CC-BY-SA 3.0"

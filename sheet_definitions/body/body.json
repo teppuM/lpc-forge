@@ -99,7 +99,7 @@
     },
     {
       "file": "body/bodies/muscular",
-      "notes": "see details at https://opengameart.org/content/lpc-character-bases",
+      "notes": "see details at https://opengameart.org/content/lpc-character-bases Built from the male body's shoot sheet and the muscular body's own frames; not drawn by hand. See tools/fill_bodies.py. Built from the male body's climb sheet and the muscular body's own frames; not drawn by hand. See tools/fill_bodies.py. Built from the male body's emote sheet and the muscular body's own frames; not drawn by hand. See tools/fill_bodies.py.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman",
@@ -111,7 +111,8 @@
         "Benjamin K. Smith (BenCreating)",
         "Eliza Wyatt (ElizaWy)",
         "dalonedrau",
-        "Stephen Challener (Redshrike)"
+        "Stephen Challener (Redshrike)",
+        "Johannes Sjölund (wulax)"
       ],
       "licenses": [
         "CC-BY-SA 3.0",
@@ -127,7 +128,10 @@
         "https://opengameart.org/content/lpc-be-seated",
         "https://opengameart.org/content/lpc-jump-expanded",
         "https://opengameart.org/content/lpc-character-bases",
-        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani"
+        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-runcycle-for-male-muscular-and-pregnant-character-bases-with-modular-heads"
       ]
     },
     {
@@ -166,7 +170,7 @@
     },
     {
       "file": "body/bodies/pregnant",
-      "notes": "see details at https://opengameart.org/content/lpc-character-bases; Pregnant Revised Run/Combat Idle/Emotes by JaidynReiman (based on ElizaWy's LPC Revised)",
+      "notes": "see details at https://opengameart.org/content/lpc-character-bases; Pregnant Revised Run/Combat Idle/Emotes by JaidynReiman (based on ElizaWy's LPC Revised) Built from the female body's backslash sheet and the pregnant body's own frames; not drawn by hand. See tools/fill_bodies.py. Built from the female body's halfslash sheet and the pregnant body's own frames; not drawn by hand. See tools/fill_bodies.py.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman",
@@ -179,7 +183,8 @@
         "Eliza Wyatt (ElizaWy)",
         "Matthew Krohn (makrohn)",
         "Johannes Sjölund (wulax)",
-        "Stephen Challener (Redshrike)"
+        "Stephen Challener (Redshrike)",
+        "ElizaWy"
       ],
       "licenses": [
         "CC-BY-SA 3.0",
@@ -195,7 +200,9 @@
         "https://gitlab.com/vagabondgame/lpc-characters",
         "https://opengameart.org/content/lpc-jump-expanded",
         "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
-        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle"
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-be-seated",
+        "https://opengameart.org/content/lpc-revised-character-basics"
       ]
     },
     {
@@ -224,6 +231,191 @@
         "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
         "https://opengameart.org/content/lpc-jump-expanded",
         "https://opengameart.org/content/lpc-jump-expanded"
+      ]
+    },
+    {
+      "file": "body/bodies/muscular/shoot.png",
+      "notes": "Built from the male body's shoot sheet and the muscular body's own frames; not drawn by hand. See tools/fill_bodies.py.",
+      "authors": [
+        "bluecarrot16",
+        "JaidynReiman",
+        "Evert",
+        "TheraHedwig",
+        "MuffinElZangano",
+        "Durrani",
+        "Sander Frenken (castelonia)",
+        "Benjamin K. Smith (BenCreating)",
+        "Eliza Wyatt (ElizaWy)",
+        "dalonedrau",
+        "Stephen Challener (Redshrike)",
+        "Johannes Sjölund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-barbarian-sprite-base",
+        "https://opengameart.org/content/lpc-muscular-swing-animation",
+        "https://opengameart.org/content/lpc-muscular-hurt-animation",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-revised-character-basics",
+        "https://opengameart.org/content/lpc-be-seated",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-character-bases",
+        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-runcycle-for-male-muscular-and-pregnant-character-bases-with-modular-heads"
+      ]
+    },
+    {
+      "file": "body/bodies/muscular/climb.png",
+      "notes": "Built from the male body's climb sheet and the muscular body's own frames; not drawn by hand. See tools/fill_bodies.py.",
+      "authors": [
+        "bluecarrot16",
+        "JaidynReiman",
+        "Evert",
+        "TheraHedwig",
+        "MuffinElZangano",
+        "Durrani",
+        "Sander Frenken (castelonia)",
+        "Benjamin K. Smith (BenCreating)",
+        "Eliza Wyatt (ElizaWy)",
+        "dalonedrau",
+        "Stephen Challener (Redshrike)",
+        "Johannes Sjölund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-barbarian-sprite-base",
+        "https://opengameart.org/content/lpc-muscular-swing-animation",
+        "https://opengameart.org/content/lpc-muscular-hurt-animation",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-revised-character-basics",
+        "https://opengameart.org/content/lpc-be-seated",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-character-bases",
+        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-runcycle-for-male-muscular-and-pregnant-character-bases-with-modular-heads"
+      ]
+    },
+    {
+      "file": "body/bodies/muscular/emote.png",
+      "notes": "Built from the male body's emote sheet and the muscular body's own frames; not drawn by hand. See tools/fill_bodies.py.",
+      "authors": [
+        "bluecarrot16",
+        "JaidynReiman",
+        "Evert",
+        "TheraHedwig",
+        "MuffinElZangano",
+        "Durrani",
+        "Sander Frenken (castelonia)",
+        "Benjamin K. Smith (BenCreating)",
+        "Eliza Wyatt (ElizaWy)",
+        "dalonedrau",
+        "Stephen Challener (Redshrike)",
+        "Johannes Sjölund (wulax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-barbarian-sprite-base",
+        "https://opengameart.org/content/lpc-muscular-swing-animation",
+        "https://opengameart.org/content/lpc-muscular-hurt-animation",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-revised-character-basics",
+        "https://opengameart.org/content/lpc-be-seated",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-character-bases",
+        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-runcycle-for-male-muscular-and-pregnant-character-bases-with-modular-heads"
+      ]
+    },
+    {
+      "file": "body/bodies/pregnant/1h_backslash.png",
+      "notes": "Built from the female body's backslash sheet and the pregnant body's own frames; not drawn by hand. See tools/fill_bodies.py.",
+      "authors": [
+        "bluecarrot16",
+        "JaidynReiman",
+        "Evert",
+        "TheraHedwig",
+        "MuffinElZangano",
+        "Durrani",
+        "Benjamin K. Smith (BenCreating)",
+        "Pierre Vigier (pvigier)",
+        "Eliza Wyatt (ElizaWy)",
+        "Matthew Krohn (makrohn)",
+        "Johannes Sjölund (wulax)",
+        "Stephen Challener (Redshrike)",
+        "ElizaWy"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-ladies",
+        "https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear",
+        "https://opengameart.org/content/lpc-7-womens-shirts",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://gitlab.com/vagabondgame/lpc-characters",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-be-seated",
+        "https://opengameart.org/content/lpc-revised-character-basics"
+      ]
+    },
+    {
+      "file": "body/bodies/pregnant/1h_halfslash.png",
+      "notes": "Built from the female body's halfslash sheet and the pregnant body's own frames; not drawn by hand. See tools/fill_bodies.py.",
+      "authors": [
+        "bluecarrot16",
+        "JaidynReiman",
+        "Evert",
+        "TheraHedwig",
+        "MuffinElZangano",
+        "Durrani",
+        "Benjamin K. Smith (BenCreating)",
+        "Pierre Vigier (pvigier)",
+        "Eliza Wyatt (ElizaWy)",
+        "Matthew Krohn (makrohn)",
+        "Johannes Sjölund (wulax)",
+        "Stephen Challener (Redshrike)",
+        "ElizaWy"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles",
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-ladies",
+        "https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear",
+        "https://opengameart.org/content/lpc-7-womens-shirts",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://gitlab.com/vagabondgame/lpc-characters",
+        "https://opengameart.org/content/lpc-jump-expanded",
+        "https://opengameart.org/content/lpc-male-jumping-animation-by-durrani",
+        "https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+        "https://opengameart.org/content/lpc-be-seated",
+        "https://opengameart.org/content/lpc-revised-character-basics"
       ]
     }
   ],

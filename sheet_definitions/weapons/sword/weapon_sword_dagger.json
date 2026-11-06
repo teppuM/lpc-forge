@@ -27,14 +27,13 @@
   "credits": [
     {
       "file": "weapon/sword/dagger",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "bluecarrot16",
         "Johannes Sjölund (wulax)",
         "Matthew Krohn (makrohn)"
       ],
       "licenses": [
-        "OGA-BY 3.0",
         "CC-BY-SA 3.0",
         "GPL 3.0"
       ],

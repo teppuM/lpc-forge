@@ -24,14 +24,20 @@
   "credits": [
     {
       "file": "tools/watering_can",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part. Those frames are CC-BY-SA 3.0 only.",
       "authors": [
-        "bluecarrot16"
+        "bluecarrot16",
+        "napsio",
+        "Pierre Vigier",
+        "Tuomo Untinen",
+        "Johannes Sjölund (wulax)",
+        "Inboxninja"
       ],
       "licenses": [
         "OGA-BY 3.0+",
         "CC-BY 4.0+",
-        "GPL 2.0+"
+        "GPL 2.0+",
+        "CC-BY-SA 3.0"
       ],
       "urls": [
         "https://opengameart.org/content/lpc-hand-tools"

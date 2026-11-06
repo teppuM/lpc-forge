@@ -19,15 +19,15 @@
   "credits": [
     {
       "file": "shield/round",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "Johannes Sjölund (wulax)",
         "Michael Whitlock (bigbeargames)",
         "DarkwallLKE",
-        "Tuomo Untinen (reemax)"
+        "Tuomo Untinen (reemax)",
+        "napsio"
       ],
       "licenses": [
-        "OGA-BY 3.0",
         "CC-BY-SA 3.0",
         "GPL 3.0"
       ],

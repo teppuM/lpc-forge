@@ -24,13 +24,16 @@
   "credits": [
     {
       "file": "tools/hoe",
-      "notes": "original by bluecarrot16, color reduced by JaidynReiman",
+      "notes": "original by bluecarrot16, color reduced by JaidynReiman Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman",
         "Pierre Vigier (pvigier)",
         "Johannes Sjölund (wulax)",
-        "Inboxninja"
+        "Inboxninja",
+        "napsio",
+        "Pierre Vigier",
+        "Tuomo Untinen"
       ],
       "licenses": [
         "CC-BY-SA 3.0"

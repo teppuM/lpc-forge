@@ -61,11 +61,12 @@
   "credits": [
     {
       "file": "weapon/polearm/halberd",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "Benjamin K. Smith (BenCreating)",
         "bluecarrot16",
-        "Sander Frenken (castelonia)"
+        "Sander Frenken (castelonia)",
+        "napsio"
       ],
       "licenses": [
         "CC-BY-SA 3.0",

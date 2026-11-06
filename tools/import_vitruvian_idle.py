@@ -153,6 +153,28 @@ def two_columns(idle):
     return out
 
 
+def fold_into_covering(credits):
+    """A download lists only the first credit covering a path, so a sheet's credit must also be in any credit covering it."""
+    for sheet in credits:
+        for covering in credits:
+            if covering is sheet or not sheet["file"].removesuffix(".png").startswith(covering["file"] + "/"):
+                continue
+            covering["authors"] += [a for a in sheet["authors"] if a not in covering["authors"]]
+            covering["urls"] += [u for u in sheet.get("urls", []) if u not in covering.get("urls", [])]
+            shared = [l for l in covering["licenses"] if l in sheet["licenses"]]
+            only = f"Those frames are {', '.join(sheet['licenses'])} only."
+            note = sheet.get("notes", "")
+            if only in covering.get("notes", ""):
+                continue
+            if not shared:
+                covering["licenses"] += [l for l in sheet["licenses"] if l not in covering["licenses"]]
+                note = f"{note} {only}".strip()
+            else:
+                covering["licenses"] = shared
+            if note and note not in covering.get("notes", ""):
+                covering["notes"] = f"{covering.get('notes', '')} {note}".strip()
+
+
 def main():
     audit = {r["item"]: r for r in csv.DictReader(open(AUDIT, encoding="utf8"))}
     done = skipped = 0
@@ -217,6 +239,7 @@ def main():
                 "licenses": [l.strip() for l in row["stated"].split(";") if l.strip()],
                 "urls": row["urls"].split(),
             })
+        fold_into_covering(credits)
         with open(file, "w", encoding="utf8", newline="\n") as f:
             f.write(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
     print("parts", done, "left out", skipped)

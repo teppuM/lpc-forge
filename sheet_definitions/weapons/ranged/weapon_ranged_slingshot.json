@@ -26,12 +26,11 @@
   "credits": [
     {
       "file": "weapon/ranged/slingshot",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "bluecarrot16"
       ],
       "licenses": [
-        "OGA-BY 3.0+",
         "GPL 3.0",
         "CC-BY 4.0"
       ],

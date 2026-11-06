@@ -50,3 +50,7 @@ lpctools is probably a more viable option along with masks, but these cutouts ar
 ### Filling missing animations
 
 `fill_animations.py` gives head-worn parts the animations they lack, by moving the part's own frames to follow the head. With `--check` it hides sheets of complete parts, rebuilds them and scores them against the real art, which is how the method was chosen: it does not suit the hurt animation, neck parts or tails, and for other body-worn parts only the idle animation, filled with `--idle`, holds up. Every sheet it writes is listed in `filled-animations.csv`, so real art can replace it later, and each part's credits say so.
+
+### Filling missing body animations
+
+`fill_bodies.py` builds a base body's missing sheets from a body that has them. Wherever the donor's frame exactly matches a stretch of a frame both bodies share, it takes the target body's own drawing, and the rest stays the donor's. With `--check` it hides real sheets, rebuilds them and scores them. Muscular shoot, climb and emote and pregnant backslash and halfslash pass and are listed in `filled-bodies.csv`. The child body does not pass, nor does muscular from the thinner art used for combat idle, backslash and halfslash, so those stay missing.

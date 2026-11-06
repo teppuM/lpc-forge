@@ -43,14 +43,13 @@
   "credits": [
     {
       "file": "weapon/sword/glowsword",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "bluecarrot16",
         "tskaufma",
         "Johannes Sjölund (wulax)"
       ],
       "licenses": [
-        "OGA-BY 3.0",
         "CC-BY-SA 3.0"
       ],
       "urls": [

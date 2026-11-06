@@ -23,11 +23,12 @@
   "credits": [
     {
       "file": "shield/kite",
-      "notes": "",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
       "authors": [
         "DarkwallLKE",
         "Tuomo Untinen (reemax)",
-        "Michael Whitlock (bigbeargames)"
+        "Michael Whitlock (bigbeargames)",
+        "napsio"
       ],
       "licenses": [
         "CC-BY-SA 3.0",
