@@ -9,33 +9,16 @@
     "teen": "facial/patches/eyepatch/right/adult/",
     "child": "facial/patches/eyepatch/right/child/"
   },
-  "variants": [
-    "base",
-    "black",
-    "blue",
-    "bluegray",
-    "brown",
-    "charcoal",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "sky",
-    "slate",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Eyepatch_Right_base": "all.lpcr.coffee"
+  },
   "animations": [
     "spellcast",
     "thrust",

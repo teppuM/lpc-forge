@@ -7,15 +7,13 @@
     "female": "torso/waist/belt_leather/female/",
     "teen": "torso/waist/belt_leather/female/"
   },
-  "variants": [
-    "brown",
-    "charcoal",
-    "leather",
-    "slate",
-    "tan",
-    "walnut",
-    "white"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "torso/waist/belt_leather",

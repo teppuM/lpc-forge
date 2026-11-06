@@ -4,10 +4,19 @@
     "zPos": 55,
     "male": "torso/jacket/trench/male/"
   },
-  "variants": [
-    "dark gray",
-    "gray"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "hair.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Trench_coat_dark_gray": "hair.dark_gray",
+    "Trench_coat_dark gray": "hair.dark_gray"
+  },
   "credits": [
     {
       "file": "torso/jacket/trench",

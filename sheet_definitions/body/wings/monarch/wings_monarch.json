@@ -22,37 +22,29 @@
     "teen": "body/wings/monarch/base/bg/",
     "child": "body/wings/monarch/base/bg/"
   },
-  "variants": [
-    "monarch",
-    "amber",
-    "black",
-    "blue",
-    "bluegray",
-    "bright_green",
-    "bronze",
-    "brown",
-    "ceramic",
-    "forest",
-    "gold",
-    "green",
-    "iron",
-    "lavender",
-    "light",
-    "maroon",
-    "navy",
-    "orange",
-    "pale_green",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "silver",
-    "sky",
-    "teal",
-    "white",
-    "yellow",
-    "zombie_green"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "metal.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Monarch_Wings_monarch": "metal.bronze",
+    "Monarch_Wings_amber": "body.amber",
+    "Monarch_Wings_bright_green": "body.bright_green",
+    "Monarch_Wings_bronze": "metal.bronze",
+    "Monarch_Wings_ceramic": "metal.ceramic",
+    "Monarch_Wings_gold": "metal.gold",
+    "Monarch_Wings_iron": "metal.iron",
+    "Monarch_Wings_light": "body.light",
+    "Monarch_Wings_pale_green": "body.pale_green",
+    "Monarch_Wings_silver": "metal.silver",
+    "Monarch_Wings_zombie_green": "body.zombie_green"
+  },
   "credits": [
     {
       "file": "body/wings/monarch",

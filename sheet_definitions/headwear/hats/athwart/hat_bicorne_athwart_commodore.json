@@ -8,32 +8,14 @@
     "teen": "hat/pirate/bicorne/athwart/commodore/adult/",
     "pregnant": "hat/pirate/bicorne/athwart/commodore/adult/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "bluegray",
-    "brown",
-    "charcoal",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "sky",
-    "slate",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "animations": [
     "spellcast",
     "thrust",

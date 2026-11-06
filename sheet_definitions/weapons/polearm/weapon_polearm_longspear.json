@@ -7,53 +7,56 @@
   "layer_1": {
     "zPos": 140,
     "custom_animation": "walk_128",
-    "male": "weapon/polearm/longspear/foreground/walk/",
-    "muscular": "weapon/polearm/longspear/foreground/walk/",
-    "female": "weapon/polearm/longspear/foreground/walk/",
-    "teen": "weapon/polearm/longspear/foreground/walk/",
-    "pregnant": "weapon/polearm/longspear/foreground/walk/"
+    "male": "weapon/polearm/longspear/foreground/walk_128",
+    "muscular": "weapon/polearm/longspear/foreground/walk_128",
+    "female": "weapon/polearm/longspear/foreground/walk_128",
+    "teen": "weapon/polearm/longspear/foreground/walk_128",
+    "pregnant": "weapon/polearm/longspear/foreground/walk_128"
   },
   "layer_2": {
     "zPos": 9,
     "custom_animation": "walk_128",
-    "male": "weapon/polearm/longspear/background/walk/",
-    "muscular": "weapon/polearm/longspear/background/walk/",
-    "female": "weapon/polearm/longspear/background/walk/",
-    "teen": "weapon/polearm/longspear/background/walk/",
-    "pregnant": "weapon/polearm/longspear/background/walk/"
+    "male": "weapon/polearm/longspear/background/walk_128",
+    "muscular": "weapon/polearm/longspear/background/walk_128",
+    "female": "weapon/polearm/longspear/background/walk_128",
+    "teen": "weapon/polearm/longspear/background/walk_128",
+    "pregnant": "weapon/polearm/longspear/background/walk_128"
   },
   "layer_3": {
     "custom_animation": "thrust_oversize",
     "zPos": 150,
-    "male": "weapon/polearm/longspear/foreground/thrust/",
-    "muscular": "weapon/polearm/longspear/foreground/thrust/",
-    "female": "weapon/polearm/longspear/foreground/thrust/",
-    "teen": "weapon/polearm/longspear/foreground/thrust/",
-    "pregnant": "weapon/polearm/longspear/foreground/thrust/"
+    "male": "weapon/polearm/longspear/foreground/thrust_oversize",
+    "muscular": "weapon/polearm/longspear/foreground/thrust_oversize",
+    "female": "weapon/polearm/longspear/foreground/thrust_oversize",
+    "teen": "weapon/polearm/longspear/foreground/thrust_oversize",
+    "pregnant": "weapon/polearm/longspear/foreground/thrust_oversize"
   },
   "layer_4": {
     "custom_animation": "thrust_oversize",
     "zPos": -1,
-    "male": "weapon/polearm/longspear/background/thrust/",
-    "muscular": "weapon/polearm/longspear/background/thrust/",
-    "female": "weapon/polearm/longspear/background/thrust/",
-    "teen": "weapon/polearm/longspear/background/thrust/",
-    "pregnant": "weapon/polearm/longspear/background/thrust/"
+    "male": "weapon/polearm/longspear/background/thrust_oversize",
+    "muscular": "weapon/polearm/longspear/background/thrust_oversize",
+    "female": "weapon/polearm/longspear/background/thrust_oversize",
+    "teen": "weapon/polearm/longspear/background/thrust_oversize",
+    "pregnant": "weapon/polearm/longspear/background/thrust_oversize"
   },
-  "variants": [
-    "medium",
-    "light",
-    "red",
-    "dark",
-    "brass",
-    "bronze",
-    "ceramic",
-    "copper",
-    "gold",
-    "iron",
-    "silver",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "base": "ceramic",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Long_spear_medium": "body.taupe",
+    "Long_spear_light": "body.light",
+    "Long_spear_red": "cloth.red",
+    "Long_spear_dark": "cloth.walnut"
+  },
   "animations": [
     "walk_128",
     "thrust_oversize"

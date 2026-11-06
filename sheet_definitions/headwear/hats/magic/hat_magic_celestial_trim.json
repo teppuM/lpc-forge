@@ -15,40 +15,24 @@
     "pregnant": "hat/magic/celestial/trim/adult/",
     "teen": "hat/magic/celestial/trim/adult/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "bluegray",
-    "brown",
-    "charcoal",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "sky",
-    "slate",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow",
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "metal.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Celestial_Wizard_Hat_Second_Color_steel": "metal.steel",
+    "Celestial_Wizard_Hat_Second_Color_iron": "metal.iron",
+    "Celestial_Wizard_Hat_Second_Color_ceramic": "metal.ceramic",
+    "Celestial_Wizard_Hat_Second_Color_brass": "metal.brass",
+    "Celestial_Wizard_Hat_Second_Color_copper": "metal.copper",
+    "Celestial_Wizard_Hat_Second_Color_bronze": "metal.bronze",
+    "Celestial_Wizard_Hat_Second_Color_silver": "metal.silver",
+    "Celestial_Wizard_Hat_Second_Color_gold": "metal.gold"
+  },
   "animations": [
     "spellcast",
     "thrust",

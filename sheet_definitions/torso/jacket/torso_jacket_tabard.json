@@ -6,27 +6,14 @@
     "teen": "torso/jacket/tabard/female/",
     "male": "torso/jacket/tabard/male/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "sky",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "torso/jacket/tabard",

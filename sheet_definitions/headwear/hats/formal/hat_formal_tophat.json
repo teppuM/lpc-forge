@@ -8,34 +8,17 @@
     "pregnant": "hat/formal/tophat/adult/",
     "teen": "hat/formal/tophat/adult/"
   },
-  "variants": [
-    "base",
-    "base_brown",
-    "black",
-    "blue",
-    "bluegray",
-    "brown",
-    "charcoal",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "sky",
-    "slate",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Formal_Tophat_base": "all.lpcr.charcoal",
+    "Formal_Tophat_base_brown": "all.lpcr.brown"
+  },
   "animations": [
     "spellcast",
     "thrust",

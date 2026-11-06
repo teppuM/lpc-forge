@@ -8,14 +8,14 @@
     "pregnant": "facial/earrings/pear/female/",
     "teen": "facial/earrings/pear/female/"
   },
-  "variants": [
-    "blue",
-    "green",
-    "orange",
-    "purple",
-    "red",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "facial/earrings/pear",

@@ -4,15 +4,19 @@
     "zPos": 58,
     "male": "torso/jacket/trim/frock_lapel/"
   },
-  "variants": [
-    "bronze",
-    "gold",
-    "silver",
-    "red",
-    "blue",
-    "teal",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "metal.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Frock_coat_lapel_bronze": "metal.bronze",
+    "Frock_coat_lapel_gold": "metal.gold",
+    "Frock_coat_lapel_silver": "metal.silver"
+  },
   "credits": [
     {
       "file": "torso/jacket/trim",

@@ -8,14 +8,14 @@
     "pregnant": "facial/earrings/princess/female/",
     "teen": "facial/earrings/princess/female/"
   },
-  "variants": [
-    "blue",
-    "green",
-    "orange",
-    "purple",
-    "red",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "facial/earrings/princess",

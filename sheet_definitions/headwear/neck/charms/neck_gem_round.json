@@ -8,14 +8,14 @@
     "teen": "neck/gem/round/female/",
     "pregnant": "neck/gem/round/female/"
   },
-  "variants": [
-    "blue",
-    "green",
-    "orange",
-    "purple",
-    "red",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "animations": [
     "spellcast",
     "thrust",

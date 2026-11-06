@@ -8,14 +8,14 @@
     "pregnant": "facial/earrings/emerald/female/",
     "teen": "facial/earrings/emerald/female/"
   },
-  "variants": [
-    "blue",
-    "green",
-    "orange",
-    "purple",
-    "red",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "base": "brown",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "facial/earrings/emerald",

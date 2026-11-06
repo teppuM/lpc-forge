@@ -14,16 +14,15 @@
     "teen": "facial/monocle/left/adult/",
     "child": "facial/monocle/left/child/"
   },
-  "variants": [
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "metal",
+    "base": "ceramic",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "animations": [
     "spellcast",
     "thrust",

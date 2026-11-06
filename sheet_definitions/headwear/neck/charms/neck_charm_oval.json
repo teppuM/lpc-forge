@@ -8,16 +8,14 @@
     "teen": "neck/charm/oval/female/",
     "pregnant": "neck/charm/oval/female/"
   },
-  "variants": [
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "animations": [
     "spellcast",
     "thrust",

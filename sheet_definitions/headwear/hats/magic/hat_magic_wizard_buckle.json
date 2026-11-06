@@ -15,16 +15,14 @@
     "pregnant": "hat/magic/wizard/buckle/adult/",
     "teen": "hat/magic/wizard/buckle/adult/"
   },
-  "variants": [
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "animations": [
     "spellcast",
     "thrust",

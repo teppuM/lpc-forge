@@ -4,18 +4,16 @@
     "zPos": 35,
     "child": "torso/clothes/shirt/child/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "brown",
-    "gray",
-    "green",
-    "lavender",
-    "lightblue",
-    "pink",
-    "red",
-    "white"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Child_shirts_lightblue": "all.lpcr.white"
+  },
   "animations": [
     "walk"
   ],

@@ -8,16 +8,14 @@
     "pregnant": "facial/earrings/stud/female/",
     "teen": "facial/earrings/stud/female/"
   },
-  "variants": [
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "facial/earrings/stud",

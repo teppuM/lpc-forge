@@ -4,15 +4,19 @@
     "zPos": 57,
     "male": "torso/jacket/trim/frock_collar/"
   },
-  "variants": [
-    "bronze",
-    "gold",
-    "silver",
-    "red",
-    "blue",
-    "teal",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "metal.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Frock_collar_bronze": "metal.bronze",
+    "Frock_collar_gold": "metal.gold",
+    "Frock_collar_silver": "metal.silver"
+  },
   "credits": [
     {
       "file": "torso/jacket/trim",

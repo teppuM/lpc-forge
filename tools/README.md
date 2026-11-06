@@ -38,3 +38,7 @@ These are also equivalent to the built-in lpctools layout's "universal" and "uni
 These cutouts can be used on their own. It is recommended to use cutouts with Aseprite or another image editor. When generating assets, you can select these cutouts across the entire page on the "black" to remove any elements from a specific layer.
 
 lpctools is probably a more viable option along with masks, but these cutouts are another potential option you can use instead.
+
+### Converting color variants
+
+`variant_measure.py` reads every sheet of every part defined with one image per color and records how each color maps onto the others. `convert_variants.py` turns those measurements into one base sheet per animation, plus palettes and `aliases` that keep old links working. It reports every part it leaves alone, and how far each named color moved.

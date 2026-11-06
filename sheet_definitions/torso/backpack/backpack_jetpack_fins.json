@@ -13,11 +13,14 @@
     "female": "backpack/jetpack_fins/female/",
     "pregnant": "backpack/jetpack_fins/female/"
   },
-  "variants": [
-    "bronze",
-    "gold",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "backpack/jetpack_fins",

@@ -8,16 +8,14 @@
     "pregnant": "facial/earrings/moon/female/",
     "teen": "facial/earrings/moon/female/"
   },
-  "variants": [
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "facial/earrings/moon",

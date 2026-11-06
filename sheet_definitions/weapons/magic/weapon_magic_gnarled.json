@@ -19,35 +19,37 @@
   "layer_3": {
     "custom_animation": "thrust_oversize",
     "zPos": 150,
-    "male": "weapon/magic/gnarled/thrust/foreground/",
-    "muscular": "weapon/magic/gnarled/thrust/foreground/",
-    "female": "weapon/magic/gnarled/thrust/foreground/",
-    "teen": "weapon/magic/gnarled/thrust/foreground/",
-    "pregnant": "weapon/magic/gnarled/thrust/foreground/"
+    "male": "weapon/magic/gnarled/thrust/foreground",
+    "muscular": "weapon/magic/gnarled/thrust/foreground",
+    "female": "weapon/magic/gnarled/thrust/foreground",
+    "teen": "weapon/magic/gnarled/thrust/foreground",
+    "pregnant": "weapon/magic/gnarled/thrust/foreground"
   },
   "layer_4": {
     "custom_animation": "thrust_oversize",
     "zPos": -1,
-    "male": "weapon/magic/gnarled/thrust/background/",
-    "muscular": "weapon/magic/gnarled/thrust/background/",
-    "female": "weapon/magic/gnarled/thrust/background/",
-    "teen": "weapon/magic/gnarled/thrust/background/",
-    "pregnant": "weapon/magic/gnarled/thrust/background/"
+    "male": "weapon/magic/gnarled/thrust/background",
+    "muscular": "weapon/magic/gnarled/thrust/background",
+    "female": "weapon/magic/gnarled/thrust/background",
+    "teen": "weapon/magic/gnarled/thrust/background",
+    "pregnant": "weapon/magic/gnarled/thrust/background"
   },
-  "variants": [
-    "medium",
-    "light",
-    "red",
-    "dark",
-    "brass",
-    "bronze",
-    "ceramic",
-    "copper",
-    "gold",
-    "iron",
-    "silver",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Gnarled_staff_medium": "body.taupe",
+    "Gnarled_staff_light": "body.light",
+    "Gnarled_staff_red": "cloth.red",
+    "Gnarled_staff_dark": "cloth.walnut"
+  },
   "animations": [
     "walk",
     "hurt",

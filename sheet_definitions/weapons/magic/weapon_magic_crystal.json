@@ -19,29 +19,28 @@
   "layer_3": {
     "custom_animation": "thrust_oversize",
     "zPos": 150,
-    "male": "weapon/magic/crystal/thrust/foreground/",
-    "muscular": "weapon/magic/crystal/thrust/foreground/",
-    "female": "weapon/magic/crystal/thrust/foreground/",
-    "teen": "weapon/magic/crystal/thrust/foreground/",
-    "pregnant": "weapon/magic/crystal/thrust/foreground/"
+    "male": "weapon/magic/crystal/thrust/foreground",
+    "muscular": "weapon/magic/crystal/thrust/foreground",
+    "female": "weapon/magic/crystal/thrust/foreground",
+    "teen": "weapon/magic/crystal/thrust/foreground",
+    "pregnant": "weapon/magic/crystal/thrust/foreground"
   },
   "layer_4": {
     "custom_animation": "thrust_oversize",
     "zPos": -1,
-    "male": "weapon/magic/crystal/thrust/background/",
-    "muscular": "weapon/magic/crystal/thrust/background/",
-    "female": "weapon/magic/crystal/thrust/background/",
-    "teen": "weapon/magic/crystal/thrust/background/",
-    "pregnant": "weapon/magic/crystal/thrust/background/"
+    "male": "weapon/magic/crystal/thrust/background",
+    "muscular": "weapon/magic/crystal/thrust/background",
+    "female": "weapon/magic/crystal/thrust/background",
+    "teen": "weapon/magic/crystal/thrust/background",
+    "pregnant": "weapon/magic/crystal/thrust/background"
   },
-  "variants": [
-    "blue",
-    "orange",
-    "green",
-    "purple",
-    "red",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "animations": [
     "walk",
     "hurt",

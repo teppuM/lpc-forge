@@ -21,35 +21,38 @@
   "layer_3": {
     "custom_animation": "walk_128",
     "zPos": -1,
-    "male": "weapon/ranged/bow/normal/walk/background/",
-    "muscular": "weapon/ranged/bow/normal/walk/background/",
-    "female": "weapon/ranged/bow/normal/walk/background/",
-    "pregnant": "weapon/ranged/bow/normal/walk/background/",
-    "teen": "weapon/ranged/bow/normal/walk/background/"
+    "male": "weapon/ranged/bow/normal/walk/background",
+    "muscular": "weapon/ranged/bow/normal/walk/background",
+    "female": "weapon/ranged/bow/normal/walk/background",
+    "pregnant": "weapon/ranged/bow/normal/walk/background",
+    "teen": "weapon/ranged/bow/normal/walk/background"
   },
   "layer_4": {
     "custom_animation": "walk_128",
     "zPos": 141,
-    "male": "weapon/ranged/bow/normal/walk/foreground/",
-    "muscular": "weapon/ranged/bow/normal/walk/foreground/",
-    "female": "weapon/ranged/bow/normal/walk/foreground/",
-    "pregnant": "weapon/ranged/bow/normal/walk/foreground/",
-    "teen": "weapon/ranged/bow/normal/walk/foreground/"
+    "male": "weapon/ranged/bow/normal/walk/foreground",
+    "muscular": "weapon/ranged/bow/normal/walk/foreground",
+    "female": "weapon/ranged/bow/normal/walk/foreground",
+    "pregnant": "weapon/ranged/bow/normal/walk/foreground",
+    "teen": "weapon/ranged/bow/normal/walk/foreground"
   },
-  "variants": [
-    "light",
-    "medium",
-    "red",
-    "dark",
-    "brass",
-    "bronze",
-    "ceramic",
-    "copper",
-    "gold",
-    "iron",
-    "silver",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "base": "ceramic",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Normal_light": "body.light",
+    "Normal_medium": "body.taupe",
+    "Normal_red": "cloth.red",
+    "Normal_dark": "cloth.walnut"
+  },
   "animations": [
     "walk",
     "shoot",

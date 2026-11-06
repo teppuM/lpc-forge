@@ -19,35 +19,37 @@
   "layer_3": {
     "custom_animation": "thrust_oversize",
     "zPos": 150,
-    "male": "weapon/magic/diamond/thrust/foreground/",
-    "muscular": "weapon/magic/diamond/thrust/foreground/",
-    "female": "weapon/magic/diamond/thrust/foreground/",
-    "teen": "weapon/magic/diamond/thrust/foreground/",
-    "pregnant": "weapon/magic/diamond/thrust/foreground/"
+    "male": "weapon/magic/diamond/thrust/foreground",
+    "muscular": "weapon/magic/diamond/thrust/foreground",
+    "female": "weapon/magic/diamond/thrust/foreground",
+    "teen": "weapon/magic/diamond/thrust/foreground",
+    "pregnant": "weapon/magic/diamond/thrust/foreground"
   },
   "layer_4": {
     "custom_animation": "thrust_oversize",
     "zPos": -1,
-    "male": "weapon/magic/diamond/thrust/background/",
-    "muscular": "weapon/magic/diamond/thrust/background/",
-    "female": "weapon/magic/diamond/thrust/background/",
-    "teen": "weapon/magic/diamond/thrust/background/",
-    "pregnant": "weapon/magic/diamond/thrust/background/"
+    "male": "weapon/magic/diamond/thrust/background",
+    "muscular": "weapon/magic/diamond/thrust/background",
+    "female": "weapon/magic/diamond/thrust/background",
+    "teen": "weapon/magic/diamond/thrust/background",
+    "pregnant": "weapon/magic/diamond/thrust/background"
   },
-  "variants": [
-    "medium",
-    "light",
-    "red",
-    "dark",
-    "brass",
-    "bronze",
-    "ceramic",
-    "copper",
-    "gold",
-    "iron",
-    "silver",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Diamond_staff_medium": "body.taupe",
+    "Diamond_staff_light": "body.light",
+    "Diamond_staff_red": "cloth.red",
+    "Diamond_staff_dark": "cloth.brown"
+  },
   "animations": [
     "walk",
     "hurt",

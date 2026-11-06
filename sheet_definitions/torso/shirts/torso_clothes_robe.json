@@ -4,18 +4,24 @@
     "zPos": 35,
     "female": "torso/clothes/robe/female/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "brown",
-    "dark brown",
-    "dark gray",
-    "forest green",
-    "light gray",
-    "purple",
-    "red",
-    "white"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "hair.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Robe_dark_brown": "hair.dark_brown",
+    "Robe_dark brown": "hair.dark_brown",
+    "Robe_dark_gray": "hair.dark_gray",
+    "Robe_dark gray": "hair.dark_gray",
+    "Robe_forest_green": "all.lpcr.green",
+    "Robe_forest green": "all.lpcr.green",
+    "Robe_light_gray": "gray",
+    "Robe_light gray": "gray"
+  },
   "credits": [
     {
       "file": "torso/clothes/robe",

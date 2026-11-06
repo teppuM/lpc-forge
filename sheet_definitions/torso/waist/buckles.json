@@ -5,12 +5,14 @@
     "zPos": 75,
     "female": "torso/waist/buckles/female/"
   },
-  "variants": [
-    "bronze",
-    "gold",
-    "iron",
-    "silver"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "torso/waist/buckles",

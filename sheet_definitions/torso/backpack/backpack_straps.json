@@ -14,28 +14,13 @@
     "female": "backpack/straps/female/",
     "pregnant": "backpack/straps/female/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "bluegray",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "sky",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
   "credits": [
     {
       "file": "backpack/straps",

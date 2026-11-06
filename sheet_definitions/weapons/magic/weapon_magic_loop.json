@@ -19,35 +19,37 @@
   "layer_3": {
     "custom_animation": "thrust_oversize",
     "zPos": 150,
-    "male": "weapon/magic/loop/thrust/foreground/",
-    "muscular": "weapon/magic/loop/thrust/foreground/",
-    "female": "weapon/magic/loop/thrust/foreground/",
-    "teen": "weapon/magic/loop/thrust/foreground/",
-    "pregnant": "weapon/magic/loop/thrust/foreground/"
+    "male": "weapon/magic/loop/thrust/foreground",
+    "muscular": "weapon/magic/loop/thrust/foreground",
+    "female": "weapon/magic/loop/thrust/foreground",
+    "teen": "weapon/magic/loop/thrust/foreground",
+    "pregnant": "weapon/magic/loop/thrust/foreground"
   },
   "layer_4": {
     "custom_animation": "thrust_oversize",
     "zPos": -1,
-    "male": "weapon/magic/loop/thrust/background/",
-    "muscular": "weapon/magic/loop/thrust/background/",
-    "female": "weapon/magic/loop/thrust/background/",
-    "teen": "weapon/magic/loop/thrust/background/",
-    "pregnant": "weapon/magic/loop/thrust/background/"
+    "male": "weapon/magic/loop/thrust/background",
+    "muscular": "weapon/magic/loop/thrust/background",
+    "female": "weapon/magic/loop/thrust/background",
+    "teen": "weapon/magic/loop/thrust/background",
+    "pregnant": "weapon/magic/loop/thrust/background"
   },
-  "variants": [
-    "medium",
-    "light",
-    "red",
-    "dark",
-    "brass",
-    "bronze",
-    "ceramic",
-    "copper",
-    "gold",
-    "iron",
-    "silver",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Loop_staff_medium": "body.taupe",
+    "Loop_staff_light": "body.light",
+    "Loop_staff_red": "cloth.red",
+    "Loop_staff_dark": "cloth.walnut"
+  },
   "animations": [
     "walk",
     "hurt",

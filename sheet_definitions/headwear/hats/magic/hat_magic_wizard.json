@@ -12,38 +12,21 @@
     "pregnant": "hat/magic/wizard/base/adult/",
     "teen": "hat/magic/wizard/base/adult/"
   },
-  "variants": [
-    "base_black",
-    "base_brown",
-    "base_gray",
-    "base_red",
-    "base_teal",
-    "base_yellow",
-    "white",
-    "black",
-    "blue",
-    "bluegray",
-    "brown",
-    "charcoal",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "sky",
-    "slate",
-    "tan",
-    "teal",
-    "walnut",
-    "yellow"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Wizard_Hat_Base_base_black": "all.lpcr.black",
+    "Wizard_Hat_Base_base_brown": "all.lpcr.brown",
+    "Wizard_Hat_Base_base_gray": "all.lpcr.dove",
+    "Wizard_Hat_Base_base_red": "all.lpcr.red",
+    "Wizard_Hat_Base_base_teal": "all.lpcr.teal",
+    "Wizard_Hat_Base_base_yellow": "all.lpcr.leather"
+  },
   "animations": [
     "spellcast",
     "thrust",

@@ -18,20 +18,23 @@
     "teen": "weapon/polearm/spear/background/",
     "pregnant": "weapon/polearm/spear/background/"
   },
-  "variants": [
-    "medium",
-    "light",
-    "red",
-    "dark",
-    "brass",
-    "bronze",
-    "ceramic",
-    "copper",
-    "gold",
-    "iron",
-    "silver",
-    "steel"
-  ],
+  "recolors": {
+    "material": "metal",
+    "base": "ceramic",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "body.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Spear_medium": "body.taupe",
+    "Spear_light": "body.light",
+    "Spear_red": "cloth.red",
+    "Spear_dark": "cloth.leather"
+  },
   "animations": [
     "walk",
     "thrust",

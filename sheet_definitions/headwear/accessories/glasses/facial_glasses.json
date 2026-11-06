@@ -9,40 +9,24 @@
     "teen": "facial/glasses/glasses/adult/",
     "child": "facial/glasses/glasses/child/"
   },
-  "variants": [
-    "black",
-    "blue",
-    "bluegray",
-    "brown",
-    "charcoal",
-    "forest",
-    "gray",
-    "green",
-    "lavender",
-    "leather",
-    "maroon",
-    "navy",
-    "orange",
-    "pink",
-    "purple",
-    "red",
-    "rose",
-    "sky",
-    "slate",
-    "tan",
-    "teal",
-    "walnut",
-    "white",
-    "yellow",
-    "steel",
-    "iron",
-    "ceramic",
-    "brass",
-    "copper",
-    "bronze",
-    "silver",
-    "gold"
-  ],
+  "recolors": {
+    "material": "cloth",
+    "palettes": [
+      "ulpc",
+      "metal.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Glasses_steel": "metal.steel",
+    "Glasses_iron": "metal.iron",
+    "Glasses_ceramic": "metal.ceramic",
+    "Glasses_brass": "metal.brass",
+    "Glasses_copper": "metal.copper",
+    "Glasses_bronze": "metal.bronze",
+    "Glasses_silver": "metal.silver",
+    "Glasses_gold": "metal.gold"
+  },
   "animations": [
     "spellcast",
     "thrust",

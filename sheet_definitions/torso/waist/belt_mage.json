@@ -6,14 +6,26 @@
     "female": "torso/waist/belt_mage/",
     "teen": "torso/waist/belt_mage/"
   },
-  "variants": [
-    "black",
-    "bronze",
-    "brown",
-    "gold",
-    "iron",
-    "silver"
-  ],
+  "recolors": {
+    "material": "metal",
+    "palettes": [
+      "ulpc",
+      "lpcr",
+      "cloth.ulpc",
+      "hair.ulpc",
+      "all.lpcr"
+    ]
+  },
+  "aliases": {
+    "Other_belts_black": "black",
+    "Other_belts_bronze": "bronze",
+    "Other_belts_brown": "brown",
+    "Other_belts_gold": "gold",
+    "Other_belts_iron": "iron",
+    "Other_belts_silver": "silver",
+    "Mage_Belt_black": "hair.black",
+    "Mage_Belt_brown": "cloth.brown"
+  },
   "animations": [
     "hurt",
     "slash",
@@ -36,13 +48,5 @@
       ]
     }
   ],
-  "aliases": {
-    "Other_belts_black": "black",
-    "Other_belts_bronze": "bronze",
-    "Other_belts_brown": "brown",
-    "Other_belts_gold": "gold",
-    "Other_belts_iron": "iron",
-    "Other_belts_silver": "silver"
-  },
   "type_name": "belt"
 }
