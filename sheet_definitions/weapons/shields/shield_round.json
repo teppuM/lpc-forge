@@ -35,6 +35,25 @@
         "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
         "https://opengameart.org/content/lpc-shields-pack"
       ]
+    },
+    {
+      "file": "shield/round/idle.png",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "Johannes Sjölund (wulax)",
+        "Michael Whitlock (bigbeargames)",
+        "DarkwallLKE",
+        "Tuomo Untinen (reemax)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-shields-pack"
+      ]
     }
   ],
   "aliases": {
@@ -45,5 +64,15 @@
     "Shields_silver": "silver",
     "Shields_yellow": "yellow"
   },
-  "type_name": "shield"
+  "type_name": "shield",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

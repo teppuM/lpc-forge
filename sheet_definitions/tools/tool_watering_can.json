@@ -18,7 +18,8 @@
   },
   "animations": [
     "walk",
-    "watering"
+    "watering",
+    "idle"
   ],
   "credits": [
     {
@@ -31,6 +32,42 @@
         "OGA-BY 3.0+",
         "CC-BY 4.0+",
         "GPL 2.0+"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-hand-tools"
+      ]
+    },
+    {
+      "file": "tools/watering_can/bg/idle.png",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "bluecarrot16",
+        "Pierre Vigier",
+        "Tuomo Untinen",
+        "Johannes Sjölund (wulax)",
+        "Inboxninja"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-hand-tools"
+      ]
+    },
+    {
+      "file": "tools/watering_can/fg/idle.png",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "bluecarrot16",
+        "Pierre Vigier",
+        "Tuomo Untinen",
+        "Johannes Sjölund (wulax)",
+        "Inboxninja"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0"
       ],
       "urls": [
         "https://opengameart.org/content/lpc-hand-tools"

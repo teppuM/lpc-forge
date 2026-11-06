@@ -18,7 +18,8 @@
   },
   "animations": [
     "thrust",
-    "walk"
+    "walk",
+    "idle"
   ],
   "credits": [
     {
@@ -28,6 +29,42 @@
         "bluecarrot16",
         "JaidynReiman",
         "Pierre Vigier (pvigier)",
+        "Johannes Sjölund (wulax)",
+        "Inboxninja"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-hand-tools"
+      ]
+    },
+    {
+      "file": "tools/hoe/bg/idle.png",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "bluecarrot16",
+        "Pierre Vigier",
+        "Tuomo Untinen",
+        "Johannes Sjölund (wulax)",
+        "Inboxninja"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-hand-tools"
+      ]
+    },
+    {
+      "file": "tools/hoe/fg/idle.png",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "bluecarrot16",
+        "Pierre Vigier",
+        "Tuomo Untinen",
         "Johannes Sjölund (wulax)",
         "Inboxninja"
       ],

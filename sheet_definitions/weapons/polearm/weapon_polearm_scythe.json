@@ -40,13 +40,42 @@
   "animations": [
     "walk",
     "hurt",
-    "slash_oversize"
+    "slash_oversize",
+    "idle"
   ],
   "credits": [
     {
       "file": "weapon/polearm/scythe",
       "notes": "",
       "authors": [
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-extended-weapon-animations"
+      ]
+    },
+    {
+      "file": "weapon/polearm/scythe/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-extended-weapon-animations"
+      ]
+    },
+    {
+      "file": "weapon/polearm/scythe/universal_behind/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
         "bluecarrot16"
       ],
       "licenses": [

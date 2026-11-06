@@ -21,7 +21,8 @@
     "thrust",
     "walk",
     "slash",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "credits": [
     {
@@ -34,6 +35,23 @@
       ],
       "licenses": [
         "OGA-BY 3.0",
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+        "https://opengameart.org/content/lpc-extended-weapon-animations"
+      ]
+    },
+    {
+      "file": "weapon/sword/dagger/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "bluecarrot16",
+        "Johannes Sjölund (wulax)",
+        "Matthew Krohn (makrohn)"
+      ],
+      "licenses": [
         "CC-BY-SA 3.0",
         "GPL 3.0"
       ],

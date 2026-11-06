@@ -55,13 +55,48 @@
     "walk",
     "hurt",
     "thrust_oversize",
-    "slash_oversize"
+    "slash_oversize",
+    "idle"
   ],
   "credits": [
     {
       "file": "weapon/polearm/halberd",
       "notes": "",
       "authors": [
+        "Benjamin K. Smith (BenCreating)",
+        "bluecarrot16",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-weapons"
+      ]
+    },
+    {
+      "file": "weapon/polearm/halberd/behind/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "Benjamin K. Smith (BenCreating)",
+        "bluecarrot16",
+        "Sander Frenken (castelonia)"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-medieval-weapons"
+      ]
+    },
+    {
+      "file": "weapon/polearm/halberd/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
         "Benjamin K. Smith (BenCreating)",
         "bluecarrot16",
         "Sander Frenken (castelonia)"

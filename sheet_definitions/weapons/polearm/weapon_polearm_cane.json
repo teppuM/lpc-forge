@@ -14,13 +14,44 @@
   ],
   "animations": [
     "walk",
-    "thrust"
+    "thrust",
+    "idle"
   ],
   "credits": [
     {
       "file": "weapon/polearm/cane",
       "notes": "",
       "authors": [
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-gentleman"
+      ]
+    },
+    {
+      "file": "weapon/polearm/cane/female/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
+        "bluecarrot16"
+      ],
+      "licenses": [
+        "CC-BY-SA 3.0",
+        "GPL 3.0"
+      ],
+      "urls": [
+        "https://opengameart.org/content/lpc-gentleman"
+      ]
+    },
+    {
+      "file": "weapon/polearm/cane/male/idle",
+      "notes": "Idle from Vitruvian LPC Studio, recolored to match this part.",
+      "authors": [
+        "napsio",
         "bluecarrot16"
       ],
       "licenses": [
