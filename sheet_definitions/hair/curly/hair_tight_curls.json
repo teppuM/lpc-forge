@@ -1,13 +1,13 @@
 {
-  "name": "Jewfro",
+  "name": "Tight Curls",
   "layer_1": {
     "zPos": 120,
-    "male": "hair/jewfro/adult/",
-    "muscular": "hair/jewfro/adult/",
-    "female": "hair/jewfro/adult/",
-    "pregnant": "hair/jewfro/adult/",
-    "teen": "hair/jewfro/adult/",
-    "child": "hair/jewfro/child/"
+    "male": "hair/tight_curls/adult/",
+    "muscular": "hair/tight_curls/adult/",
+    "female": "hair/tight_curls/adult/",
+    "pregnant": "hair/tight_curls/adult/",
+    "teen": "hair/tight_curls/adult/",
+    "child": "hair/tight_curls/child/"
   },
   "animations": [
     "spellcast",
@@ -30,7 +30,7 @@
   ],
   "credits": [
     {
-      "file": "hair/jewfro",
+      "file": "hair/tight_curls",
       "notes": "",
       "authors": [
         "JaidynReiman"
@@ -54,6 +54,9 @@
       "lpcr",
       "all.lpcr"
     ]
+  },
+  "aliases": {
+    "Jewfro_*": "Tight_Curls_*"
   },
   "type_name": "hair"
 }
