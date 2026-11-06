@@ -15,7 +15,17 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "climb",
+    "idle",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "recolors": {
     "material": "cloth",
@@ -29,7 +39,7 @@
   "credits": [
     {
       "file": "chargen/mask/bandages/bandages_f1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to follow the head: climb, idle, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122"
       ],
@@ -44,7 +54,7 @@
     },
     {
       "file": "chargen/mask/bandages/bandages_m1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to follow the head: climb, idle, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122"
       ],

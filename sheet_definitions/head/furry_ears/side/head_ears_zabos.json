@@ -12,7 +12,7 @@
   "animations": [
     "spellcast",
     "thrust",
-    "walk", 
+    "walk",
     "shoot",
     "hurt",
     "watering",
@@ -25,7 +25,8 @@
     "combat",
     "1h_slash",
     "1h_backslash",
-    "1h_halfslash"
+    "1h_halfslash",
+    "slash"
   ],
   "credits": [
     {

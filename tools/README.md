@@ -42,3 +42,7 @@ lpctools is probably a more viable option along with masks, but these cutouts ar
 ### Converting color variants
 
 `variant_measure.py` reads every sheet of every part defined with one image per color and records how each color maps onto the others. `convert_variants.py` turns those measurements into one base sheet per animation, plus palettes and `aliases` that keep old links working. It reports every part it leaves alone, and how far each named color moved.
+
+### Filling missing animations
+
+`fill_animations.py` gives head-worn parts the animations they lack, by moving the part's own frames to follow the head. With `--check` it hides sheets of complete parts, rebuilds them and scores them against the real art, which is how the method was chosen: it does not suit the hurt animation or body-worn parts, so it leaves those alone. Every sheet it writes is listed in `filled-animations.csv`, so real art can replace it later, and each part's credits say so.

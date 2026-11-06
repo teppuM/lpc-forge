@@ -21,7 +21,8 @@
     "jump",
     "run",
     "sit",
-    "emote"
+    "emote",
+    "climb"
   ],
   "credits": [
     {

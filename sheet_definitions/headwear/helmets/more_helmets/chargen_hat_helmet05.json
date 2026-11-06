@@ -15,7 +15,17 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "climb",
+    "idle",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "recolors": {
     "color_1": {
@@ -43,7 +53,7 @@
   "credits": [
     {
       "file": "chargen/hat/helmet05/barbarian11_f",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to follow the head: climb, idle, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16"
       ],
@@ -60,7 +70,7 @@
     },
     {
       "file": "chargen/hat/helmet05/barbarian11_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to follow the head: climb, idle, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16"
       ],

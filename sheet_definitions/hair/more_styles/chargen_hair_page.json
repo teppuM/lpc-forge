@@ -15,7 +15,17 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "climb",
+    "idle",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "recolors": {
     "material": "hair",
@@ -30,7 +40,7 @@
   "credits": [
     {
       "file": "chargen/hair/page/page_f",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to follow the head: climb, idle, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Johannes SjÃ¶lund (wulax)"
       ],
@@ -44,7 +54,7 @@
     },
     {
       "file": "chargen/hair/page/page_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to follow the head: climb, idle, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Johannes SjÃ¶lund (wulax)"
       ],
