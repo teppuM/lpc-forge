@@ -28,7 +28,7 @@
   "credits": [
     {
       "file": "backpack/basket_contents/wood",
-      "notes": "this item is CC-BY-SA 3.0/GPL 3.0 because it's derived from daneeklu's log",
+      "notes": "this item is CC-BY-SA 3.0/GPL 3.0 because it's derived from daneeklu's log Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Daniel Eddeland (daneeklu)"
@@ -43,5 +43,15 @@
       ]
     }
   ],
-  "type_name": "cargo"
+  "type_name": "cargo",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

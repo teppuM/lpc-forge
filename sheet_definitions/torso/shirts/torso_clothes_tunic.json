@@ -15,7 +15,7 @@
   "credits": [
     {
       "file": "torso/clothes/tunic",
-      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless then to tunic by JaidynReiman, edits for v3 bases and further cleanup by bluecarrot16",
+      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless then to tunic by JaidynReiman, edits for v3 bases and further cleanup by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman",
@@ -36,5 +36,15 @@
       ]
     }
   ],
-  "type_name": "clothes"
+  "type_name": "clothes",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

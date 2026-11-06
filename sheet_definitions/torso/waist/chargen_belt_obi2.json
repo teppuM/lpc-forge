@@ -13,7 +13,8 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "recolors": {
     "material": "cloth",
@@ -27,7 +28,7 @@
   "credits": [
     {
       "file": "chargen/belt/obi2/obi2_f1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "David Conway Jr. (JaidynReiman)"
       ],
@@ -44,7 +45,7 @@
     },
     {
       "file": "chargen/belt/obi2/obi2_m1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "David Conway Jr. (JaidynReiman)"
       ],

@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/waist/waistband",
-      "notes": "LPC Sara by Redshrike, contributed by William Thompsonj, Waistband Separated by Bluecarrot16",
+      "notes": "LPC Sara by Redshrike, contributed by William Thompsonj, Waistband Separated by Bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Bluecarrot16",
         "Mandi Paugh",
@@ -33,7 +33,7 @@
     },
     {
       "file": "torso/waist/sash",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Nila122"
@@ -50,5 +50,15 @@
       ]
     }
   ],
-  "type_name": "sash"
+  "type_name": "sash",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

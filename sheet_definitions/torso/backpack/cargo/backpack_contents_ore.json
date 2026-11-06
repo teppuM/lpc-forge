@@ -36,7 +36,7 @@
   "credits": [
     {
       "file": "backpack/basket_contents/ore",
-      "notes": "full submission is CC-BY-SA 3.0/GPL 3.0, but this item is CC0",
+      "notes": "full submission is CC-BY-SA 3.0/GPL 3.0, but this item is CC0 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16"
       ],
@@ -48,5 +48,15 @@
       ]
     }
   ],
-  "type_name": "cargo"
+  "type_name": "cargo",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

@@ -7,9 +7,12 @@ licenses stand. Every sheet written is listed in tools/filled-animations.csv, so
 
 A sheet is filled only when no layer of the part has it on that body, and only when that body has the animation at all.
 
+With --idle it fills only the idle animation of parts worn on the body, matching whole-body poses instead of heads. Idle
+is the one pose close enough to the others for this to work; other animations of these parts do not pass the check.
+
 With --check it writes nothing. It takes complete parts, hides sheets, rebuilds them and scores them against the real art.
 
-usage: fill_animations.py <repo root> [--apply] [--check]
+usage: fill_animations.py <repo root> [--idle] [--apply] [--check]
 Without --apply or --check it only plans.
 """
 import collections
@@ -26,6 +29,7 @@ from PIL import Image
 ROOT = sys.argv[1]
 APPLY = "--apply" in sys.argv
 CHECK = "--check" in sys.argv
+IDLE = "--idle" in sys.argv
 DEFS = os.path.join(ROOT, "sheet_definitions")
 ART = os.path.join(ROOT, "spritesheets")
 MANIFEST = os.path.join(ROOT, "tools", "filled-animations.csv")
@@ -42,11 +46,18 @@ DEFAULT_CLAIMS = ["spellcast", "thrust", "walk", "slash", "shoot", "hurt", "wate
 FACINGS = "nwse"
 SCOPE = ("hair/", "head/", "headwear/")
 OUT_OF_SCOPE = ("headwear/neck/", "head/heads/")
+IDLE_SCOPE = ("torso/", "legs/", "feet/", "arms/", "body/")
+# Tails swing on their own, so a copied frame lands in front of the body.
+IDLE_OUT_OF_SCOPE = ("body/tails/", "body/body.json", "body/shadow.json", "body/wheelchair.json")
 HEADS = {"male": "head/heads/human/male/", "female": "head/heads/human/female/", "child": "head/heads/human/child/"}
 HEAD_OF_BODY = {"male": "male", "muscular": "male", "female": "female", "pregnant": "female", "teen": "female", "child": "child"}
 BODIES = list(HEAD_OF_BODY)
+BODY_GUIDES = {body: f"body/bodies/{body}/" for body in BODIES}
 NUDGE = 3  # Pixels searched around the shift that lines up the two heads' corners.
-WEAK_MATCH = 0.90  # A head match below this is reported.
+WEAK_MATCH = 0.90  # A match below this is reported.
+# A layer can be empty in the frames that match best, because that layer has nothing to draw in that pose. Below this
+# match the frame stays empty rather than borrowing a pose that does not fit.
+MIN_MATCH = 0.85
 
 
 def load(path):
@@ -87,19 +98,20 @@ def corner(mask):
 
 
 class HeadTable:
-    """For every frame of every sheet, how well each other sheet's frames of the same facing match its head."""
+    """For every frame of a sheet, how well each other sheet's frames of the same facing match the guide art."""
 
-    def __init__(self, folder):
-        self.images = {s: load(os.path.join(ART, folder, s + ".png")) for s in SHEETS}
-        masks = {s: {k: f[..., 3] > 0 for k, f in frames_of(self.images[s], s).items()} for s in SHEETS}
+    def __init__(self, folder, targets=SHEETS):
+        files = {s: os.path.join(ART, folder, s + ".png") for s in SHEETS}
+        self.images = {s: load(f) for s, f in files.items() if os.path.exists(f)}
+        masks = {s: {k: f[..., 3] > 0 for k, f in frames_of(image, s).items()} for s, image in self.images.items()}
         self.table = {}
-        for target in SHEETS:
-            for key, mask in masks[target].items():
+        for target in targets:
+            for key, mask in masks.get(target, {}).items():
                 at = corner(mask)
                 if at is None:
                     continue
                 self.table[(target, key)] = options = []
-                for source in SHEETS:
+                for source in masks:
                     if source == target:
                         continue
                     for other_key, other in masks[source].items():
@@ -133,6 +145,8 @@ def rebuild(table, target, available):
         for c in range(w // 64):
             key = (facing_of(target, r, rows), c)
             for score, _, source, other_key, dx, dy in table.table.get((target, key), []):
+                if score < MIN_MATCH:
+                    break
                 frame = available.get(source, {}).get(other_key)
                 if frame is None or not (frame[..., 3] > 0).any():
                     continue
@@ -198,20 +212,21 @@ def read_sheets(path, color, sheets):
 def definitions():
     for p in sorted(glob.glob(DEFS + "/**/*.json", recursive=True)):
         rel = os.path.relpath(p, DEFS).replace("\\", "/")
-        if os.path.basename(p).startswith("meta_") or not rel.startswith(SCOPE) or rel.startswith(OUT_OF_SCOPE):
+        scope, out_of_scope = (IDLE_SCOPE, IDLE_OUT_OF_SCOPE) if IDLE else (SCOPE, OUT_OF_SCOPE)
+        if os.path.basename(p).startswith("meta_") or not rel.startswith(scope) or rel.startswith(out_of_scope):
             continue
         yield p, rel, json.load(open(p, encoding="utf8"))
 
 
 def plan():
-    """{(path, sheet): head}, {path: definition}, and the sheets skipped because the body has no such animation."""
+    """{(path, sheet): guide}, {path: definition}, and the sheets skipped because the body has no such animation."""
     wanted, owner, skipped = {}, {}, collections.Counter()
     for _, rel, d in definitions():
         for body in BODIES:
             paths = layer_paths(d, body)
             if not paths:
                 continue
-            for sheet in SHEETS:
+            for sheet in ["idle"] if IDLE else SHEETS:
                 # Parts fall over with the head in hurt, so a moved frame does not fit: 41% of frames pass the check.
                 if sheet == "hurt" or any(has_sheet(p, sheet) for p in paths):
                     continue
@@ -219,7 +234,7 @@ def plan():
                     skipped[(body, sheet)] += 1
                     continue
                 for p in paths:
-                    wanted.setdefault((p, sheet), HEAD_OF_BODY[body])
+                    wanted.setdefault((p, sheet), body if IDLE else HEAD_OF_BODY[body])
                     owner[p] = rel
     return wanted, owner, skipped
 
@@ -278,10 +293,13 @@ def add_claims(definition, sheets):
 
 
 def main():
-    tables = {name: HeadTable(folder) for name, folder in HEADS.items()}
+    if IDLE:
+        tables = {name: HeadTable(folder, ["idle"]) for name, folder in BODY_GUIDES.items()}
+    else:
+        tables = {name: HeadTable(folder) for name, folder in HEADS.items()}
     for name, table in tables.items():
         weak = [(k[0], k[1], o[0][0]) for k, o in table.table.items() if o and o[0][0] < WEAK_MATCH]
-        print(f"{name} head: frames {len(table.table)}, weak matches {weak}")
+        print(f"{name} guide: frames {len(table.table)}, weak matches {weak}")
     if CHECK:
         check(tables)
         return
@@ -294,7 +312,7 @@ def main():
     report, empty = [], []
 
     def fill(item):
-        (path, sheet), head = item
+        (path, sheet), guide = item
         rows = []
         # Only the part's own art is a source, never a sheet this run writes.
         sources = [s for s in SHEETS if (path, s) not in wanted]
@@ -302,7 +320,7 @@ def main():
             available = read_sheets(path, color, sources)
             if not available or blank({k: f for frames in available.values() for k, f in frames.items()}):
                 return rows, (path, sheet, color)
-            made, weakest = rebuild(tables[head], sheet, available)
+            made, weakest = rebuild(tables[guide], sheet, available)
             if made is None:
                 rows.append((path, sheet, color, None, None))
                 continue
@@ -310,22 +328,22 @@ def main():
             if APPLY:
                 os.makedirs(os.path.dirname(f), exist_ok=True)
                 Image.fromarray(made, "RGBA").save(f, optimize=True)
-            rows.append((path, sheet, color, head, weakest))
+            rows.append((path, sheet, color, guide, weakest))
         return rows, None
 
     with ThreadPool(6) as pool:
         for rows, nothing in pool.imap_unordered(fill, sorted(wanted.items())):
             if nothing:
                 empty.append(nothing)
-            for path, sheet, color, head, weakest in rows:
-                if head is None:
+            for path, sheet, color, guide, weakest in rows:
+                if guide is None:
                     empty.append((path, sheet, color))
                     continue
                 written[owner[path]].add(sheet)
-                report.append({"part": owner[path], "path": path, "sheet": sheet, "color": color or "", "head": head, "weakest_head_match": weakest})
+                report.append({"part": owner[path], "path": path, "sheet": sheet, "color": color or "", "guide": guide, "weakest_match": weakest})
     report.sort(key=lambda r: (r["part"], r["path"], r["sheet"], r["color"]))
     print("sheets written" if APPLY else "sheets planned", len(report), "| nothing to draw", len(empty), "| parts", len(written))
-    print("weakest head match used", sorted(collections.Counter(r["weakest_head_match"] < WEAK_MATCH for r in report).items()))
+    print("below the weak-match line", sum(r["weakest_match"] < WEAK_MATCH for r in report))
     if not APPLY:
         return
     for p, rel, d in definitions():
@@ -334,15 +352,19 @@ def main():
             continue
         d["animations"] = add_claims(d, [s for s in SHEETS if s in sheets])
         names = ", ".join(s.replace("_", " ") for s in SHEETS if s in sheets)
-        note = f"Rebuilt from this part's own frames to follow the head: {names}."
+        note = f"Rebuilt from this part's own frames to match the body's pose: {names}." if IDLE else f"Rebuilt from this part's own frames to follow the head: {names}."
         for credit in d.get("credits", []):
             credit["notes"] = (credit.get("notes", "") + " " + note).strip()
         with open(p, "w", encoding="utf8", newline="\n") as f:
             f.write(json.dumps(d, indent=2, ensure_ascii=False) + "\n")
+    earlier = []
+    if os.path.exists(MANIFEST):
+        with open(MANIFEST, encoding="utf8", newline="") as f:
+            earlier = list(csv.DictReader(f))
     with open(MANIFEST, "w", encoding="utf8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["part", "path", "sheet", "color", "head", "weakest_head_match"], lineterminator="\n")
+        w = csv.DictWriter(f, fieldnames=["part", "path", "sheet", "color", "guide", "weakest_match"], lineterminator="\n")
         w.writeheader()
-        w.writerows(report)
+        w.writerows(sorted(earlier + report, key=lambda r: (r["part"], r["path"], r["sheet"], r["color"])))
 
 
 main()

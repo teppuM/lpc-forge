@@ -24,7 +24,7 @@
   "credits": [
     {
       "file": "backpack/jetpack_fins",
-      "notes": "trivial adjustments by bluecarrot16 to be compatible with v3 bases",
+      "notes": "trivial adjustments by bluecarrot16 to be compatible with v3 bases Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Benjamin K. Smith (BenCreating)",
         "macmanmatty"
@@ -38,5 +38,15 @@
       ]
     }
   ],
-  "type_name": "cargo"
+  "type_name": "cargo",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

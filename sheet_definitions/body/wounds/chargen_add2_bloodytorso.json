@@ -11,7 +11,8 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "variants": [
     "default"
@@ -20,7 +21,7 @@
   "credits": [
     {
       "file": "chargen/add2/bloodytorso/bloodytorso_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Benjamin K. Smith (BenCreating)",
         "Sander Frenken (castelonia)"

@@ -30,12 +30,13 @@
     "hurt",
     "slash",
     "spellcast",
-    "walk"
+    "walk",
+    "idle"
   ],
   "credits": [
     {
       "file": "torso/waist/belt_mage",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Luke Mehl"
       ],

@@ -14,7 +14,7 @@
   "credits": [
     {
       "file": "torso/waist/belt_robe",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Johannes Sjölund (wulax)",
         "Matthew Krohn (makrohn)"
@@ -33,5 +33,15 @@
     "Other_belts_white": "white",
     "Other_belts_teal": "teal"
   },
-  "type_name": "belt"
+  "type_name": "belt",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

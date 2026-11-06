@@ -14,7 +14,8 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "recolors": {
     "material": "cloth",
@@ -28,7 +29,7 @@
   "credits": [
     {
       "file": "chargen/back/quiver1/quiver1_fb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Johannes SjÃ¶lund (wulax)",
         "pflat"
@@ -43,7 +44,7 @@
     },
     {
       "file": "chargen/back/quiver1/quiver1_mb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Johannes SjÃ¶lund (wulax)",
         "pflat"

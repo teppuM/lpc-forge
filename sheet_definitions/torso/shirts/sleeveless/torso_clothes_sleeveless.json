@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/clothes/sleeveless/sleeveless/male",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Matthew Krohn (makrohn)",
@@ -40,7 +40,7 @@
     },
     {
       "file": "torso/clothes/sleeveless/sleeveless/female",
-      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless by JaidynReiman, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16",
+      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless by JaidynReiman, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "ElizaWy",
         "JaidynReiman",
@@ -62,5 +62,15 @@
       ]
     }
   ],
-  "type_name": "clothes"
+  "type_name": "clothes",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

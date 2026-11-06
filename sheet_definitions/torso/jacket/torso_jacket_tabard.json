@@ -17,7 +17,7 @@
   "credits": [
     {
       "file": "torso/jacket/tabard",
-      "notes": "original by wulax, edited to v3 base by bluecarrot16",
+      "notes": "original by wulax, edited to v3 base by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Johannes Sjölund (wulax)"
@@ -34,7 +34,7 @@
     },
     {
       "file": "torso/jacket/tabard/female",
-      "notes": "original by wulax, edited to female base by makrohn and JaidynReiman, edited to v3 base by bluecarrot16",
+      "notes": "original by wulax, edited to female base by makrohn and JaidynReiman, edited to v3 base by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "JaidynReiman",
         "Matthew Krohn (makrohn)",
@@ -52,5 +52,15 @@
       ]
     }
   ],
-  "type_name": "jacket"
+  "type_name": "jacket",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

@@ -11,7 +11,7 @@
   "credits": [
     {
       "file": "torso/waist/belt_formal",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Thane Brimhall (pennomi)",
         "laetissima",
@@ -30,5 +30,15 @@
   "aliases": {
     "Other_belts_formal": "brown"
   },
-  "type_name": "belt"
+  "type_name": "belt",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

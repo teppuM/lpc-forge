@@ -55,7 +55,7 @@
   "credits": [
     {
       "file": "body/wings/dragonfly",
-      "notes": "In dedication to my grandmother, Sharon Rowe",
+      "notes": "In dedication to my grandmother, Sharon Rowe Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "The Foreman"
       ],
@@ -68,5 +68,15 @@
       ]
     }
   ],
-  "type_name": "wings"
+  "type_name": "wings",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

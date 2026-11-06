@@ -14,7 +14,7 @@
   "credits": [
     {
       "file": "torso/clothes/tunic_sara",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Mandi Paugh",
         "William.Thompsonj",
@@ -30,5 +30,15 @@
       ]
     }
   ],
-  "type_name": "clothes"
+  "type_name": "clothes",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

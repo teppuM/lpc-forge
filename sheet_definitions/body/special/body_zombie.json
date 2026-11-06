@@ -12,7 +12,7 @@
   "credits": [
     {
       "file": "body/bodies/zombie",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Stephen Challener (Redshrike)",
         "Johannes Sjölund (wulax)",
@@ -33,5 +33,15 @@
       ]
     }
   ],
-  "type_name": "body"
+  "type_name": "body",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

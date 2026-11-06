@@ -21,7 +21,8 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "recolors": {
     "color_1": {
@@ -47,7 +48,7 @@
   "credits": [
     {
       "file": "chargen/back/basket8/square_logs2_fb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "pflat",
@@ -64,7 +65,7 @@
     },
     {
       "file": "chargen/back/basket8/square_logs2_ff",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "pflat",
@@ -83,7 +84,7 @@
     },
     {
       "file": "chargen/back/basket8/square_logs2_mb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Daniel Eddeland (daneeklu)"
@@ -99,7 +100,7 @@
     },
     {
       "file": "chargen/back/basket8/square_logs2_mf",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Daniel Eddeland (daneeklu)",

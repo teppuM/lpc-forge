@@ -13,7 +13,7 @@
   "credits": [
     {
       "file": "torso/waist/belt_leather2",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Johannes Sjölund (wulax)",
         "Matthew Krohn (makrohn)"
@@ -31,5 +31,15 @@
   "aliases": {
     "Other_belts_leather": "leather"
   },
-  "type_name": "belt"
+  "type_name": "belt",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

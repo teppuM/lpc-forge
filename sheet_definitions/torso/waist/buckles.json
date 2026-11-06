@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/waist/buckles",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Luke Mehl"
       ],
@@ -29,5 +29,15 @@
       ]
     }
   ],
-  "type_name": "buckles"
+  "type_name": "buckles",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

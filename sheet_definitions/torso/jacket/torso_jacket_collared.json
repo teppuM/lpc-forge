@@ -34,7 +34,7 @@
   "credits": [
     {
       "file": "torso/jacket/collared",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16"
       ],
@@ -48,5 +48,15 @@
       ]
     }
   ],
-  "type_name": "jacket"
+  "type_name": "jacket",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

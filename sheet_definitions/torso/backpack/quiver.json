@@ -14,7 +14,7 @@
   "credits": [
     {
       "file": "quiver",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Johannes Sjölund (wulax)"
       ],
@@ -28,5 +28,15 @@
       ]
     }
   ],
-  "type_name": "quiver"
+  "type_name": "quiver",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

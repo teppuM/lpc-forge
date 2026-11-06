@@ -13,7 +13,7 @@
   "credits": [
     {
       "file": "torso/bandage",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Nila122"
       ],
@@ -28,5 +28,15 @@
       ]
     }
   ],
-  "type_name": "bandages"
+  "type_name": "bandages",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

@@ -29,7 +29,7 @@
   "credits": [
     {
       "file": "torso/clothes/longsleeve/longsleeve/male",
-      "notes": "original by wulax; tweaks and further recolors by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman",
+      "notes": "original by wulax; tweaks and further recolors by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "JaidynReiman",
         "Johannes Sjölund (wulax)"
@@ -50,7 +50,7 @@
     },
     {
       "file": "torso/clothes/longsleeve/longsleeve/female",
-      "notes": "original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman",
+      "notes": "original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -74,7 +74,7 @@
     },
     {
       "file": "torso/clothes/longsleeve/longsleeve/teen",
-      "notes": "body by Redshrike, shirt by ElizaWy derived from base, edited by bluecarrot16 to v3 bases; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman",
+      "notes": "body by Redshrike, shirt by ElizaWy derived from base, edited by bluecarrot16 to v3 bases; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -98,7 +98,7 @@
     },
     {
       "file": "torso/clothes/longsleeve/longsleeve/pregnant",
-      "notes": "original by ElizaWy, edited to pregnant v3 bases by bluecarrot16",
+      "notes": "original by ElizaWy, edited to pregnant v3 bases by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",

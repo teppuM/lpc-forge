@@ -15,7 +15,7 @@
   "credits": [
     {
       "file": "torso/clothes/corset",
-      "notes": "original by Nila122, recolored by ElizaWy",
+      "notes": "original by Nila122, recolored by ElizaWy Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "ElizaWy",
         "Nila122"
@@ -31,5 +31,15 @@
       ]
     }
   ],
-  "type_name": "vest"
+  "type_name": "vest",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

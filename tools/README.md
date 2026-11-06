@@ -45,4 +45,4 @@ lpctools is probably a more viable option along with masks, but these cutouts ar
 
 ### Filling missing animations
 
-`fill_animations.py` gives head-worn parts the animations they lack, by moving the part's own frames to follow the head. With `--check` it hides sheets of complete parts, rebuilds them and scores them against the real art, which is how the method was chosen: it does not suit the hurt animation or body-worn parts, so it leaves those alone. Every sheet it writes is listed in `filled-animations.csv`, so real art can replace it later, and each part's credits say so.
+`fill_animations.py` gives head-worn parts the animations they lack, by moving the part's own frames to follow the head. With `--check` it hides sheets of complete parts, rebuilds them and scores them against the real art, which is how the method was chosen: it does not suit the hurt animation, neck parts or tails, and for other body-worn parts only the idle animation, filled with `--idle`, holds up. Every sheet it writes is listed in `filled-animations.csv`, so real art can replace it later, and each part's credits say so.

@@ -18,7 +18,8 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "recolors": {
     "color_1": {
@@ -46,7 +47,7 @@
   "credits": [
     {
       "file": "chargen/add3/pirate/pirate_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16"
       ],

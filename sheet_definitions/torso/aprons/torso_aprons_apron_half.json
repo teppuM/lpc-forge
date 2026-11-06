@@ -15,7 +15,7 @@
   "credits": [
     {
       "file": "torso/aprons/apron_half",
-      "notes": "original apron by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16",
+      "notes": "original apron by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "ElizaWy",
         "bluecarrot16"
@@ -29,5 +29,15 @@
       ]
     }
   ],
-  "type_name": "apron"
+  "type_name": "apron",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }

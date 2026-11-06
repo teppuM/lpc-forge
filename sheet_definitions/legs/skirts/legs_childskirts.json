@@ -17,12 +17,13 @@
     "white"
   ],
   "animations": [
-    "walk"
+    "walk",
+    "idle"
   ],
   "credits": [
     {
       "file": "legs/skirts/child",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Nila122"
       ],

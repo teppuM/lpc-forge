@@ -18,7 +18,7 @@
   "credits": [
     {
       "file": "torso/waist/belt_loose",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "bluecarrot16",
         "Johannes Sjölund (wulax)",
@@ -35,5 +35,15 @@
       ]
     }
   ],
-  "type_name": "belt"
+  "type_name": "belt",
+  "animations": [
+    "spellcast",
+    "thrust",
+    "walk",
+    "slash",
+    "shoot",
+    "hurt",
+    "watering",
+    "idle"
+  ]
 }
