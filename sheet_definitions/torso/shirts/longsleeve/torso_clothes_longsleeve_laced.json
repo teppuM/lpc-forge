@@ -15,7 +15,7 @@
   "credits": [
     {
       "file": "torso/clothes/longsleeve/laced",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Climb, Jump, Sit, Emote, Run, Combat idle, Backslash, Halfslash built from Longsleeve's frames and this part's own; not drawn by hand. See tools/fill_from_twin.py.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman",
@@ -28,7 +28,12 @@
       ],
       "urls": [
         "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
-        "https://opengameart.org/content/lpc-pirates"
+        "https://opengameart.org/content/lpc-pirates",
+        "http://opengameart.org/content/lpc-clothing-updates",
+        "https://opengameart.org/content/lpc-revised-character-basics",
+        "https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing",
+        "https://opengameart.org/content/lpc-expanded-sit-run-jump-more",
+        "https://opengameart.org/content/lpc-expanded-simple-shirts"
       ]
     }
   ],
@@ -41,6 +46,14 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

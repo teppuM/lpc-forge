@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/aprons/apron",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Nila122"
       ],
@@ -40,6 +40,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

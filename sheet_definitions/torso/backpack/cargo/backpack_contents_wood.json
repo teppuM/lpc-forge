@@ -28,7 +28,7 @@
   "credits": [
     {
       "file": "backpack/basket_contents/wood",
-      "notes": "this item is CC-BY-SA 3.0/GPL 3.0 because it's derived from daneeklu's log Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "this item is CC-BY-SA 3.0/GPL 3.0 because it's derived from daneeklu's log Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "Daniel Eddeland (daneeklu)"
@@ -52,6 +52,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

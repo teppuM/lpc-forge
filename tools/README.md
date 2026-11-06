@@ -51,6 +51,12 @@ lpctools is probably a more viable option along with masks, but these cutouts ar
 
 `fill_animations.py` gives head-worn parts the animations they lack, by moving the part's own frames to follow the head. With `--check` it hides sheets of complete parts, rebuilds them and scores them against the real art, which is how the method was chosen: it does not suit the hurt animation, neck parts or tails, and for other body-worn parts only the idle animation, filled with `--idle`, holds up. Every sheet it writes is listed in `filled-animations.csv`, so real art can replace it later, and each part's credits say so.
 
+It also fills wings in every missing animation, following the head, since wings ride on the back and flap regardless of pose. With `--emote` it fills the emote animation of torso parts without sleeves, following the torso. Other animations of clothes do not pass the check from a part's own frames, whether guided by the head, torso, waist, hips, shoulders, hands or whole body.
+
+### Filling from a near-identical part
+
+`fill_from_twin.py` fills a part from a near-identical part that has the animation. Across every part, overlap on the older animations closely predicts overlap on the newer ones, but few parts have a close twin. A pair is used only if its hidden real sheets rebuild at 0.92 or better. Sheets are listed in `filled-twins.csv` and each part's credits name the twin's authors.
+
 ### Filling missing body animations
 
 `fill_bodies.py` builds a base body's missing sheets from a body that has them. Wherever the donor's frame exactly matches a stretch of a frame both bodies share, it takes the target body's own drawing, and the rest stays the donor's. With `--check` it hides real sheets, rebuilds them and scores them. Muscular shoot, climb and emote and pregnant backslash and halfslash pass and are listed in `filled-bodies.csv`. The child body does not pass, nor does muscular from the thinner art used for combat idle, backslash and halfslash, so those stay missing.

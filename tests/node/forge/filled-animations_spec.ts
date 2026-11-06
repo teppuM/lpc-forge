@@ -55,6 +55,26 @@ test("every built body sheet exists at its donor's size and has its own credit",
   }
 });
 
+test("every sheet built from a twin exists, is claimed, and its credits name the twin", () => {
+  const [header, ...lines] = readFileSync("tools/filled-twins.csv", "utf8").trim().split("\n");
+  const names = header.split(",");
+  assert.ok(lines.length > 0, "the manifest lists the built sheets");
+  for (const line of lines) {
+    const row = Object.fromEntries(line.split(",").map((value, i) => [names[i], value])) as Record<string, string>;
+    const file = row.color
+      ? `spritesheets/${row.path}${row.sheet}/${row.color}.png`
+      : `spritesheets/${row.path}${row.sheet}.png`;
+    assert.ok(existsSync(file), `${file} is missing`);
+    assert.ok(Number(row.held_out) >= 0.92, `${row.part} scored ${row.held_out}`);
+    const definition = JSON.parse(readFileSync(`sheet_definitions/${row.part}`, "utf8")) as Definition;
+    assert.ok(definition.animations?.includes(CLAIMS[row.sheet] ?? row.sheet), `${row.part} does not claim ${row.sheet}`);
+    assert.ok(
+      definition.credits?.some((credit) => credit.notes?.includes("fill_from_twin")),
+      `${row.part} does not note the twin in its credits`,
+    );
+  }
+});
+
 test("a download shows everyone a sheet's credit names", () => {
   // A download lists the first credit covering a path, so a credit naming one sheet never appears on its own.
   type Credit = { file: string; notes?: string; authors: string[]; licenses: string[]; urls?: string[] };

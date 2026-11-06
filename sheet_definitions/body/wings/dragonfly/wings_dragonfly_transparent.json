@@ -55,7 +55,7 @@
   "credits": [
     {
       "file": "body/wings/dragonfly",
-      "notes": "In dedication to my grandmother, Sharon Rowe Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "In dedication to my grandmother, Sharon Rowe Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "The Foreman"
       ],
@@ -77,6 +77,15 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

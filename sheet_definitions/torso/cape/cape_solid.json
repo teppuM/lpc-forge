@@ -29,12 +29,13 @@
     "hurt",
     "watering",
     "climb",
-    "idle"
+    "idle",
+    "emote"
   ],
   "credits": [
     {
       "file": "cape/solid/fg",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"
@@ -52,7 +53,7 @@
     },
     {
       "file": "cape/solid/bg",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Nila122",
         "JaidynReiman"

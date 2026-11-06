@@ -39,18 +39,20 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "emote"
   ],
   "credits": [
     {
       "file": "torso/clothes/vest",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "Thane Brimhall (pennomi)",
         "laetissima",
         "Stephen Challener (Redshrike)",
-        "Johannes Sjölund (wulax)"
+        "Johannes Sjölund (wulax)",
+        "Michael Whitlock (bigbeargames)"
       ],
       "licenses": [
         "CC-BY-SA 3.0",
@@ -64,7 +66,7 @@
     },
     {
       "file": "torso/clothes/vest/male/gray_striped.png",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "bluecarrot16",
@@ -81,7 +83,7 @@
     },
     {
       "file": "torso/clothes/vest/male/gray.png",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "bluecarrot16",

@@ -22,7 +22,7 @@
   "credits": [
     {
       "file": "backpack/backpack",
-      "notes": "trivial adjustments by bluecarrot16 to be compatible with v3 bases Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "trivial adjustments by bluecarrot16 to be compatible with v3 bases Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Benjamin K. Smith (BenCreating)",
         "macmanmatty"
@@ -45,6 +45,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

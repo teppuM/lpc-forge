@@ -18,12 +18,13 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "emote"
   ],
   "credits": [
     {
       "file": "torso/clothes/vest_open",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "Thane Brimhall (pennomi)",

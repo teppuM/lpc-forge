@@ -20,12 +20,13 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "emote"
   ],
   "credits": [
     {
       "file": "dress/bodice",
-      "notes": "original princess.xcf by Sharm, extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16",
+      "notes": "original princess.xcf by Sharm, extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16 Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "Matthew Krohn (makrohn)",

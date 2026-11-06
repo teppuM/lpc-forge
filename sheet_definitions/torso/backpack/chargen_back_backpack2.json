@@ -15,7 +15,8 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "emote"
   ],
   "recolors": {
     "material": "cloth",
@@ -29,7 +30,7 @@
   "credits": [
     {
       "file": "chargen/back/backpack2/backpack2_f",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Benjamin K. Smith (BenCreating)"
       ],
@@ -43,7 +44,7 @@
     },
     {
       "file": "chargen/back/backpack2/backpack2_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Benjamin K. Smith (BenCreating)"
       ],

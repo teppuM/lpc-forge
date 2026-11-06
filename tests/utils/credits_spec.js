@@ -47,6 +47,39 @@ describe("utils/credits.ts", () => {
       ).to.deep.equal([]);
     });
 
+    it("lets the most specific credit claim a path, whatever order they are listed in", () => {
+      seedCatalog(catalogWriter, {
+        item1: {
+          animations: ["walk"],
+          layers: {
+            layer_1: { male: "feet/hoofs/thin/" },
+            layer_2: { male: "feet/hoofs/behind/" },
+          },
+          credits: [
+            { file: "feet/hoofs", authors: ["Broad"], licenses: ["CC0"], urls: [] },
+            {
+              file: "feet/hoofs/thin",
+              authors: ["Specific"],
+              licenses: ["CC0"],
+              urls: [],
+            },
+          ],
+        },
+      });
+      const credits = getAllCredits(
+        catalog,
+        { g: { itemId: "item1", variant: null } },
+        "male",
+        "walk",
+      );
+      expect(
+        credits.map(({ fileName, authors }) => [fileName, authors[0]]),
+      ).to.deep.equal([
+        ["feet/hoofs/thin/walk.png", "Specific"],
+        ["feet/hoofs/behind/walk.png", "Broad"],
+      ]);
+    });
+
     it("includes a credit when the used sprite path matches the credit file prefix", () => {
       seedCatalog(catalogWriter, {
         item1: {

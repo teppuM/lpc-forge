@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/waist/waistband",
-      "notes": "LPC Sara by Redshrike, contributed by William Thompsonj, Waistband Separated by Bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "LPC Sara by Redshrike, contributed by William Thompsonj, Waistband Separated by Bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Bluecarrot16",
         "Mandi Paugh",
@@ -33,7 +33,7 @@
     },
     {
       "file": "torso/waist/sash",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "Nila122"
@@ -59,6 +59,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

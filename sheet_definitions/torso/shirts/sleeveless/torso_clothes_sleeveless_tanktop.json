@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/clothes/sleeveless/tanktop/female",
-      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -38,7 +38,7 @@
     },
     {
       "file": "torso/clothes/sleeveless/tanktop/pregnant",
-      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, cleanup and re-drawing for pregnant base by ElizaWy, edits for v3 base by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, cleanup and re-drawing for pregnant base by ElizaWy, edits for v3 base by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -69,6 +69,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

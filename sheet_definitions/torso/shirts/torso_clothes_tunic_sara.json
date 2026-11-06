@@ -14,7 +14,7 @@
   "credits": [
     {
       "file": "torso/clothes/tunic_sara",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Mandi Paugh",
         "William.Thompsonj",
@@ -39,6 +39,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

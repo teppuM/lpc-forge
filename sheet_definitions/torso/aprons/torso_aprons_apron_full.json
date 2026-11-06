@@ -15,7 +15,7 @@
   "credits": [
     {
       "file": "torso/aprons/apron_full",
-      "notes": "original apron by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original apron by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "ElizaWy",
         "bluecarrot16"
@@ -38,6 +38,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

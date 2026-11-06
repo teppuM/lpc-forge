@@ -11,7 +11,7 @@
   "credits": [
     {
       "file": "torso/waist/belt_formal",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "Thane Brimhall (pennomi)",
         "laetissima",
@@ -39,6 +39,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }

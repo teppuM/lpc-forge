@@ -7,15 +7,22 @@ licenses stand. Every sheet written is listed in tools/filled-animations.csv, so
 
 A sheet is filled only when no layer of the part has it on that body, and only when that body has the animation at all.
 
+Wings also follow the head here. They ride on the back and flap regardless of pose, and they look right in every animation
+though flapping lowers their score in the check.
+
 With --idle it fills only the idle animation of parts worn on the body, matching whole-body poses instead of heads. Idle
 is the one pose close enough to the others for this to work; other animations of these parts do not pass the check.
+
+With --emote it fills only the emote animation of torso parts without sleeves, following the torso. A sleeveless shirt's
+drawing says where the torso is in each frame. Emote is the only other animation close enough to the older ones, and raised
+arms are its weak point, so parts covering the arms are left out.
 
 With --check it writes nothing. It takes complete parts, hides sheets, rebuilds them and scores them against the real art,
 counting frames where the real part draws nothing but the rebuild does.
 
 With --refresh it rebuilds every sheet already listed in the manifest, for when this method changes.
 
-usage: fill_animations.py <repo root> [--idle] [--apply] [--check] [--refresh]
+usage: fill_animations.py <repo root> [--idle | --emote] [--apply] [--check] [--refresh]
 Without --apply or --check it only plans.
 """
 import collections
@@ -33,6 +40,7 @@ ROOT = sys.argv[1]
 APPLY = "--apply" in sys.argv
 CHECK = "--check" in sys.argv
 IDLE = "--idle" in sys.argv
+EMOTE = "--emote" in sys.argv
 REFRESH = "--refresh" in sys.argv
 DEFS = os.path.join(ROOT, "sheet_definitions")
 ART = os.path.join(ROOT, "spritesheets")
@@ -48,10 +56,14 @@ CLAIMS["backslash"] = ["1h_slash", "1h_backslash"]
 CLAIMS["halfslash"] = ["1h_halfslash"]
 DEFAULT_CLAIMS = ["spellcast", "thrust", "walk", "slash", "shoot", "hurt", "watering"]
 FACINGS = "nwse"
-SCOPE = ("hair/", "head/", "headwear/")
+SCOPE = ("hair/", "head/", "headwear/", "body/wings/")
 OUT_OF_SCOPE = ("headwear/neck/", "head/heads/")
 IDLE_SCOPE = ("torso/", "legs/", "feet/", "arms/", "body/")
 IDLE_OUT_OF_SCOPE = ("body/body.json", "body/shadow.json", "body/wheelchair.json")
+EMOTE_SCOPE = ("torso/",)
+TORSO_GUIDES = {"male": "torso/clothes/sleeveless/sleeveless1/male/", "female": "torso/clothes/sleeveless/sleeveless1/female/", "teen": "torso/clothes/sleeveless/sleeveless1/teen/"}
+ARM_GUIDES = {"male": "torso/clothes/longsleeve/longsleeves/male/", "muscular": "torso/clothes/longsleeve/longsleeves/male/", "female": "torso/clothes/longsleeve/longsleeves/female/", "pregnant": "torso/clothes/longsleeve/longsleeves/female/", "teen": "torso/clothes/longsleeve/longsleeves/teen/"}
+MOST_ARM_COVER = 0.35  # A part covering more of the arms than this in the walk animation counts as having sleeves.
 HEADS = {"male": "head/heads/human/male/", "female": "head/heads/human/female/", "child": "head/heads/human/child/"}
 HEAD_OF_BODY = {"male": "male", "muscular": "male", "female": "female", "pregnant": "female", "teen": "female", "child": "child"}
 BODIES = list(HEAD_OF_BODY)
@@ -235,10 +247,31 @@ def read_sheets(path, color, sheets):
 def definitions():
     for p in sorted(glob.glob(DEFS + "/**/*.json", recursive=True)):
         rel = os.path.relpath(p, DEFS).replace("\\", "/")
-        scope, out_of_scope = (IDLE_SCOPE, IDLE_OUT_OF_SCOPE) if IDLE else (SCOPE, OUT_OF_SCOPE)
+        scope, out_of_scope = (IDLE_SCOPE, IDLE_OUT_OF_SCOPE) if IDLE else (EMOTE_SCOPE, ()) if EMOTE else (SCOPE, OUT_OF_SCOPE)
         if os.path.basename(p).startswith("meta_") or not rel.startswith(scope) or rel.startswith(out_of_scope):
             continue
         yield p, rel, json.load(open(p, encoding="utf8"))
+
+
+def covers_arms(paths, body):
+    """Whether a part has sleeves, by how much of the arms it covers in the walk animation."""
+    if body not in ARM_GUIDES:
+        return True
+    arms = load(os.path.join(ART, ARM_GUIDES[body], "walk.png"))[..., 3] > 0
+    worn = np.zeros_like(arms)
+    for path in paths:
+        f = sheet_file(path, "walk", colors_of(path)[0])
+        if not os.path.exists(f):
+            return True
+        art = load(f)
+        if art.shape[:2] != arms.shape:
+            return True
+        worn |= art[..., 3] > 0
+    return np.count_nonzero(worn & arms) / np.count_nonzero(arms) > MOST_ARM_COVER
+
+
+def emote_guide(body):
+    return f"torso {body}" if body in TORSO_GUIDES else f"head {HEAD_OF_BODY[body]}"
 
 
 def plan():
@@ -250,15 +283,18 @@ def plan():
             paths = layer_paths(d, body)
             if not paths:
                 continue
-            for sheet in ["idle"] if IDLE else SHEETS:
+            for sheet in ["idle"] if IDLE else ["emote"] if EMOTE else SHEETS:
                 # Parts fall over with the head in hurt, so a moved frame does not fit: 44% of frames pass the check.
                 if sheet == "hurt" or any(has_sheet(p, sheet) for p in paths):
                     continue
                 if not os.path.exists(os.path.join(ART, "body/bodies", body, sheet + ".png")):
                     skipped[(body, sheet)] += 1
                     continue
+                if EMOTE and covers_arms(paths, body):
+                    skipped[(body, "has sleeves")] += 1
+                    continue
                 for p in paths:
-                    wanted.setdefault((p, sheet), body if IDLE else HEAD_OF_BODY[body])
+                    wanted.setdefault((p, sheet), body if IDLE else emote_guide(body) if EMOTE else HEAD_OF_BODY[body])
                     owner[p] = rel
                     siblings[p] = paths
     return wanted, owner, skipped, siblings
@@ -272,7 +308,8 @@ def planned_again():
     for r in rows:
         d = json.load(open(os.path.join(DEFS, r["part"]), encoding="utf8"))
         body = next(b for b in BODIES if r["path"] in layer_paths(d, b))
-        guide = "head " + r["guide"] if r["part"].startswith(SCOPE) else r["guide"]
+        follows_head = r["part"].startswith(SCOPE) and not (r["part"].startswith("body/wings/") and r["sheet"] == "idle")
+        guide = r["guide"] if r["guide"].startswith("torso ") else "head " + r["guide"] if follows_head or r["sheet"] == "emote" else r["guide"]
         wanted[(r["path"], r["sheet"])] = guide
         owner[r["path"]] = r["part"]
         siblings[r["path"]] = layer_paths(d, body)
@@ -344,6 +381,10 @@ def main():
     if REFRESH:
         tables = {name: HeadTable(folder, ["idle"]) for name, folder in BODY_GUIDES.items()}
         tables.update({"head " + name: HeadTable(folder) for name, folder in HEADS.items()})
+        tables.update({"torso " + name: HeadTable(folder, ["emote"]) for name, folder in TORSO_GUIDES.items()})
+    elif EMOTE:
+        tables = {"torso " + name: HeadTable(folder, ["emote"]) for name, folder in TORSO_GUIDES.items()}
+        tables.update({"head " + name: HeadTable(folder, ["emote"]) for name, folder in HEADS.items()})
     elif IDLE:
         tables = {name: HeadTable(folder, ["idle"]) for name, folder in BODY_GUIDES.items()}
     else:
@@ -355,6 +396,8 @@ def main():
         check(tables)
         return
     wanted, owner, skipped, siblings = planned_again() if REFRESH else plan()
+    with open(MANIFEST, encoding="utf8", newline="") as f:
+        rebuilt = {(r["path"], r["sheet"]) for r in csv.DictReader(f)}
     print("sheets to fill (one per layer path)", len(wanted), "parts", len(set(owner.values())))
     print("by sheet", collections.Counter(s for _, s in wanted).most_common())
     print("skipped, body has no such animation", sum(skipped.values()), sorted({k for k in skipped}))
@@ -365,8 +408,8 @@ def main():
     def fill(item):
         (path, sheet), guide = item
         rows = []
-        # Only the part's own art is a source, never a sheet this run writes.
-        sources = lambda q: [s for s in SHEETS if (q, s) not in wanted]
+        # Only the part's own real art is a source, never a sheet this tool wrote.
+        sources = lambda q: [s for s in SHEETS if (q, s) not in wanted and (q, s) not in rebuilt]
         others = [read_sheets(q, colors_of(q)[0], sources(q)) for q in siblings[path] if q != path]
         for color in colors_of(path):
             available = read_sheets(path, color, sources(path))
@@ -421,7 +464,7 @@ def main():
             continue
         d["animations"] = add_claims(d, [s for s in SHEETS if s in sheets])
         names = ", ".join(s.replace("_", " ") for s in SHEETS if s in sheets)
-        note = f"Rebuilt from this part's own frames to match the body's pose: {names}." if IDLE else f"Rebuilt from this part's own frames to follow the head: {names}."
+        note = f"Rebuilt from this part's own frames to match the body's pose: {names}." if IDLE else f"Rebuilt from this part's own frames to follow the torso: {names}." if EMOTE else f"Rebuilt from this part's own frames to follow the head: {names}."
         for credit in d.get("credits", []):
             credit["notes"] = (credit.get("notes", "") + " " + note).strip()
         with open(p, "w", encoding="utf8", newline="\n") as f:

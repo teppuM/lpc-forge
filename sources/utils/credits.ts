@@ -59,8 +59,12 @@ export function getAllCredits(
       usedPaths.add(fullPath);
     }
 
-    // Only include credits whose file path matches one of the used paths
-    for (const credit of meta.credits) {
+    // Only include credits whose file path matches one of the used paths. The
+    // most specific credit claims a path first, whatever order they are listed in.
+    const mostSpecificFirst = [...meta.credits].sort(
+      (a, b) => b.file.length - a.file.length,
+    );
+    for (const credit of mostSpecificFirst) {
       if (seenFiles.has(credit.file)) continue;
 
       const creditFile = credit.file;
@@ -68,6 +72,9 @@ export function getAllCredits(
       let lastUsedPath: string | null = null;
 
       for (const usedPath of usedPaths) {
+        // A path a more specific credit already claimed must not stop this one
+        // reaching the item's other layers.
+        if (seenFiles.has(usedPath)) continue;
         // Match if used path equals or starts with the credit file path
         // e.g., usedPath="eyes/human/adult/neutral" matches credit.file="eyes/human" or "eyes/human/adult"
         if (usedPath === creditFile || usedPath.startsWith(creditFile + "/")) {

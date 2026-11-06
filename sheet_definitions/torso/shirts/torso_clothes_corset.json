@@ -15,7 +15,7 @@
   "credits": [
     {
       "file": "torso/clothes/corset",
-      "notes": "original by Nila122, recolored by ElizaWy Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by Nila122, recolored by ElizaWy Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
       "authors": [
         "ElizaWy",
         "Nila122"
@@ -40,6 +40,7 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "emote"
   ]
 }
