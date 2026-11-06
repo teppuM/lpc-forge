@@ -62,6 +62,22 @@ import {
   customKeyToHex,
   isCustomColorKey,
 } from "./custom-color.ts";
+import { downloadZipBlob } from "../utils/zip-helpers.ts";
+import {
+  buildAnimationZip,
+  planAnimationExport,
+  DEFAULT_ANIMATION_EXPORT_OPTIONS,
+  type AnimationExportOptions,
+} from "./animation-export.ts";
+import {
+  addOnParents,
+  hasParentWorn,
+  isFittedToHead,
+  isHumanShapedHead,
+  isParentOf,
+  partLabel,
+  type WornPart,
+} from "./part-rules.ts";
 import {
   buildPartCategories,
   humanize,
@@ -141,6 +157,9 @@ type Ui = {
   tab: "character" | "colors" | "parts";
   drawer: "download" | "about" | "filters" | null;
   showUnfit: boolean;
+  animationOptions: AnimationExportOptions;
+  animationBusy: boolean;
+  animationNote: string;
   hairFallback: string;
   remembered: Record<string, string>;
   hovered: string | null;
@@ -240,6 +259,42 @@ function removeSlot(env: Env, key: string): void {
   if (ui.subject.kind === "slot" && ui.subject.key === key) {
     ui.subject = { kind: "group", group: "skin" };
   }
+  dropOrphanAddOns(env);
+}
+
+function wornParts({ catalog, state }: Env): WornPart[] {
+  return Object.values(state.selections).flatMap((selection) => {
+    const path = lite(catalog, selection.itemId)?.path;
+    return path ? [{ itemId: selection.itemId, path }] : [];
+  });
+}
+
+/** An add-on whose part has just gone goes with it. */
+function dropOrphanAddOns(env: Env): void {
+  const { state, ui } = env;
+  const worn = wornParts(env);
+  for (const [key, selection] of Object.entries(state.selections)) {
+    if (hasParentWorn(selection.itemId, worn)) continue;
+    delete state.selections[key];
+    ui.locks.delete(key);
+    if (ui.subject.kind === "slot" && ui.subject.key === key) {
+      ui.subject = { kind: "group", group: "skin" };
+    }
+  }
+}
+
+/** Head parts are drawn for human-shaped heads. With no head, nothing is at odds. */
+function fitsWornHead({ state }: Env, meta: ItemLite): boolean {
+  const head = state.selections.head?.itemId;
+  return !head || isHumanShapedHead(head) || !isFittedToHead(meta.path);
+}
+
+/** How many add-ons go on this worn part. */
+function addOnCount(env: Env, part: WornPart): number {
+  return (env.ui.categories ?? [])
+    .flatMap((category) => category.sections)
+    .flatMap((section) => section.itemIds)
+    .filter((itemId) => isParentOf(itemId, part)).length;
 }
 
 function isWorn(state: State, meta: ItemLite, itemId: string): boolean {
@@ -814,12 +869,20 @@ function slotRow(env: Env, key: string, selection: Selection) {
   const meta = lite(catalog, selection.itemId);
   if (!meta) return null;
   const fits = meta.required.includes(state.bodyType);
+  const fitsHead = fitsWornHead(env, meta);
+  const addOns = addOnCount(env, {
+    itemId: selection.itemId,
+    path: meta.path,
+  });
   const isActive = ui.subject.kind === "slot" && ui.subject.key === key;
   const material = meta.recolors[0]?.material;
   const color = selection.recolor;
   return m(
     "li.forge-slot",
-    { key, class: `${isActive ? "is-on" : ""} ${fits ? "" : "is-unfit"}` },
+    {
+      key,
+      class: `${isActive ? "is-on" : ""} ${fits && fitsHead ? "" : "is-unfit"}`,
+    },
     [
       m(
         "button.forge-slot-main",
@@ -833,12 +896,16 @@ function slotRow(env: Env, key: string, selection: Selection) {
         [
           partThumb(env, selection.itemId, meta),
           m("span.forge-slot-text", [
-            m("strong", meta.name),
+            m("strong", partLabel(meta.name)),
             m(
               "small",
-              fits
-                ? slotLabel(key)
-                : `${slotLabel(key)}: not drawn for this body`,
+              !fits
+                ? `${slotLabel(key)}: not drawn for this body`
+                : !fitsHead
+                  ? `${slotLabel(key)}: may not line up with this head`
+                  : addOns > 0
+                    ? `${slotLabel(key)}: ${addOns} add-on${addOns === 1 ? "" : "s"} in the parts list`
+                    : slotLabel(key),
             ),
           ]),
           material && color
@@ -1047,6 +1114,8 @@ function partsPanel(env: Env) {
     ? categories
     : categories.filter((category) => category.key === ui.category);
 
+  const wornNow = wornParts(env);
+  let hiddenByHead = 0;
   const announcedSlots = new Set<string>();
   const sectionViews = shown.flatMap((category) =>
     mainSlotFirst(catalog, category).flatMap((section) => {
@@ -1065,13 +1134,21 @@ function partsPanel(env: Env) {
             isItemLicenseCompatible(catalog, state, p.itemId) &&
             isItemAnimationCompatible(catalog, state, p.itemId) &&
             (ui.showUnfit || p.meta.required.includes(state.bodyType)) &&
+            (ui.showUnfit ||
+              query !== "" ||
+              hasParentWorn(p.itemId, wornNow)) &&
             matchesPartSearch(query, [
               p.meta.name,
               p.meta.type_name,
               section.label,
               category.label,
             ]),
-        );
+        )
+        .filter((p) => {
+          if (ui.showUnfit || fitsWornHead(env, p.meta)) return true;
+          hiddenByHead++;
+          return false;
+        });
       if (parts.length === 0) return [];
 
       const slots = [...new Set(parts.map((p) => p.meta.type_name))];
@@ -1199,10 +1276,14 @@ function partsPanel(env: Env) {
         : m(
             "p.forge-note",
             query
-              ? `No parts match "${query}" on this body. Try another word, or show parts for other bodies under Filters.`
-              : catalog.isLiteReady()
-                ? "No parts here for this body."
-                : "Loading parts…",
+              ? hiddenByHead > 0
+                ? `The parts matching "${query}" are drawn for human-shaped heads, so they would not line up with this one. Filters can show them anyway.`
+                : `No parts match "${query}" on this body. Try another word, or show parts for other bodies under Filters.`
+              : !catalog.isLiteReady()
+                ? "Loading parts…"
+                : hiddenByHead > 0
+                  ? "These parts are drawn for human-shaped heads, so they would not line up with this one. Filters can show them anyway."
+                  : "No parts here for this body.",
           ),
     ),
   ]);
@@ -1519,7 +1600,10 @@ function rightPanel(env: Env) {
 function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
   const { catalog, state, ui } = env;
   const worn = isWorn(state, meta, itemId);
-  const fits = meta.required.includes(state.bodyType);
+  const parents = addOnParents(itemId);
+  const parentWorn = hasParentWorn(itemId, wornParts(env));
+  const fits = meta.required.includes(state.bodyType) && parentWorn;
+  const fitsHead = fitsWornHead(env, meta);
   const occupant = state.selections[meta.type_name];
   const occupantName =
     occupant && !worn ? lite(catalog, occupant.itemId)?.name : null;
@@ -1531,7 +1615,13 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
     meta.name,
     worn ? "Worn now. Click to remove." : null,
     occupantName ? `Replaces ${occupantName}.` : null,
-    fits ? null : "Not drawn for this body.",
+    parentWorn
+      ? null
+      : `Goes on ${(parents ?? []).map((id) => (id === "helmet" ? "a helmet" : partLabel(lite(catalog, id)?.name ?? id))).join(" or ")}. Wear that first.`,
+    meta.required.includes(state.bodyType) ? null : "Not drawn for this body.",
+    fitsHead
+      ? null
+      : "Drawn for human-shaped heads. May not line up with this one.",
     lacksAnimation
       ? `Not drawn for ${humanize(state.selectedAnimation)}.`
       : null,
@@ -1543,7 +1633,7 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
     {
       key: itemId,
       "data-item": itemId,
-      class: `${worn ? "is-on" : ""} ${fits ? "" : "is-unfit"}`,
+      class: `${worn ? "is-on" : ""} ${fits && fitsHead ? "" : "is-unfit"}`,
       title: help,
       disabled: !fits,
       onclick: () => {
@@ -1551,7 +1641,10 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
         ui.tryOnTimer = null;
         ui.hovered = null;
         if (worn) removeSlot(env, meta.type_name);
-        else equip(env, state, itemId);
+        else {
+          equip(env, state, itemId);
+          dropOrphanAddOns(env);
+        }
       },
       onpointerenter: (e: PointerEvent) => {
         if (e.pointerType === "mouse" && fits && !worn) hoverPart(env, itemId);
@@ -1564,7 +1657,7 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
     },
     [
       partThumb(env, itemId, meta),
-      m("span.forge-tile-name", meta.name),
+      m("span.forge-tile-name", partLabel(meta.name)),
       showSlot ? m("small.forge-tile-slot", slotLabel(meta.type_name)) : null,
       lacksAnimation
         ? m(
@@ -1706,6 +1799,135 @@ async function sendToFoundry(env: Env) {
   }
 }
 
+async function saveAnimations(env: Env): Promise<void> {
+  const { catalog, state, ui } = env;
+  ui.animationBusy = true;
+  ui.animationNote = "";
+  m.redraw();
+  try {
+    const result = await buildAnimationZip(catalog, state, ui.animationOptions);
+    downloadZipBlob(result.blob, result.filename);
+    ui.animationNote = `Saved ${result.included.length} animation${result.included.length === 1 ? "" : "s"}.`;
+  } catch (error) {
+    console.error(error);
+    ui.animationNote = "The animations could not be built. Please try again.";
+  } finally {
+    ui.animationBusy = false;
+    m.redraw();
+  }
+}
+
+/** Ready-made animations, so nothing needs cutting out of a sheet afterwards. */
+function animationSection(env: Env) {
+  const { catalog, state, ui } = env;
+  const options = ui.animationOptions;
+  const plan = planAnimationExport(catalog, state, options.includeIncomplete);
+  const held = ui.hovered !== null || ui.tryOnTimer !== null || ui.renderBusy;
+  const nothingTicked =
+    !options.gifs && !options.strips && !options.frames && !options.token;
+  const absent = plan.missing.filter((row) => !row.included);
+  const toggle = (
+    key: "gifs" | "strips" | "frames" | "token" | "includeIncomplete",
+    label: string,
+  ) =>
+    m("label.forge-check", [
+      m("input[type=checkbox]", {
+        checked: options[key],
+        onchange: (e: Event) => {
+          options[key] = (e.target as HTMLInputElement).checked;
+        },
+      }),
+      label,
+    ]);
+  return [
+    m("h3.forge-heading", "Animations, ready to use"),
+    m(
+      "p.forge-note",
+      "One file per animation and facing, oversized weapon swings included, with the credits.",
+    ),
+    m("div.forge-animation-options", [
+      m("label.forge-check", [
+        "Size ",
+        m(
+          "select",
+          {
+            value: String(options.scale),
+            onchange: (e: Event) => {
+              options.scale = Number((e.target as HTMLSelectElement).value);
+            },
+          },
+          [1, 2, 3, 4, 6, 8].map((scale) =>
+            m("option", { value: String(scale) }, `${scale}x`),
+          ),
+        ),
+      ]),
+      m("label.forge-check", [
+        "Frames per second ",
+        m("input[type=number][min=1][max=30]", {
+          value: options.fps,
+          onchange: (e: Event) => {
+            const value = Number((e.target as HTMLInputElement).value);
+            options.fps = Math.min(30, Math.max(1, value || 8));
+          },
+        }),
+      ]),
+      toggle("gifs", "GIFs"),
+      toggle("strips", "Strips"),
+      toggle("frames", "Single frames"),
+      toggle("token", "Still token"),
+    ]),
+    m(
+      "div",
+      toggle(
+        "includeIncomplete",
+        "Also save animations a part is missing from",
+      ),
+    ),
+    m("div.forge-pills", [
+      m(
+        "button.forge-pill.is-primary",
+        {
+          disabled: ui.animationBusy || held || nothingTicked,
+          title: held
+            ? "Waiting for the character to finish drawing"
+            : nothingTicked
+              ? "Tick at least one kind of file"
+              : undefined,
+          onclick: () => void saveAnimations(env),
+        },
+        ui.animationBusy
+          ? "Saving animations (working…)"
+          : `Save ${plan.included.length} animation${plan.included.length === 1 ? "" : "s"}`,
+      ),
+    ]),
+    ui.animationNote ? m("p.forge-note", ui.animationNote) : null,
+    absent.length > 0
+      ? m("details.forge-missing", [
+          m(
+            "summary",
+            `${absent.length} animation${absent.length === 1 ? " is" : "s are"} left out because a worn part has no art for ${absent.length === 1 ? "it" : "them"}`,
+          ),
+          m(
+            "ul",
+            absent.map((row) =>
+              m(
+                "li",
+                { key: row.animation },
+                `${row.label}: no ${row.parts.join(", ")}`,
+              ),
+            ),
+          ),
+        ])
+      : null,
+    plan.partsNotDrawn.length > 0
+      ? m(
+          "p.forge-note",
+          `Not drawn for this body at all: ${plan.partsNotDrawn.join(", ")}.`,
+        )
+      : null,
+  ];
+}
+
 function downloadDrawer(env: Env) {
   const { state, models, catalog } = env;
   const download = models.createDownloadModel();
@@ -1749,6 +1971,7 @@ function downloadDrawer(env: Env) {
         download.zipIndividualFramesRunning,
       ),
     ]),
+    animationSection(env),
     m("h3.forge-heading", "Credits for this character"),
     m(
       "p.forge-note",
@@ -1845,12 +2068,12 @@ function filtersDrawer(env: Env) {
     ]);
   return [
     m("h2.forge-drawer-title", "Filters"),
-    m("h3.forge-heading", "Body"),
+    m("h3.forge-heading", "Body and head"),
     m(
       "div",
       checkbox(
         "unfit",
-        "Also show parts not drawn for this body, greyed out",
+        "Also show parts that do not fit this body or head, add-ons waiting for their part, greyed out",
         ui.showUnfit,
         (value) => {
           ui.showUnfit = value;
@@ -1991,6 +2214,9 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
       tab: "parts",
       drawer: null,
       showUnfit: false,
+      animationOptions: { ...DEFAULT_ANIMATION_EXPORT_OPTIONS, scale: 2 },
+      animationBusy: false,
+      animationNote: "",
       hairFallback: defaultHairColor(),
       remembered: {},
       hovered: null,
