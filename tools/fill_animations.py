@@ -10,9 +10,12 @@ A sheet is filled only when no layer of the part has it on that body, and only w
 With --idle it fills only the idle animation of parts worn on the body, matching whole-body poses instead of heads. Idle
 is the one pose close enough to the others for this to work; other animations of these parts do not pass the check.
 
-With --check it writes nothing. It takes complete parts, hides sheets, rebuilds them and scores them against the real art.
+With --check it writes nothing. It takes complete parts, hides sheets, rebuilds them and scores them against the real art,
+counting frames where the real part draws nothing but the rebuild does.
 
-usage: fill_animations.py <repo root> [--idle] [--apply] [--check]
+With --refresh it rebuilds every sheet already listed in the manifest, for when this method changes.
+
+usage: fill_animations.py <repo root> [--idle] [--apply] [--check] [--refresh]
 Without --apply or --check it only plans.
 """
 import collections
@@ -30,6 +33,7 @@ ROOT = sys.argv[1]
 APPLY = "--apply" in sys.argv
 CHECK = "--check" in sys.argv
 IDLE = "--idle" in sys.argv
+REFRESH = "--refresh" in sys.argv
 DEFS = os.path.join(ROOT, "sheet_definitions")
 ART = os.path.join(ROOT, "spritesheets")
 MANIFEST = os.path.join(ROOT, "tools", "filled-animations.csv")
@@ -47,17 +51,14 @@ FACINGS = "nwse"
 SCOPE = ("hair/", "head/", "headwear/")
 OUT_OF_SCOPE = ("headwear/neck/", "head/heads/")
 IDLE_SCOPE = ("torso/", "legs/", "feet/", "arms/", "body/")
-# Tails swing on their own, so a copied frame lands in front of the body.
-IDLE_OUT_OF_SCOPE = ("body/tails/", "body/body.json", "body/shadow.json", "body/wheelchair.json")
+IDLE_OUT_OF_SCOPE = ("body/body.json", "body/shadow.json", "body/wheelchair.json")
 HEADS = {"male": "head/heads/human/male/", "female": "head/heads/human/female/", "child": "head/heads/human/child/"}
 HEAD_OF_BODY = {"male": "male", "muscular": "male", "female": "female", "pregnant": "female", "teen": "female", "child": "child"}
 BODIES = list(HEAD_OF_BODY)
 BODY_GUIDES = {body: f"body/bodies/{body}/" for body in BODIES}
 NUDGE = 3  # Pixels searched around the shift that lines up the two heads' corners.
 WEAK_MATCH = 0.90  # A match below this is reported.
-# A layer can be empty in the frames that match best, because that layer has nothing to draw in that pose. Below this
-# match the frame stays empty rather than borrowing a pose that does not fit.
-MIN_MATCH = 0.85
+MIN_MATCH = 0.85  # Below this match a frame stays empty rather than borrowing a pose that does not fit.
 
 
 def load(path):
@@ -134,8 +135,17 @@ class HeadTable:
         return self.images[sheet].shape
 
 
-def rebuild(table, target, available):
-    """A new sheet for target from {sheet: frames}, plus the weakest head match used. None if it would be empty."""
+def has_art(frame):
+    return frame is not None and (frame[..., 3] > 0).any()
+
+
+def rebuild(table, target, available, layers=None):
+    """A new sheet for target from {sheet: frames}, plus the weakest match used. None if it would be empty.
+
+    The pose is chosen once per frame for the whole part, from layers, the {sheet: frames} of each of its layers. Parts
+    split into a front and a back layer draw each only in some poses, so a layer with nothing in the chosen pose stays
+    empty. Choosing per layer would bring a front layer's drawing into a frame where the part belongs behind the body.
+    """
     h, w, _ = table.size(target)
     out = np.zeros((h, w, 4), np.uint8)
     rows = h // 64
@@ -147,12 +157,13 @@ def rebuild(table, target, available):
             for score, _, source, other_key, dx, dy in table.table.get((target, key), []):
                 if score < MIN_MATCH:
                     break
-                frame = available.get(source, {}).get(other_key)
-                if frame is None or not (frame[..., 3] > 0).any():
+                if not any(has_art(layer.get(source, {}).get(other_key)) for layer in layers or [available]):
                     continue
-                out[r * 64:(r + 1) * 64, c * 64:(c + 1) * 64] = moved(frame, dx, dy)
+                frame = available.get(source, {}).get(other_key)
                 weakest = min(weakest, score)
-                drawn = True
+                if has_art(frame):
+                    out[r * 64:(r + 1) * 64, c * 64:(c + 1) * 64] = moved(frame, dx, dy)
+                    drawn = True
                 break
     return (out, weakest) if drawn else (None, weakest)
 
@@ -221,13 +232,14 @@ def definitions():
 def plan():
     """{(path, sheet): guide}, {path: definition}, and the sheets skipped because the body has no such animation."""
     wanted, owner, skipped = {}, {}, collections.Counter()
+    siblings = {}
     for _, rel, d in definitions():
         for body in BODIES:
             paths = layer_paths(d, body)
             if not paths:
                 continue
             for sheet in ["idle"] if IDLE else SHEETS:
-                # Parts fall over with the head in hurt, so a moved frame does not fit: 41% of frames pass the check.
+                # Parts fall over with the head in hurt, so a moved frame does not fit: 44% of frames pass the check.
                 if sheet == "hurt" or any(has_sheet(p, sheet) for p in paths):
                     continue
                 if not os.path.exists(os.path.join(ART, "body/bodies", body, sheet + ".png")):
@@ -236,7 +248,23 @@ def plan():
                 for p in paths:
                     wanted.setdefault((p, sheet), body if IDLE else HEAD_OF_BODY[body])
                     owner[p] = rel
-    return wanted, owner, skipped
+                    siblings[p] = paths
+    return wanted, owner, skipped, siblings
+
+
+def planned_again():
+    """The same shape as plan(), for every sheet already in the manifest."""
+    wanted, owner, siblings = {}, {}, {}
+    with open(MANIFEST, encoding="utf8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    for r in rows:
+        d = json.load(open(os.path.join(DEFS, r["part"]), encoding="utf8"))
+        body = next(b for b in BODIES if r["path"] in layer_paths(d, b))
+        guide = "head " + r["guide"] if r["part"].startswith(SCOPE) else r["guide"]
+        wanted[(r["path"], r["sheet"])] = guide
+        owner[r["path"]] = r["part"]
+        siblings[r["path"]] = layer_paths(d, body)
+    return wanted, owner, collections.Counter(), siblings
 
 
 def blank(frames):
@@ -250,18 +278,21 @@ def check(tables):
     for _, rel, d in definitions():
         for p in layer_paths(d, "male"):
             if colors_of(p) == [None] and all(has_sheet(p, s) for s in SHEETS):
-                parts.append((rel, p))
+                parts.append((rel, p, layer_paths(d, "male")))
     print("complete layers tested", len(parts))
     for name, (targets, sources) in cases.items():
         scores = collections.defaultdict(list)
+        extra = collections.Counter()
 
         def run(item):
-            _, p = item
+            _, p, paths = item
             sheets = read_sheets(p, None, SHEETS)
+            others = [read_sheets(q, colors_of(q)[0], SHEETS) for q in paths if q != p]
             out = []
             for t in targets:
-                use = {s: f for s, f in sheets.items() if s != t and (sources is None or s in sources)}
-                made, _ = rebuild(tables["male"], t, use)
+                keep = lambda frames: {s: f for s, f in frames.items() if s != t and (sources is None or s in sources)}
+                use = keep(sheets)
+                made, _ = rebuild(tables["male"], t, use, [use] + [keep(o) for o in others])
                 if made is None:
                     continue
                 for key, real in sheets[t].items():
@@ -270,6 +301,8 @@ def check(tables):
                     a, b = mine[..., 3] > 0, real[..., 3] > 0
                     if b.any():
                         out.append((t, np.count_nonzero(a & b) / np.count_nonzero(a | b)))
+                    elif a.any():
+                        extra[t] += 1
             return out
 
         with ThreadPool(6) as pool:
@@ -280,7 +313,7 @@ def check(tables):
         for t in targets:
             v = np.array(scores[t])
             if len(v):
-                print(f"  {t:12s} frames {len(v):6d} overlap {v.mean():.3f} at 0.9 or better {(v >= .9).mean():.0%}")
+                print(f"  {t:12s} frames {len(v):6d} overlap {v.mean():.3f} at 0.9 or better {(v >= .9).mean():.0%} drawn where the real part is empty {extra[t]}")
 
 
 def add_claims(definition, sheets):
@@ -293,7 +326,10 @@ def add_claims(definition, sheets):
 
 
 def main():
-    if IDLE:
+    if REFRESH:
+        tables = {name: HeadTable(folder, ["idle"]) for name, folder in BODY_GUIDES.items()}
+        tables.update({"head " + name: HeadTable(folder) for name, folder in HEADS.items()})
+    elif IDLE:
         tables = {name: HeadTable(folder, ["idle"]) for name, folder in BODY_GUIDES.items()}
     else:
         tables = {name: HeadTable(folder) for name, folder in HEADS.items()}
@@ -303,28 +339,38 @@ def main():
     if CHECK:
         check(tables)
         return
-    wanted, owner, skipped = plan()
+    wanted, owner, skipped, siblings = planned_again() if REFRESH else plan()
     print("sheets to fill (one per layer path)", len(wanted), "parts", len(set(owner.values())))
     print("by sheet", collections.Counter(s for _, s in wanted).most_common())
     print("skipped, body has no such animation", sum(skipped.values()), sorted({k for k in skipped}))
 
     written = collections.defaultdict(set)
-    report, empty = [], []
+    report, empty, changed = [], [], collections.Counter()
 
     def fill(item):
         (path, sheet), guide = item
         rows = []
         # Only the part's own art is a source, never a sheet this run writes.
-        sources = [s for s in SHEETS if (path, s) not in wanted]
+        sources = lambda q: [s for s in SHEETS if (q, s) not in wanted]
+        others = [read_sheets(q, colors_of(q)[0], sources(q)) for q in siblings[path] if q != path]
         for color in colors_of(path):
-            available = read_sheets(path, color, sources)
+            available = read_sheets(path, color, sources(path))
             if not available or blank({k: f for frames in available.values() for k, f in frames.items()}):
                 return rows, (path, sheet, color)
-            made, weakest = rebuild(tables[guide], sheet, available)
+            made, weakest = rebuild(tables[guide], sheet, available, [available] + others)
+            f = sheet_file(path, sheet, color)
             if made is None:
+                if REFRESH and os.path.exists(f):
+                    changed[("emptied", owner[path].rsplit("/", 1)[0])] += 1
+                    if APPLY:
+                        os.remove(f)
                 rows.append((path, sheet, color, None, None))
                 continue
-            f = sheet_file(path, sheet, color)
+            if REFRESH:
+                if os.path.exists(f) and np.array_equal(load(f), made):
+                    rows.append((path, sheet, color, guide, weakest))
+                    continue
+                changed[("changed", owner[path].rsplit("/", 1)[0])] += 1
             if APPLY:
                 os.makedirs(os.path.dirname(f), exist_ok=True)
                 Image.fromarray(made, "RGBA").save(f, optimize=True)
@@ -340,11 +386,19 @@ def main():
                     empty.append((path, sheet, color))
                     continue
                 written[owner[path]].add(sheet)
-                report.append({"part": owner[path], "path": path, "sheet": sheet, "color": color or "", "guide": guide, "weakest_match": weakest})
+                report.append({"part": owner[path], "path": path, "sheet": sheet, "color": color or "", "guide": guide.replace("head ", ""), "weakest_match": weakest})
     report.sort(key=lambda r: (r["part"], r["path"], r["sheet"], r["color"]))
     print("sheets written" if APPLY else "sheets planned", len(report), "| nothing to draw", len(empty), "| parts", len(written))
     print("below the weak-match line", sum(r["weakest_match"] < WEAK_MATCH for r in report))
+    if REFRESH:
+        print("sheets that come out differently", sum(changed.values()), sorted(changed.items(), key=lambda kv: -kv[1]))
     if not APPLY:
+        return
+    if REFRESH:
+        with open(MANIFEST, "w", encoding="utf8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=["part", "path", "sheet", "color", "guide", "weakest_match"], lineterminator="\n")
+            w.writeheader()
+            w.writerows(report)
         return
     for p, rel, d in definitions():
         sheets = written.get(rel)

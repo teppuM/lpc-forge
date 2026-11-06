@@ -21,7 +21,8 @@
     "walk",
     "slash",
     "shoot",
-    "hurt"
+    "hurt",
+    "idle"
   ],
   "match_body_color": true,
   "recolors": {
@@ -37,7 +38,7 @@
   "credits": [
     {
       "file": "chargen/tail/draketail/tail_fb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Nila122",
         "Stephen Challener (Redshrike)",
@@ -57,7 +58,7 @@
     },
     {
       "file": "chargen/tail/draketail/tail_ff",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Nila122",
         "Stephen Challener (Redshrike)",
@@ -77,7 +78,7 @@
     },
     {
       "file": "chargen/tail/draketail/tail_mb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Nila122",
         "Johannes SjÃ¶lund (wulax)",
@@ -95,7 +96,7 @@
     },
     {
       "file": "chargen/tail/draketail/tail_mf",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
       "authors": [
         "Nila122",
         "Johannes SjÃ¶lund (wulax)",
