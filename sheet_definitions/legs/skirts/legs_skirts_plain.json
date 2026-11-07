@@ -18,12 +18,18 @@
     "climb",
     "idle",
     "sit",
-    "emote"
+    "emote",
+    "jump",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "legs/skirts/plain",
-      "notes": "original by wulax, edited for female base by pvigier, edited for v3 base by bluecarrot16, idle & sit by Ahmad3366, color reduced & female sit/emote by JaidynReiman",
+      "notes": "original by wulax, edited for female base by pvigier, edited for v3 base by bluecarrot16, idle & sit by Ahmad3366, color reduced & female sit/emote by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: jump, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "Pierre Vigier (pvigier)",
@@ -48,5 +54,12 @@
       "all.lpcr"
     ]
   },
-  "type_name": "legs"
+  "type_name": "legs",
+  "unchecked_animations": [
+    "jump",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

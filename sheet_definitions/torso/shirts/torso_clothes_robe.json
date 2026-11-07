@@ -25,7 +25,7 @@
   "credits": [
     {
       "file": "torso/clothes/robe",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: thrust, shoot, climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Luke Mehl"
       ],
@@ -47,6 +47,27 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
+  ],
+  "unchecked_animations": [
+    "thrust",
+    "shoot",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

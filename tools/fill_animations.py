@@ -402,6 +402,12 @@ def main():
     wanted, owner, skipped, siblings = planned_again() if REFRESH else plan()
     with open(MANIFEST, encoding="utf8", newline="") as f:
         rebuilt = {(r["path"], r["sheet"]) for r in csv.DictReader(f)}
+    # A sheet another tool wrote is never a source either.
+    for other in ("filled-twins.csv", "filled-from-body.csv"):
+        path = os.path.join(ROOT, "tools", other)
+        if os.path.exists(path):
+            with open(path, encoding="utf8", newline="") as f:
+                rebuilt |= {(r["path"], r["sheet"]) for r in csv.DictReader(f)}
     print("sheets to fill (one per layer path)", len(wanted), "parts", len(set(owner.values())))
     print("by sheet", collections.Counter(s for _, s in wanted).most_common())
     print("skipped, body has no such animation", sum(skipped.values()), sorted({k for k in skipped}))
@@ -483,4 +489,5 @@ def main():
         w.writerows(sorted(earlier + report, key=lambda r: (r["part"], r["path"], r["sheet"], r["color"])))
 
 
-main()
+if __name__ == "__main__":
+    main()

@@ -17,3 +17,4 @@ computed-style-diff-output/
 /.nyc_output/
 /.claude/skills/*
 !/.claude/skills/README.md
+__pycache__/

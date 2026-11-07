@@ -32,12 +32,21 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "dress/kimono/sleeves",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "JaidynReiman",
         "Stephen Challener (Redshrike)",
@@ -53,5 +62,15 @@
       ]
     }
   ],
-  "type_name": "dress_sleeves_trim"
+  "type_name": "dress_sleeves_trim",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

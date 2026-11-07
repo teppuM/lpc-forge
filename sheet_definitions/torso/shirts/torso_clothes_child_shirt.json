@@ -16,12 +16,15 @@
   },
   "animations": [
     "walk",
-    "idle"
+    "idle",
+    "slash",
+    "jump",
+    "sit"
   ],
   "credits": [
     {
       "file": "torso/clothes/shirt/child",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: slash, jump, sit.",
       "authors": [
         "Nila122"
       ],
@@ -35,5 +38,10 @@
       ]
     }
   ],
-  "type_name": "clothes"
+  "type_name": "clothes",
+  "unchecked_animations": [
+    "slash",
+    "jump",
+    "sit"
+  ]
 }

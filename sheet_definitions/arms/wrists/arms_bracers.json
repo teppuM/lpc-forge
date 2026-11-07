@@ -21,12 +21,16 @@
     "jump",
     "sit",
     "emote",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "arms/bracers",
-      "notes": "original by wulax, adjustments by Makrohn, climb/emote/jump/sit/run by JaidynReiman",
+      "notes": "original by wulax, adjustments by Makrohn, climb/emote/jump/sit/run by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Matthew Krohn (makrohn)",
         "Johannes Sjölund (wulax)",
@@ -51,5 +55,10 @@
       "all.lpcr"
     ]
   },
-  "type_name": "bracers"
+  "type_name": "bracers",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

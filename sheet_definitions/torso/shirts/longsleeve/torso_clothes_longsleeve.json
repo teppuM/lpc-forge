@@ -29,7 +29,7 @@
   "credits": [
     {
       "file": "torso/clothes/longsleeve/longsleeve/male",
-      "notes": "original by wulax; tweaks and further recolors by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by wulax; tweaks and further recolors by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "JaidynReiman",
         "Johannes Sjölund (wulax)"
@@ -50,7 +50,7 @@
     },
     {
       "file": "torso/clothes/longsleeve/longsleeve/female",
-      "notes": "original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -74,7 +74,7 @@
     },
     {
       "file": "torso/clothes/longsleeve/longsleeve/teen",
-      "notes": "body by Redshrike, shirt by ElizaWy derived from base, edited by bluecarrot16 to v3 bases; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "body by Redshrike, shirt by ElizaWy derived from base, edited by bluecarrot16 to v3 bases; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -98,7 +98,7 @@
     },
     {
       "file": "torso/clothes/longsleeve/longsleeve/pregnant",
-      "notes": "original by ElizaWy, edited to pregnant v3 bases by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by ElizaWy, edited to pregnant v3 bases by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -126,5 +126,15 @@
       "all.lpcr"
     ]
   },
-  "type_name": "clothes"
+  "type_name": "clothes",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

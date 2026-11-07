@@ -1,0 +1,1400 @@
+part,path,sheet,color,body,method
+arms/arms_armour.json,arms/armour/plate/male/,backslash,,male,map
+arms/arms_armour.json,arms/armour/plate/male/,combat_idle,,male,map
+arms/arms_armour.json,arms/armour/plate/male/,halfslash,,male,map
+arms/arms_armour.json,arms/armour/plate/male/,run,,male,map
+arms/arms_armour.json,arms/armour/plate/thin/,backslash,,female,map
+arms/arms_armour.json,arms/armour/plate/thin/,combat_idle,,female,map
+arms/arms_armour.json,arms/armour/plate/thin/,halfslash,,female,map
+arms/arms_armour.json,arms/armour/plate/thin/,run,,female,map
+arms/arms_hands_ring_stud.json,arms/hands/ring/stud/male/,backslash,,male,map
+arms/arms_hands_ring_stud.json,arms/hands/ring/stud/male/,combat_idle,,male,map
+arms/arms_hands_ring_stud.json,arms/hands/ring/stud/male/,halfslash,,male,map
+arms/arms_hands_ring_stud.json,arms/hands/ring/stud/thin/,backslash,,female,map
+arms/arms_hands_ring_stud.json,arms/hands/ring/stud/thin/,combat_idle,,female,map
+arms/arms_hands_ring_stud.json,arms/hands/ring/stud/thin/,halfslash,,female,map
+arms/bauldron.json,shoulders/bauldron/male/,backslash,,male,map
+arms/bauldron.json,shoulders/bauldron/male/,combat_idle,,male,map
+arms/bauldron.json,shoulders/bauldron/male/,halfslash,,male,map
+arms/bauldron.json,shoulders/bauldron/thin/,backslash,,female,map
+arms/bauldron.json,shoulders/bauldron/thin/,combat_idle,,female,map
+arms/bauldron.json,shoulders/bauldron/thin/,halfslash,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,backslash,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,climb,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,combat_idle,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,emote,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,halfslash,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,jump,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,run,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/female/,sit,,female,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,backslash,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,climb,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,combat_idle,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,emote,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,halfslash,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,jump,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,run,,male,map
+arms/shoulders/shoulders_legion.json,shoulders/legion/male/,sit,,male,map
+arms/shoulders/shoulders_mantal.json,shoulders/mantal/male/,backslash,,male,map
+arms/shoulders/shoulders_mantal.json,shoulders/mantal/male/,combat_idle,,male,map
+arms/shoulders/shoulders_mantal.json,shoulders/mantal/male/,halfslash,,male,map
+arms/shoulders/shoulders_mantal.json,shoulders/mantal/thin/,backslash,,female,map
+arms/shoulders/shoulders_mantal.json,shoulders/mantal/thin/,combat_idle,,female,map
+arms/shoulders/shoulders_mantal.json,shoulders/mantal/thin/,halfslash,,female,map
+arms/wrists/arms_bracers.json,arms/bracers/male/,backslash,,male,map
+arms/wrists/arms_bracers.json,arms/bracers/male/,combat_idle,,male,map
+arms/wrists/arms_bracers.json,arms/bracers/male/,halfslash,,male,map
+arms/wrists/arms_bracers.json,arms/bracers/thin/,backslash,,female,map
+arms/wrists/arms_bracers.json,arms/bracers/thin/,combat_idle,,female,map
+arms/wrists/arms_bracers.json,arms/bracers/thin/,halfslash,,female,map
+arms/wrists/wrists_cuffs.json,arms/wrists/cuffs/male/,backslash,,male,map
+arms/wrists/wrists_cuffs.json,arms/wrists/cuffs/male/,combat_idle,,male,map
+arms/wrists/wrists_cuffs.json,arms/wrists/cuffs/male/,halfslash,,male,map
+arms/wrists/wrists_cuffs.json,arms/wrists/cuffs/thin/,backslash,,female,map
+arms/wrists/wrists_cuffs.json,arms/wrists/cuffs/thin/,combat_idle,,female,map
+arms/wrists/wrists_cuffs.json,arms/wrists/cuffs/thin/,halfslash,,female,map
+arms/wrists/wrists_cuffs_lace.json,arms/wrists/lace/male/,backslash,,male,map
+arms/wrists/wrists_cuffs_lace.json,arms/wrists/lace/male/,combat_idle,,male,map
+arms/wrists/wrists_cuffs_lace.json,arms/wrists/lace/male/,halfslash,,male,map
+arms/wrists/wrists_cuffs_lace.json,arms/wrists/lace/thin/,backslash,,female,map
+arms/wrists/wrists_cuffs_lace.json,arms/wrists/lace/thin/,combat_idle,,female,map
+arms/wrists/wrists_cuffs_lace.json,arms/wrists/lace/thin/,halfslash,,female,map
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,backslash,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,climb,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,combat_idle,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,emote,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,halfslash,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,jump,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,run,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/,sit,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,backslash,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,climb,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,combat_idle,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,emote,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,halfslash,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,jump,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,run,,male,map and hem
+body/prostheses/chargen_add3_pirate.json,chargen/add3/pirate/pirate_m/mask/,sit,,male,map and hem
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,backslash,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,climb,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,combat_idle,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,halfslash,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,jump,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,run,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/,sit,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,backslash,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,climb,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,combat_idle,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,halfslash,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,jump,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,run,,male,map
+body/prostheses/prosthesis_hook.json,body/prosthesis/hook/male/mask/,sit,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,backslash,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,climb,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,combat_idle,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,halfslash,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,jump,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,run,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/,sit,,male,map
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,backslash,,male,map and hem
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,climb,,male,map and hem
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,combat_idle,,male,map and hem
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,halfslash,,male,map and hem
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,jump,,male,map and hem
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,run,,male,map and hem
+body/prostheses/prosthesis_peg_leg.json,body/prosthesis/peg_leg/male/mask/,sit,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,backslash,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,climb,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,combat_idle,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,emote,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,halfslash,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,jump,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,run,,male,map and hem
+body/special/body_skeleton.json,body/bodies/skeleton/,sit,,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,backslash,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,climb,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,combat_idle,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,emote,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,halfslash,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,jump,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,run,zombie,male,map and hem
+body/special/body_zombie.json,body/bodies/zombie/,sit,zombie,male,map and hem
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,backslash,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,combat_idle,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,emote,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,halfslash,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,jump,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,run,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_fb/,sit,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,backslash,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,climb,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,combat_idle,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,emote,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,halfslash,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,jump,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,run,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_ff/,sit,,female,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,backslash,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,combat_idle,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,emote,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,halfslash,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,jump,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,run,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mb/,sit,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,backslash,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,climb,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,combat_idle,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,emote,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,halfslash,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,jump,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,run,,male,head
+body/tails/chargen_tail_draketail.json,chargen/tail/draketail/tail_mf/,sit,,male,head
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,backslash,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,combat_idle,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,emote,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,halfslash,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,jump,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,run,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_f1/,sit,default,female,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,backslash,default,male,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,combat_idle,default,male,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,emote,default,male,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,halfslash,default,male,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,jump,default,male,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,run,default,male,map
+body/wounds/chargen_add1_bloodyface.json,chargen/add1/bloodyface/bloodyface_m1/,sit,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,backslash,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,climb,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,combat_idle,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,emote,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,halfslash,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,jump,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,run,default,male,map
+body/wounds/chargen_add2_bloodytorso.json,chargen/add2/bloodytorso/bloodytorso_m/,sit,default,male,map
+body/wounds/wound_arm.json,body/wound/arm/,backslash,,male,map
+body/wounds/wound_arm.json,body/wound/arm/,combat_idle,,male,map
+body/wounds/wound_arm.json,body/wound/arm/,halfslash,,male,map
+body/wounds/wound_ribs.json,body/wound/ribs/,backslash,,male,map
+body/wounds/wound_ribs.json,body/wound/ribs/,combat_idle,,male,map
+body/wounds/wound_ribs.json,body/wound/ribs/,halfslash,,male,map
+feet/feet_armour.json,feet/armour/plate/male/,backslash,,male,map and hem
+feet/feet_armour.json,feet/armour/plate/male/,combat_idle,,male,map and hem
+feet/feet_armour.json,feet/armour/plate/male/,halfslash,,male,map and hem
+feet/feet_armour.json,feet/armour/plate/thin/,backslash,,female,map and hem
+feet/feet_armour.json,feet/armour/plate/thin/,combat_idle,,female,map and hem
+feet/feet_armour.json,feet/armour/plate/thin/,halfslash,,female,map and hem
+feet/feet_hoofs.json,feet/hoofs/male/,backslash,,male,map and hem
+feet/feet_hoofs.json,feet/hoofs/male/,combat_idle,,male,map and hem
+feet/feet_hoofs.json,feet/hoofs/male/,halfslash,,male,map and hem
+feet/feet_hoofs.json,feet/hoofs/male/,run,,male,map and hem
+feet/feet_hoofs.json,feet/hoofs/thin/,backslash,,female,map and hem
+feet/feet_hoofs.json,feet/hoofs/thin/,combat_idle,,female,map and hem
+feet/feet_hoofs.json,feet/hoofs/thin/,halfslash,,female,map and hem
+feet/feet_hoofs.json,feet/hoofs/thin/,run,,female,map and hem
+legs/legs_armour.json,legs/armour/plate/male/,backslash,,male,map
+legs/legs_armour.json,legs/armour/plate/male/,combat_idle,,male,map
+legs/legs_armour.json,legs/armour/plate/male/,halfslash,,male,map
+legs/legs_armour.json,legs/armour/plate/male/,run,,male,map
+legs/legs_armour.json,legs/armour/plate/thin/,backslash,,female,map
+legs/legs_armour.json,legs/armour/plate/thin/,combat_idle,,female,map
+legs/legs_armour.json,legs/armour/plate/thin/,halfslash,,female,map
+legs/legs_armour.json,legs/armour/plate/thin/,run,,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,backslash,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,climb,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,combat_idle,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,emote,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,halfslash,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,jump,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,run,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_f1/,sit,default,female,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,backslash,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,climb,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,combat_idle,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,emote,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,halfslash,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,jump,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,run,default,male,map
+legs/pants/chargen_pants_legion.json,chargen/pants/legion/skirt_m1/,sit,default,male,map
+legs/pants/legs_childpants.json,legs/pants/child/,jump,,child,map
+legs/pants/legs_childpants.json,legs/pants/child/,sit,,child,map
+legs/pants/legs_childpants.json,legs/pants/child/,slash,,child,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,backslash,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,climb,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,combat_idle,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,emote,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,halfslash,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,jump,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,run,,pregnant,map
+legs/pants/legs_pregnantpants.json,legs/pants/pregnant/,sit,,pregnant,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,black,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,blue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,darkblue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,green,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,lavender,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,lightblue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,maroon,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,pink,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,red,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,jump,white,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,black,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,blue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,darkblue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,green,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,lavender,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,lightblue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,maroon,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,pink,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,red,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,sit,white,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,black,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,blue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,darkblue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,green,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,lavender,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,lightblue,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,maroon,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,pink,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,red,child,map
+legs/skirts/legs_childskirts.json,legs/skirts/child/,slash,white,child,map
+legs/skirts/legs_skirt_belle.json,legs/skirts/belle/thin/,backslash,,female,map and hem
+legs/skirts/legs_skirt_belle.json,legs/skirts/belle/thin/,combat_idle,,female,map and hem
+legs/skirts/legs_skirt_belle.json,legs/skirts/belle/thin/,halfslash,,female,map and hem
+legs/skirts/legs_skirt_belle.json,legs/skirts/belle/thin/,jump,,female,map and hem
+legs/skirts/legs_skirt_belle.json,legs/skirts/belle/thin/,run,,female,map and hem
+legs/skirts/legs_skirt_belle.json,legs/skirts/belle/thin/,sit,,female,map and hem
+legs/skirts/legs_skirt_overskirt.json,legs/skirts/overskirt/thin/,backslash,,female,map and hem
+legs/skirts/legs_skirt_overskirt.json,legs/skirts/overskirt/thin/,combat_idle,,female,map and hem
+legs/skirts/legs_skirt_overskirt.json,legs/skirts/overskirt/thin/,halfslash,,female,map and hem
+legs/skirts/legs_skirt_overskirt.json,legs/skirts/overskirt/thin/,jump,,female,map and hem
+legs/skirts/legs_skirt_overskirt.json,legs/skirts/overskirt/thin/,run,,female,map and hem
+legs/skirts/legs_skirt_overskirt.json,legs/skirts/overskirt/thin/,sit,,female,map and hem
+legs/skirts/legs_skirt_straight.json,legs/skirts/straight/thin/,backslash,,female,map and hem
+legs/skirts/legs_skirt_straight.json,legs/skirts/straight/thin/,combat_idle,,female,map and hem
+legs/skirts/legs_skirt_straight.json,legs/skirts/straight/thin/,halfslash,,female,map and hem
+legs/skirts/legs_skirt_straight.json,legs/skirts/straight/thin/,jump,,female,map and hem
+legs/skirts/legs_skirt_straight.json,legs/skirts/straight/thin/,run,,female,map and hem
+legs/skirts/legs_skirt_straight.json,legs/skirts/straight/thin/,sit,,female,map and hem
+legs/skirts/legs_skirts_legion.json,legs/skirts/legion/male/,backslash,,male,map
+legs/skirts/legs_skirts_legion.json,legs/skirts/legion/male/,combat_idle,,male,map
+legs/skirts/legs_skirts_legion.json,legs/skirts/legion/male/,halfslash,,male,map
+legs/skirts/legs_skirts_legion.json,legs/skirts/legion/thin/,backslash,,female,map
+legs/skirts/legs_skirts_legion.json,legs/skirts/legion/thin/,combat_idle,,female,map
+legs/skirts/legs_skirts_legion.json,legs/skirts/legion/thin/,halfslash,,female,map
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/male/,backslash,,male,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/male/,combat_idle,,male,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/male/,halfslash,,male,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/male/,jump,,male,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/male/,run,,male,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/thin/,backslash,,female,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/thin/,combat_idle,,female,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/thin/,halfslash,,female,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/thin/,jump,,female,map and hem
+legs/skirts/legs_skirts_plain.json,legs/skirts/plain/thin/,run,,female,map and hem
+legs/skirts/legs_skirts_slit.json,legs/skirts/slit/thin/,backslash,,male,map and hem
+legs/skirts/legs_skirts_slit.json,legs/skirts/slit/thin/,combat_idle,,male,map and hem
+legs/skirts/legs_skirts_slit.json,legs/skirts/slit/thin/,halfslash,,male,map and hem
+legs/skirts/legs_skirts_slit.json,legs/skirts/slit/thin/,jump,,male,map and hem
+legs/skirts/legs_skirts_slit.json,legs/skirts/slit/thin/,run,,male,map and hem
+legs/skirts/legs_skirts_slit.json,legs/skirts/slit/thin/,sit,,male,map and hem
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,backslash,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,climb,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,combat_idle,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,halfslash,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,jump,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,run,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/female/,sit,,female,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,backslash,,male,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,climb,,male,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,combat_idle,,male,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,halfslash,,male,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,jump,,male,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,run,,male,map
+torso/aprons/torso_aprons_apron.json,torso/aprons/apron/male/,sit,,male,map
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,backslash,,female,map and hem
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,climb,,female,map and hem
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,combat_idle,,female,map and hem
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,halfslash,,female,map and hem
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,jump,,female,map and hem
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,run,,female,map and hem
+torso/aprons/torso_aprons_apron_full.json,torso/aprons/apron_full/female/,sit,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,backslash,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,climb,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,combat_idle,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,halfslash,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,jump,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,run,,female,map and hem
+torso/aprons/torso_aprons_apron_half.json,torso/aprons/apron_half/female/,sit,,female,map and hem
+torso/armour/torso_armour_leather.json,torso/armour/leather/female/,backslash,,female,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/female/,combat_idle,,female,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/female/,halfslash,,female,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/male/,backslash,,male,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/male/,combat_idle,,male,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/male/,halfslash,,male,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/teen/,backslash,,teen,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/teen/,combat_idle,,teen,map
+torso/armour/torso_armour_leather.json,torso/armour/leather/teen/,halfslash,,teen,map
+torso/cape/cape_solid.json,cape/solid/bg/,backslash,,male,head
+torso/cape/cape_solid.json,cape/solid/bg/,combat_idle,,male,head
+torso/cape/cape_solid.json,cape/solid/bg/,halfslash,,male,head
+torso/cape/cape_solid.json,cape/solid/bg/,jump,,male,head
+torso/cape/cape_solid.json,cape/solid/bg/,run,,male,head
+torso/cape/cape_solid.json,cape/solid/bg/,sit,,male,head
+torso/cape/cape_solid.json,cape/solid/fg/,backslash,,male,head
+torso/cape/cape_solid.json,cape/solid/fg/,combat_idle,,male,head
+torso/cape/cape_solid.json,cape/solid/fg/,halfslash,,male,head
+torso/cape/cape_solid.json,cape/solid/fg/,jump,,male,head
+torso/cape/cape_solid.json,cape/solid/fg/,run,,male,head
+torso/cape/cape_solid.json,cape/solid/fg/,sit,,male,head
+torso/cape/cape_tattered.json,cape/tattered/bg/,backslash,,male,head
+torso/cape/cape_tattered.json,cape/tattered/bg/,combat_idle,,male,head
+torso/cape/cape_tattered.json,cape/tattered/bg/,halfslash,,male,head
+torso/cape/cape_tattered.json,cape/tattered/bg/,jump,,male,head
+torso/cape/cape_tattered.json,cape/tattered/bg/,run,,male,head
+torso/cape/cape_tattered.json,cape/tattered/bg/,sit,,male,head
+torso/cape/cape_tattered.json,cape/tattered/fg/,backslash,,male,head
+torso/cape/cape_tattered.json,cape/tattered/fg/,combat_idle,,male,head
+torso/cape/cape_tattered.json,cape/tattered/fg/,halfslash,,male,head
+torso/cape/cape_tattered.json,cape/tattered/fg/,jump,,male,head
+torso/cape/cape_tattered.json,cape/tattered/fg/,run,,male,head
+torso/cape/cape_tattered.json,cape/tattered/fg/,sit,,male,head
+torso/cape/cape_trim.json,cape/trim/,backslash,,male,head
+torso/cape/cape_trim.json,cape/trim/,combat_idle,,male,head
+torso/cape/cape_trim.json,cape/trim/,halfslash,,male,head
+torso/cape/cape_trim.json,cape/trim/,jump,,male,head
+torso/cape/cape_trim.json,cape/trim/,run,,male,head
+torso/cape/cape_trim.json,cape/trim/,sit,,male,head
+torso/dresses/dress_bodice.json,dress/bodice/female/,backslash,,female,map
+torso/dresses/dress_bodice.json,dress/bodice/female/,climb,,female,map
+torso/dresses/dress_bodice.json,dress/bodice/female/,combat_idle,,female,map
+torso/dresses/dress_bodice.json,dress/bodice/female/,halfslash,,female,map
+torso/dresses/dress_bodice.json,dress/bodice/female/,jump,,female,map
+torso/dresses/dress_bodice.json,dress/bodice/female/,run,,female,map
+torso/dresses/dress_bodice.json,dress/bodice/female/,sit,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,backslash,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,climb,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,combat_idle,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,emote,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,halfslash,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,jump,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,run,,female,map
+torso/dresses/dress_sash.json,dress/sash/female/,sit,,female,map
+torso/dresses/dress_slit.json,dress/slit/female/,backslash,,female,map and hem
+torso/dresses/dress_slit.json,dress/slit/female/,climb,,female,map and hem
+torso/dresses/dress_slit.json,dress/slit/female/,combat_idle,,female,map and hem
+torso/dresses/dress_slit.json,dress/slit/female/,halfslash,,female,map and hem
+torso/dresses/dress_slit.json,dress/slit/female/,jump,,female,map and hem
+torso/dresses/dress_slit.json,dress/slit/female/,run,,female,map and hem
+torso/dresses/dress_slit.json,dress/slit/female/,sit,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,backslash,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,climb,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,combat_idle,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,halfslash,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,jump,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,run,,female,map and hem
+torso/dresses/kimono/dress_kimono.json,dress/kimono/normal/universal/female/,sit,,female,map and hem
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,climb,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,combat_idle,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,emote,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,jump,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,run,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female/,sit,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,combat_idle,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,emote,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,jump,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,run,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve.json,dress/kimono/sleeves/universal/female_front/,sit,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,climb,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,combat_idle,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,emote,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,jump,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,run,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female/,sit,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female_front/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female_front/,emote,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female_front/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female_front/,jump,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female_front/,run,,female,map
+torso/dresses/kimono/dress_kimono_longsleeve_trim.json,dress/kimono/sleeves/trim/universal/female_front/,sit,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,climb,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,combat_idle,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,emote,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,jump,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,run,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female/,sit,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,combat_idle,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,emote,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,jump,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,run,,female,map
+torso/dresses/kimono/dress_kimono_oversize.json,dress/kimono/sleeves_oversize/universal/female_front/,sit,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,climb,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,combat_idle,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,emote,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,jump,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,run,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female/,sit,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female_front/,backslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female_front/,emote,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female_front/,halfslash,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female_front/,jump,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female_front/,run,,female,map
+torso/dresses/kimono/dress_kimono_oversize_trim.json,dress/kimono/sleeves_oversize/trim/universal/female_front/,sit,,female,map
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,backslash,,female,map and hem
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,climb,,female,map and hem
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,combat_idle,,female,map and hem
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,halfslash,,female,map and hem
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,jump,,female,map and hem
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,run,,female,map and hem
+torso/dresses/kimono/dress_kimono_split.json,dress/kimono/split/universal/female/,sit,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,backslash,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,climb,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,combat_idle,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,halfslash,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,jump,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,run,,female,map and hem
+torso/dresses/kimono/dress_kimono_split_trim.json,dress/kimono/split/trim/universal/female/,sit,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,backslash,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,climb,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,combat_idle,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,halfslash,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,jump,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,run,,female,map and hem
+torso/dresses/kimono/dress_kimono_trim.json,dress/kimono/normal/trim/universal/female/,sit,,female,map and hem
+torso/jacket/accessory/torso_jacket_frock_buttons.json,torso/jacket/trim/frock_buttons/,backslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_buttons.json,torso/jacket/trim/frock_buttons/,combat_idle,,male,map
+torso/jacket/accessory/torso_jacket_frock_buttons.json,torso/jacket/trim/frock_buttons/,halfslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_buttons.json,torso/jacket/trim/frock_buttons/,jump,,male,map
+torso/jacket/accessory/torso_jacket_frock_buttons.json,torso/jacket/trim/frock_buttons/,run,,male,map
+torso/jacket/accessory/torso_jacket_frock_buttons.json,torso/jacket/trim/frock_buttons/,sit,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,backslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,climb,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,combat_idle,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,halfslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,jump,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,run,,male,map
+torso/jacket/accessory/torso_jacket_frock_collar.json,torso/jacket/trim/frock_collar/,sit,,male,map
+torso/jacket/accessory/torso_jacket_frock_lace.json,torso/jacket/trim/frock_lace/,backslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_lace.json,torso/jacket/trim/frock_lace/,combat_idle,,male,map
+torso/jacket/accessory/torso_jacket_frock_lace.json,torso/jacket/trim/frock_lace/,halfslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_lace.json,torso/jacket/trim/frock_lace/,jump,,male,map
+torso/jacket/accessory/torso_jacket_frock_lace.json,torso/jacket/trim/frock_lace/,run,,male,map
+torso/jacket/accessory/torso_jacket_frock_lace.json,torso/jacket/trim/frock_lace/,sit,,male,map
+torso/jacket/accessory/torso_jacket_frock_lapel.json,torso/jacket/trim/frock_lapel/,backslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_lapel.json,torso/jacket/trim/frock_lapel/,combat_idle,,male,map
+torso/jacket/accessory/torso_jacket_frock_lapel.json,torso/jacket/trim/frock_lapel/,halfslash,,male,map
+torso/jacket/accessory/torso_jacket_frock_lapel.json,torso/jacket/trim/frock_lapel/,jump,,male,map
+torso/jacket/accessory/torso_jacket_frock_lapel.json,torso/jacket/trim/frock_lapel/,run,,male,map
+torso/jacket/accessory/torso_jacket_frock_lapel.json,torso/jacket/trim/frock_lapel/,sit,,male,map
+torso/jacket/accessory/torso_jacket_pockets.json,torso/jacket/trim/jacket_pockets/,backslash,,male,map
+torso/jacket/accessory/torso_jacket_pockets.json,torso/jacket/trim/jacket_pockets/,combat_idle,,male,map
+torso/jacket/accessory/torso_jacket_pockets.json,torso/jacket/trim/jacket_pockets/,halfslash,,male,map
+torso/jacket/accessory/torso_jacket_pockets.json,torso/jacket/trim/jacket_pockets/,jump,,male,map
+torso/jacket/accessory/torso_jacket_pockets.json,torso/jacket/trim/jacket_pockets/,run,,male,map
+torso/jacket/accessory/torso_jacket_pockets.json,torso/jacket/trim/jacket_pockets/,sit,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,backslash,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,climb,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,combat_idle,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,emote,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,halfslash,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,jump,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,run,,male,map
+torso/jacket/chargen_jacket_collared6.json,chargen/jacket/collared6/collared6_m1/,sit,,male,map
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,backslash,,female,map and hem
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,climb,,female,map and hem
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,combat_idle,,female,map and hem
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,halfslash,,female,map and hem
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,jump,,female,map and hem
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,run,,female,map and hem
+torso/jacket/chargen_jacket_skirt3.json,chargen/jacket/skirt3/dress_f1/,sit,,female,map and hem
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,backslash,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,climb,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,combat_idle,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,emote,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,halfslash,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,jump,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,run,yellow,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,black,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,blue,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,bluegray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,brown,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,brown_striped,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,charcoal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,forest,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,gray,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,green,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,lavender,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,leather,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,maroon,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,navy,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,orange,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,pink,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,purple,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,red,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,rose,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,sky,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,slate,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,tan,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,teal,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,walnut,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,white,male,map
+torso/jacket/torso_jacket_collared.json,torso/jacket/collared/male/,sit,yellow,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,backslash,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,climb,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,combat_idle,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,emote,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,halfslash,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,jump,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,run,,male,map
+torso/jacket/torso_jacket_frock.json,torso/jacket/frock/male/,sit,,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,backslash,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,climb,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,combat_idle,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,emote,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,halfslash,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,jump,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,run,black,male,map
+torso/jacket/torso_jacket_iverness.json,torso/jacket/iverness/male/,sit,black,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,backslash,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,climb,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,combat_idle,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,emote,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,halfslash,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,jump,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,run,,male,map
+torso/jacket/torso_jacket_santa.json,torso/jacket/santa/male/,sit,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,backslash,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,climb,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,combat_idle,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,halfslash,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,jump,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,run,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/female/,sit,,female,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,backslash,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,climb,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,combat_idle,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,halfslash,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,jump,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,run,,male,map
+torso/jacket/torso_jacket_tabard.json,torso/jacket/tabard/male/,sit,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,backslash,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,climb,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,combat_idle,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,emote,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,halfslash,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,jump,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,run,,male,map
+torso/jacket/torso_jacket_trench.json,torso/jacket/trench/male/,sit,,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,backslash,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,climb,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,combat_idle,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,emote,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,halfslash,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,jump,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,run,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve.json,torso/clothes/longsleeve/longsleeve/pregnant/,sit,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,backslash,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,climb,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,combat_idle,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,emote,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,halfslash,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,jump,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,run,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal.json,torso/clothes/longsleeve/formal/male/,sit,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,backslash,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,climb,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,combat_idle,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,emote,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,halfslash,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,jump,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,run,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_formal_striped.json,torso/clothes/longsleeve/formal_striped/male/,sit,white,male,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,backslash,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,climb,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,combat_idle,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,emote,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,halfslash,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,jump,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,run,,pregnant,map
+torso/shirts/longsleeve/torso_clothes_longsleeve_scoop.json,torso/clothes/longsleeve/scoop/pregnant/,sit,,pregnant,map
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy1.json,chargen/shirt/fancy1/fancy1_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy2.json,chargen/shirt/fancy2/fancy2_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy3.json,chargen/shirt/fancy3/fancy3_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_fancy4.json,chargen/shirt/fancy4/fancy4_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono1.json,chargen/shirt/kimono1/kimono1_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono2.json,chargen/shirt/kimono2/kimono2_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono3.json,chargen/shirt/kimono3/kimono3_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_kimono4.json,chargen/shirt/kimono4/kimono4_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,backslash,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,climb,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,combat_idle,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,emote,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,halfslash,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,jump,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,run,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_f1/,sit,,female,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,backslash,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,climb,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,combat_idle,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,emote,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,halfslash,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,jump,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,run,,male,map
+torso/shirts/more_shirts/chargen_shirt_leather2.json,chargen/shirt/leather2/leather2_m1/,sit,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,backslash,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,climb,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,combat_idle,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,emote,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,halfslash,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,jump,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,run,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_f1/,sit,,female,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,backslash,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,climb,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,combat_idle,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,emote,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,halfslash,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,jump,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,run,,male,map
+torso/shirts/more_shirts/chargen_shirt_legion2.json,chargen/shirt/legion2/legion2_m1/,sit,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,backslash,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,climb,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,combat_idle,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,emote,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,halfslash,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,jump,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,run,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_f1/,sit,,female,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,backslash,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,climb,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,combat_idle,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,emote,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,halfslash,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,jump,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,run,,male,map
+torso/shirts/more_shirts/chargen_shirt_plate3.json,chargen/shirt/plate3/plate3_m1/,sit,,male,map
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,backslash,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,climb,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,combat_idle,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,emote,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,halfslash,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,jump,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,run,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_f1/,sit,,female,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,backslash,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,climb,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,combat_idle,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,emote,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,halfslash,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,jump,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,run,,male,map and hem
+torso/shirts/more_shirts/chargen_suit_bandages.json,chargen/suit/bandages/bandages_m1/,sit,,male,map and hem
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,backslash,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,climb,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,combat_idle,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,emote,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,halfslash,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,jump,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,run,,pregnant,map
+torso/shirts/shortsleeve/torso_clothes_shortsleeve.json,torso/clothes/shortsleeve/shortsleeve/pregnant/,sit,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,backslash,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,climb,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,combat_idle,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,halfslash,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,jump,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,run,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless.json,torso/clothes/sleeveless/sleeveless/male/,sit,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,backslash,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,climb,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,combat_idle,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,halfslash,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,jump,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,run,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_laced.json,torso/clothes/sleeveless/laced/male/,sit,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,backslash,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,climb,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,combat_idle,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,halfslash,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,jump,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,run,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_striped.json,torso/clothes/sleeveless/striped/male/,sit,,male,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,backslash,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,climb,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,combat_idle,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,halfslash,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,jump,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,run,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/female/,sit,,female,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,backslash,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,climb,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,combat_idle,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,halfslash,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,jump,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,run,,pregnant,map
+torso/shirts/sleeveless/torso_clothes_sleeveless_tanktop.json,torso/clothes/sleeveless/tanktop/pregnant/,sit,,pregnant,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,backslash,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,climb,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,combat_idle,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,emote,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,halfslash,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,jump,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,run,,female,map
+torso/shirts/torso_clothes_blouse.json,torso/clothes/blouse/female/,sit,,female,map
+torso/shirts/torso_clothes_child_shirt.json,torso/clothes/shirt/child/,jump,,child,map
+torso/shirts/torso_clothes_child_shirt.json,torso/clothes/shirt/child/,sit,,child,map
+torso/shirts/torso_clothes_child_shirt.json,torso/clothes/shirt/child/,slash,,child,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,backslash,,female,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,climb,,female,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,combat_idle,,female,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,halfslash,,female,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,jump,,female,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,run,,female,map
+torso/shirts/torso_clothes_corset.json,torso/clothes/corset/female/,sit,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,backslash,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,climb,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,combat_idle,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,emote,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,halfslash,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,jump,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,run,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,shoot,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,sit,,female,map
+torso/shirts/torso_clothes_robe.json,torso/clothes/robe/female/,thrust,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,backslash,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,climb,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,combat_idle,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,halfslash,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,jump,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,run,,female,map
+torso/shirts/torso_clothes_tunic.json,torso/clothes/tunic/female/,sit,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,backslash,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,climb,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,combat_idle,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,halfslash,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,jump,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,run,,female,map
+torso/shirts/torso_clothes_tunic_sara.json,torso/clothes/tunic_sara/female/,sit,,female,map
+torso/torso_bandages.json,torso/bandage/female/,backslash,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,backslash,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,climb,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,climb,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,combat_idle,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,combat_idle,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,emote,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,emote,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,halfslash,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,halfslash,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,jump,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,jump,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,run,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,run,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,sit,_white,female,map and hem
+torso/torso_bandages.json,torso/bandage/female/,sit,white,female,map and hem
+torso/torso_bandages.json,torso/bandage/male/,backslash,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,climb,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,combat_idle,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,emote,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,halfslash,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,jump,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,run,white,male,map and hem
+torso/torso_bandages.json,torso/bandage/male/,sit,white,male,map and hem
+torso/torso_chainmail.json,torso/chainmail/female/,backslash,,female,map
+torso/torso_chainmail.json,torso/chainmail/female/,combat_idle,,female,map
+torso/torso_chainmail.json,torso/chainmail/female/,halfslash,,female,map
+torso/torso_chainmail.json,torso/chainmail/male/,backslash,,male,map
+torso/torso_chainmail.json,torso/chainmail/male/,combat_idle,,male,map
+torso/torso_chainmail.json,torso/chainmail/male/,halfslash,,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,backslash,yellow,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,climb,yellow,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,combat_idle,yellow,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,halfslash,yellow,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,jump,yellow,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,run,yellow,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,black,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,blue,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,bluegray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,brown,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,charcoal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,forest,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,gray,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,gray_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,green,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,green_striped,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,lavender,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,leather,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,maroon,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,navy,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,orange,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,pink,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,purple,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,red,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,rose,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,sky,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,slate,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,tan,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,teal,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,walnut,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,white,male,map
+torso/vest/torso_clothes_vest.json,torso/clothes/vest/male/,sit,yellow,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,backslash,,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,climb,,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,combat_idle,,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,halfslash,,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,jump,,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,run,,male,map
+torso/vest/torso_clothes_vest_open.json,torso/clothes/vest_open/male/,sit,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,backslash,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,climb,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,combat_idle,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,halfslash,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,jump,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,run,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/female/,sit,,female,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,backslash,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,climb,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,combat_idle,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,halfslash,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,jump,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,run,,male,map
+torso/waist/belt_belly.json,torso/waist/belt_belly/male/,sit,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,backslash,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,climb,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,combat_idle,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,halfslash,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,jump,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,run,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/female/,sit,,female,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,backslash,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,climb,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,combat_idle,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,halfslash,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,jump,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,run,,male,map
+torso/waist/belt_double.json,torso/waist/belt_double/male/,sit,,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,backslash,brown,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,climb,brown,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,combat_idle,brown,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,halfslash,brown,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,jump,brown,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,run,brown,male,map
+torso/waist/belt_formal.json,torso/waist/belt_formal/,sit,brown,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,backslash,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,climb,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,combat_idle,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,halfslash,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,jump,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,run,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/female/,sit,,female,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,backslash,,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,climb,,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,combat_idle,,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,halfslash,,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,jump,,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,run,,male,map
+torso/waist/belt_leather.json,torso/waist/belt_leather/male/,sit,,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,backslash,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,climb,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,combat_idle,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,halfslash,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,jump,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,run,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/female/,sit,leather,female,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,backslash,leather,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,climb,leather,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,combat_idle,leather,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,halfslash,leather,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,jump,leather,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,run,leather,male,map
+torso/waist/belt_leather2.json,torso/waist/belt_leather2/male/,sit,leather,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,backslash,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,climb,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,combat_idle,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,halfslash,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,jump,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,run,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/female/,sit,,female,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,backslash,,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,climb,,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,combat_idle,,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,halfslash,,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,jump,,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,run,,male,map
+torso/waist/belt_loose.json,torso/waist/belt_loose/male/,sit,,male,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,backslash,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,climb,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,combat_idle,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,halfslash,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,jump,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,run,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,shoot,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,sit,,female,map
+torso/waist/belt_mage.json,torso/waist/belt_mage/,thrust,,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,backslash,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,backslash,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,climb,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,climb,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,combat_idle,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,combat_idle,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,halfslash,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,halfslash,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,jump,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,jump,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,run,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,run,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,sit,teal,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/female/,sit,white,female,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,backslash,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,backslash,white,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,climb,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,climb,white,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,combat_idle,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,combat_idle,white,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,halfslash,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,halfslash,white,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,jump,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,jump,white,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,run,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,run,white,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,sit,teal,male,map
+torso/waist/belt_robe.json,torso/waist/belt_robe/male/,sit,white,male,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,backslash,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,climb,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,combat_idle,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,halfslash,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,jump,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,run,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/female/,sit,,female,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,backslash,,male,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,climb,,male,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,combat_idle,,male,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,halfslash,,male,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,jump,,male,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,run,,male,map
+torso/waist/belt_sash.json,torso/waist/sash/male/,sit,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,backslash,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,climb,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,combat_idle,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,halfslash,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,jump,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,run,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/female/,sit,,female,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,backslash,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,climb,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,combat_idle,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,halfslash,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,jump,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,run,,male,map
+torso/waist/belt_sash_narrow.json,torso/waist/sash_narrow/male/,sit,,male,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,backslash,,female,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,climb,,female,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,combat_idle,,female,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,halfslash,,female,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,jump,,female,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,run,,female,map
+torso/waist/belt_waistband.json,torso/waist/waistband/female/,sit,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,backslash,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,combat_idle,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,halfslash,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,jump,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,run,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,shoot,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,sit,,female,map
+torso/waist/buckles.json,torso/waist/buckles/female/,thrust,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,backslash,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,climb,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,combat_idle,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,halfslash,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,jump,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,run,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_f1/,sit,,female,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,backslash,,male,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,climb,,male,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,combat_idle,,male,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,halfslash,,male,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,jump,,male,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,run,,male,map
+torso/waist/chargen_belt_obi2.json,chargen/belt/obi2/obi2_m1/,sit,,male,map

@@ -21,12 +21,17 @@
     "idle",
     "jump",
     "sit",
-    "emote"
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "arms/armour/plate/male",
-      "notes": "original by wulax, recolors by bigbeargames; adapted to v3 bases and further recolors by bluecarrot16, climb/emote/jump by JaidynReiman",
+      "notes": "original by wulax, recolors by bigbeargames; adapted to v3 bases and further recolors by bluecarrot16, climb/emote/jump by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: run, combat idle, backslash, halfslash.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "Matthew Krohn (makrohn)",
@@ -46,7 +51,7 @@
     },
     {
       "file": "arms/armour/plate/thin",
-      "notes": "original by wulax, adapted to female by makrohn, recolors by bigbeargames; adapted to v3 bases and further recolors by bluecarrot16, climb/emote by JaidynReiman",
+      "notes": "original by wulax, adapted to female by makrohn, recolors by bigbeargames; adapted to v3 bases and further recolors by bluecarrot16, climb/emote by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: run, combat idle, backslash, halfslash.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "Matthew Krohn (makrohn)",
@@ -74,5 +79,11 @@
       "all.lpcr"
     ]
   },
-  "type_name": "arms"
+  "type_name": "arms",
+  "unchecked_animations": [
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

@@ -22,7 +22,16 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "match_body_color": true,
   "recolors": {
@@ -38,7 +47,7 @@
   "credits": [
     {
       "file": "chargen/tail/draketail/tail_fb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122",
         "Stephen Challener (Redshrike)",
@@ -58,7 +67,7 @@
     },
     {
       "file": "chargen/tail/draketail/tail_ff",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122",
         "Stephen Challener (Redshrike)",
@@ -78,7 +87,7 @@
     },
     {
       "file": "chargen/tail/draketail/tail_mb",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122",
         "Johannes SjÃ¶lund (wulax)",
@@ -96,7 +105,7 @@
     },
     {
       "file": "chargen/tail/draketail/tail_mf",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122",
         "Johannes SjÃ¶lund (wulax)",
@@ -112,5 +121,15 @@
         "https://opengameart.org/content/drakes-and-lizardfolk"
       ]
     }
+  ],
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

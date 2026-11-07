@@ -33,6 +33,8 @@ export type SheetDefinition = RecolorSheetDefinition & {
   type_name?: string;
   path?: string[];
   animations?: string[];
+  /** Animations rebuilt by a tool that a person has not looked at yet. */
+  unchecked_animations?: string[];
   tags?: string[];
   required_tags?: string[];
   excluded_tags?: string[];
@@ -146,6 +148,9 @@ export function parseItem(
     matchBodyColor: definition.match_body_color ?? false,
     recolors: recolors ?? [],
   };
+  if (definition.unchecked_animations?.length) {
+    item.unchecked_animations = definition.unchecked_animations;
+  }
 
   itemMetadata[itemId] = item;
 

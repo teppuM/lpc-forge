@@ -20,12 +20,16 @@
     "sit",
     "emote",
     "climb",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "legs/armour/plate",
-      "notes": "reduced to 7 colors an adapted to v3 bases by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman",
+      "notes": "reduced to 7 colors an adapted to v3 bases by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman",
@@ -51,5 +55,11 @@
       "all.lpcr"
     ]
   },
-  "type_name": "legs"
+  "type_name": "legs",
+  "unchecked_animations": [
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

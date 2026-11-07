@@ -15,12 +15,21 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "shoulders/legion",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122"
       ],
@@ -43,5 +52,15 @@
       "all.lpcr"
     ]
   },
-  "type_name": "shoulders"
+  "type_name": "shoulders",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

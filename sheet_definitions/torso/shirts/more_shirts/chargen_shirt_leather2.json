@@ -13,7 +13,16 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "recolors": {
     "color_1": {
@@ -41,7 +50,7 @@
   "credits": [
     {
       "file": "chargen/shirt/leather2/leather2_f1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Johannes SjÃ¶lund (wulax)",
         "Matthew Krohn (makrohn)",
@@ -59,7 +68,7 @@
     },
     {
       "file": "chargen/shirt/leather2/leather2_m1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Johannes SjÃ¶lund (wulax)"
       ],
@@ -71,5 +80,15 @@
         "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites"
       ]
     }
+  ],
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

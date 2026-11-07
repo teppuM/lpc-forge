@@ -12,7 +12,16 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "recolors": {
     "color_1": {
@@ -38,7 +47,7 @@
   "credits": [
     {
       "file": "chargen/shirt/kimono4/kimono4_f1",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "David Conway Jr. (JaidynReiman)"
       ],
@@ -53,5 +62,15 @@
         "https://opengameart.org/content/lpc-relm-outfit-pieces-2-kimonos-2-sleeves-2-boots-tabi-socks-updated-4924"
       ]
     }
+  ],
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

@@ -16,12 +16,19 @@
     "watering",
     "climb",
     "idle",
-    "emote"
+    "emote",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "legs/skirts/straight",
-      "notes": "original skirt by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16",
+      "notes": "original skirt by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16 Rebuilt from this part's own frames guided by a map of the base body: jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy"
@@ -42,5 +49,13 @@
       "all.lpcr"
     ]
   },
-  "type_name": "legs"
+  "type_name": "legs",
+  "unchecked_animations": [
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

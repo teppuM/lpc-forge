@@ -16,12 +16,19 @@
     "watering",
     "climb",
     "idle",
-    "emote"
+    "emote",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "legs/skirts/overskirt",
-      "notes": "original princess.xcf by Sharm, extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16",
+      "notes": "original princess.xcf by Sharm, extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16 Rebuilt from this part's own frames guided by a map of the base body: jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "Matthew Krohn (makrohn)",
@@ -46,5 +53,13 @@
       "all.lpcr"
     ]
   },
-  "type_name": "apron"
+  "type_name": "apron",
+  "unchecked_animations": [
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

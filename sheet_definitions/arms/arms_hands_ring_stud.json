@@ -21,12 +21,16 @@
     "jump",
     "sit",
     "emote",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "arms/hands/ring/stud",
-      "notes": "original by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman",
+      "notes": "original by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"
@@ -48,5 +52,10 @@
       "all.lpcr"
     ]
   },
-  "type_name": "ring"
+  "type_name": "ring",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

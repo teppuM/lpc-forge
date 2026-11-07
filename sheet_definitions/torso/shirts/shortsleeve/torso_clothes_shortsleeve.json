@@ -29,7 +29,7 @@
   "credits": [
     {
       "file": "torso/clothes/shortsleeve/shortsleeve/male",
-      "notes": "original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -52,7 +52,7 @@
     },
     {
       "file": "torso/clothes/shortsleeve/shortsleeve/female",
-      "notes": "original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -76,7 +76,7 @@
     },
     {
       "file": "torso/clothes/shortsleeve/shortsleeve/teen",
-      "notes": "original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; teen version by Nyom; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; teen version by Nyom; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nyom",
         "bluecarrot16",
@@ -102,7 +102,7 @@
     },
     {
       "file": "torso/clothes/shortsleeve/shortsleeve/pregnant",
-      "notes": "body by Redshrike, t-shirt by ElizaWy derived from base; pregnant tanktop by ElizaWy; tanktop edited by bluecarrot16 to make other pregnant shirts and match v3 bases Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "body by Redshrike, t-shirt by ElizaWy derived from base; pregnant tanktop by ElizaWy; tanktop edited by bluecarrot16 to make other pregnant shirts and match v3 bases Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "ElizaWy",
@@ -128,5 +128,15 @@
       "all.lpcr"
     ]
   },
-  "type_name": "clothes"
+  "type_name": "clothes",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

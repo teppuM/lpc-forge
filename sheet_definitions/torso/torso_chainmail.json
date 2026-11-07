@@ -20,12 +20,16 @@
     "jump",
     "sit",
     "emote",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "torso/chainmail",
-      "notes": "minor edits by bluecarrot16, reduced colors by Napsio, adjusted Male colors and Idle/Sit/Emote/Climb/Run by JaidynReiman",
+      "notes": "minor edits by bluecarrot16, reduced colors by Napsio, adjusted Male colors and Idle/Sit/Emote/Climb/Run by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Johannes Sjölund (wulax)",
         "Napsio (Vitruvian Studio)",
@@ -49,5 +53,10 @@
       "all.lpcr"
     ]
   },
-  "type_name": "chainmail"
+  "type_name": "chainmail",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

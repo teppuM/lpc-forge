@@ -107,6 +107,18 @@ import {
   writeSavedList,
   type SavedCharacter,
 } from "./saved.ts";
+import {
+  flagState,
+  isStillToCheck,
+  readReviews,
+  reviewsToText,
+  setReviewNote,
+  toggleVerdict,
+  writeReviews,
+  type FlagState,
+  type Reviews,
+  type Verdict,
+} from "./review.ts";
 import { cropPortrait, Thumb, type PortraitPart } from "./thumbnails.ts";
 
 const FORK_URL = "https://github.com/teppuM/lpc-forge";
@@ -155,8 +167,16 @@ type Ui = {
   search: string;
   subject: Subject;
   tab: "character" | "colors" | "parts";
-  drawer: "download" | "about" | "filters" | null;
+  drawer: "download" | "about" | "filters" | "review" | null;
   showUnfit: boolean;
+  reviews: Reviews;
+  /** The flagged part the review drawer is open on; null lists the notes. */
+  reviewItem: string | null;
+  /** Shows only flagged parts still waiting for a verdict, from every category. */
+  onlyFlagged: boolean;
+  reviewNote: string | null;
+  /** Every flagged part, found once the part list has loaded. */
+  flagged: string[] | null;
   animationOptions: AnimationExportOptions;
   animationBusy: boolean;
   animationNote: string;
@@ -915,6 +935,7 @@ function slotRow(env: Env, key: string, selection: Selection) {
             : null,
         ],
       ),
+      reviewFlag(env, selection.itemId, meta),
       ROLLED_SLOTS.includes(key) ? lockButton(env, key, meta.name) : null,
       m(
         "button.forge-remove",
@@ -1059,6 +1080,12 @@ function previewPanel(env: Env) {
           `Not drawn for this animation, so missing from it: ${missing.join(", ")}.`,
         )
       : null,
+    uncheckedHere(env).length > 0
+      ? m("p.forge-review-here", [
+          flagPicture("unchecked"),
+          `Still to check in this animation: ${uncheckedHere(env).join(", ")}.`,
+        ])
+      : null,
     ui.hovered
       ? m(
           "p.forge-trying",
@@ -1110,9 +1137,10 @@ function partsPanel(env: Env) {
   const { catalog, state, ui } = env;
   const categories = ui.categories ?? [];
   const query = ui.search.trim();
-  const shown = query
-    ? categories
-    : categories.filter((category) => category.key === ui.category);
+  const shown =
+    query || ui.onlyFlagged
+      ? categories
+      : categories.filter((category) => category.key === ui.category);
 
   const wornNow = wornParts(env);
   let hiddenByHead = 0;
@@ -1121,6 +1149,7 @@ function partsPanel(env: Env) {
     mainSlotFirst(catalog, category).flatMap((section) => {
       if (
         !query &&
+        !ui.onlyFlagged &&
         ui.group !== null &&
         sectionGroup(category, section) !== ui.group
       ) {
@@ -1136,7 +1165,9 @@ function partsPanel(env: Env) {
             (ui.showUnfit || p.meta.required.includes(state.bodyType)) &&
             (ui.showUnfit ||
               query !== "" ||
+              ui.onlyFlagged ||
               hasParentWorn(p.itemId, wornNow)) &&
+            (!ui.onlyFlagged || stillToCheck(env, p.itemId, p.meta)) &&
             matchesPartSearch(query, [
               p.meta.name,
               p.meta.type_name,
@@ -1221,8 +1252,9 @@ function partsPanel(env: Env) {
         },
         "Filters",
       ),
+      flaggedPill(env),
     ]),
-    query
+    query || ui.onlyFlagged
       ? null
       : m(
           "div.forge-pills.forge-categories",
@@ -1241,7 +1273,7 @@ function partsPanel(env: Env) {
             ),
           ),
         ),
-    !query && groups.length > 1
+    !query && !ui.onlyFlagged && groups.length > 1
       ? m("div.forge-pills.forge-groups", [
           m(
             "button.forge-pill",
@@ -1275,15 +1307,17 @@ function partsPanel(env: Env) {
         ? sectionViews
         : m(
             "p.forge-note",
-            query
-              ? hiddenByHead > 0
-                ? `The parts matching "${query}" are drawn for human-shaped heads, so they would not line up with this one. Filters can show them anyway.`
-                : `No parts match "${query}" on this body. Try another word, or show parts for other bodies under Filters.`
-              : !catalog.isLiteReady()
-                ? "Loading parts…"
-                : hiddenByHead > 0
-                  ? "These parts are drawn for human-shaped heads, so they would not line up with this one. Filters can show them anyway."
-                  : "No parts here for this body.",
+            ui.onlyFlagged
+              ? "Nothing left to check on this body. Other bodies may still have some."
+              : query
+                ? hiddenByHead > 0
+                  ? `The parts matching "${query}" are drawn for human-shaped heads, so they would not line up with this one. Filters can show them anyway.`
+                  : `No parts match "${query}" on this body. Try another word, or show parts for other bodies under Filters.`
+                : !catalog.isLiteReady()
+                  ? "Loading parts…"
+                  : hiddenByHead > 0
+                    ? "These parts are drawn for human-shaped heads, so they would not line up with this one. Filters can show them anyway."
+                    : "No parts here for this body.",
           ),
     ),
   ]);
@@ -1597,6 +1631,346 @@ function rightPanel(env: Env) {
   ];
 }
 
+const FLAG_FILL = "M3 1h7v2H3zM3 3h6v1H3zM3 4h5v1H3zM3 5h6v1H3zM3 6h7v2H3z";
+const FLAG_EDGE =
+  "M1 0h2v13H1zM3 0h7v1H3zM3 8h7v1H3zM10 1h1v2h-1zM9 3h1v1H9zM8 4h1v1H8zM9 5h1v1H9zM10 6h1v2h-1z";
+const FLAG_FACE = "M4 3h1v1H4zM6 3h1v1H6zM5 5h1v1H5z";
+
+/** A little pennant with a face, drawn on a pixel grid. It never moves. */
+function flagPicture(state: FlagState) {
+  return m(
+    "svg.forge-flag-picture",
+    {
+      viewBox: "0 0 11 13",
+      "shape-rendering": "crispEdges",
+      "aria-hidden": "true",
+      "data-state": state,
+    },
+    [
+      m("path.forge-flag-edge", { d: FLAG_EDGE }),
+      m("path.forge-flag-fill", { d: FLAG_FILL }),
+      m("path.forge-flag-edge", { d: FLAG_FACE }),
+    ],
+  );
+}
+
+function animationLabel(animation: string): string {
+  return (
+    ANIMATIONS.find((entry) => entry.value === animation)?.label ??
+    humanize(animation)
+  );
+}
+
+function stillToCheck(env: Env, itemId: string, meta: ItemLite): boolean {
+  return (
+    !!meta.unchecked_animations &&
+    isStillToCheck(meta.unchecked_animations, env.ui.reviews[itemId])
+  );
+}
+
+/** The flag on a part in any list, whichever animation is showing. Null if it has none. */
+function reviewFlag(env: Env, itemId: string, meta: ItemLite) {
+  const { ui } = env;
+  const unchecked = meta.unchecked_animations;
+  if (!unchecked?.length) return null;
+  const state = flagState(unchecked, ui.reviews[itemId]);
+  const names = unchecked.map(animationLabel).join(", ");
+  const title =
+    state === "good"
+      ? `${meta.name}: you marked this good. Click to change it.`
+      : state === "needs-work"
+        ? `${meta.name}: marked as needing work. Rebuilt animations: ${names}.`
+        : `${meta.name}: check these rebuilt animations: ${names}.`;
+  return m(
+    "button.forge-review-flag",
+    {
+      title,
+      "aria-label": title,
+      "data-state": state,
+      onclick: (e: Event) => {
+        e.stopPropagation();
+        ui.reviewItem = itemId;
+        ui.reviewNote = null;
+        ui.drawer = "review";
+      },
+    },
+    flagPicture(state),
+  );
+}
+
+function allFlagged(env: Env): string[] {
+  const { catalog, ui } = env;
+  if (ui.flagged === null && ui.categories && catalog.isLiteReady()) {
+    const seen = new Set<string>();
+    for (const category of ui.categories) {
+      for (const section of category.sections) {
+        for (const itemId of section.itemIds) {
+          if (lite(catalog, itemId)?.unchecked_animations?.length) {
+            seen.add(itemId);
+          }
+        }
+      }
+    }
+    ui.flagged = [...seen];
+  }
+  return ui.flagged ?? [];
+}
+
+/** Names of worn parts flagged for the animation on screen. */
+function uncheckedHere(env: Env): string[] {
+  const { catalog, state, ui } = env;
+  return Object.values(state.selections).flatMap((selection) => {
+    const meta = lite(catalog, selection.itemId);
+    const animation = state.selectedAnimation;
+    return meta?.unchecked_animations?.includes(animation) &&
+      !ui.reviews[selection.itemId]?.[animation]?.verdict
+      ? [meta.name]
+      : [];
+  });
+}
+
+function flaggedPill(env: Env) {
+  const { catalog, ui } = env;
+  const flagged = allFlagged(env);
+  if (flagged.length === 0) return null;
+  const left = flagged.filter((itemId) => {
+    const meta = lite(catalog, itemId);
+    return meta && stillToCheck(env, itemId, meta);
+  }).length;
+  return m("div.forge-flag-tools", [
+    m(
+      "button.forge-pill",
+      {
+        class: ui.onlyFlagged ? "is-on" : "",
+        title: "Show only flagged parts still waiting for your verdict",
+        onclick: () => {
+          ui.onlyFlagged = !ui.onlyFlagged;
+        },
+      },
+      [flagPicture("unchecked"), ` ${left} to check`],
+    ),
+    m(
+      "button.forge-pill",
+      {
+        onclick: () => {
+          ui.reviewItem = null;
+          ui.reviewNote = null;
+          ui.drawer = "review";
+        },
+      },
+      "My notes",
+    ),
+  ]);
+}
+
+function storeReviews(env: Env, reviews: Reviews): void {
+  const { ui } = env;
+  ui.reviews = reviews;
+  ui.reviewNote = writeReviews(reviews)
+    ? null
+    : "This browser would not keep your notes, so copy them before closing the page. Private windows do this.";
+}
+
+/** Wears the part, if it is not on already, and shows it in that animation. */
+function showForReview(env: Env, itemId: string, animation: string): void {
+  const { catalog, state } = env;
+  const meta = lite(catalog, itemId);
+  if (!meta) return;
+  // An add-on only shows on its part, so that goes on first.
+  if (!hasParentWorn(itemId, wornParts(env))) {
+    const parent = addOnParents(itemId)?.find((id) =>
+      lite(catalog, id)?.required.includes(state.bodyType),
+    );
+    if (parent) equip(env, state, parent);
+  }
+  if (meta.required.includes(state.bodyType) && !isWorn(state, meta, itemId)) {
+    equip(env, state, itemId);
+    dropOrphanAddOns(env);
+  }
+  state.selectedAnimation = animation;
+}
+
+function nextToCheck(env: Env, after: string | null): string | null {
+  const { catalog, state } = env;
+  const flagged = allFlagged(env);
+  const start = after === null ? -1 : flagged.indexOf(after);
+  const order = [...flagged.slice(start + 1), ...flagged.slice(0, start + 1)];
+  return (
+    order.find((itemId) => {
+      const meta = lite(catalog, itemId);
+      return (
+        itemId !== after &&
+        !!meta &&
+        meta.required.includes(state.bodyType) &&
+        stillToCheck(env, itemId, meta)
+      );
+    }) ?? null
+  );
+}
+
+function reviewText(env: Env): string {
+  const { catalog, ui } = env;
+  return reviewsToText(
+    allFlagged(env).map((itemId) => ({
+      itemId,
+      name: lite(catalog, itemId)?.name ?? itemId,
+      unchecked: lite(catalog, itemId)?.unchecked_animations ?? [],
+    })),
+    ui.reviews,
+    animationLabel,
+  );
+}
+
+function reviewRow(env: Env, itemId: string, animation: string) {
+  const { state, ui } = env;
+  const entry = ui.reviews[itemId]?.[animation];
+  const verdictButton = (verdict: Verdict, label: string) =>
+    m(
+      "button.forge-pill",
+      {
+        class: entry?.verdict === verdict ? "is-on" : "",
+        "data-verdict": verdict,
+        onclick: () =>
+          storeReviews(
+            env,
+            toggleVerdict(
+              ui.reviews,
+              itemId,
+              animation,
+              verdict,
+              state.bodyType,
+            ),
+          ),
+      },
+      label,
+    );
+  return m(
+    "li.forge-review-row",
+    {
+      key: animation,
+      class: state.selectedAnimation === animation ? "is-showing" : "",
+    },
+    [
+      m(
+        "button.forge-pill.forge-review-show",
+        {
+          class: state.selectedAnimation === animation ? "is-on" : "",
+          title: `Wear this part and show ${animationLabel(animation)}`,
+          onclick: () => showForReview(env, itemId, animation),
+        },
+        animationLabel(animation),
+      ),
+      verdictButton("good", "Looks good"),
+      verdictButton("needs-work", "Needs work"),
+      m("input.forge-review-note[type=text]", {
+        placeholder: "What's wrong? (optional)",
+        "aria-label": `Note on ${animationLabel(animation)}`,
+        value: entry?.note ?? "",
+        onchange: (e: Event) =>
+          storeReviews(
+            env,
+            setReviewNote(
+              ui.reviews,
+              itemId,
+              animation,
+              (e.target as HTMLInputElement).value,
+              state.bodyType,
+            ),
+          ),
+      }),
+    ],
+  );
+}
+
+function reviewDrawer(env: Env) {
+  const { catalog, ui } = env;
+  const itemId = ui.reviewItem;
+  const meta = itemId ? lite(catalog, itemId) : null;
+  const next = nextToCheck(env, itemId);
+  const text = reviewText(env);
+  return [
+    m("h2.forge-drawer-title", [
+      flagPicture(
+        meta?.unchecked_animations
+          ? flagState(meta.unchecked_animations, ui.reviews[itemId!])
+          : "unchecked",
+      ),
+      meta ? ` Check ${meta.name}` : " My notes",
+    ]),
+    meta?.unchecked_animations
+      ? [
+          m(
+            "p.forge-note",
+            "A tool rebuilt these animations from the part's own older frames and no person has looked yet. Press an animation to wear the part and see it.",
+          ),
+          meta.required.includes(env.state.bodyType)
+            ? null
+            : m(
+                "p.forge-warning",
+                "This part is not drawn for the body on screen.",
+              ),
+          m(
+            "ul.forge-review-list",
+            meta.unchecked_animations.map((animation) =>
+              reviewRow(env, itemId!, animation),
+            ),
+          ),
+        ]
+      : null,
+    m("div.forge-pills", [
+      next
+        ? m(
+            "button.forge-pill.is-primary",
+            {
+              onclick: () => {
+                ui.reviewItem = next;
+                ui.reviewNote = null;
+                const first = lite(catalog, next)?.unchecked_animations?.[0];
+                if (first) showForReview(env, next, first);
+              },
+            },
+            "Next part to check",
+          )
+        : null,
+      m(
+        "button.forge-pill",
+        {
+          onclick: () => {
+            void navigator.clipboard.writeText(text).then(
+              () => {
+                ui.reviewNote =
+                  "Copied. Paste it wherever you keep track of this.";
+                m.redraw();
+              },
+              () => {
+                ui.reviewNote =
+                  "This browser would not allow copying. Save the file instead.";
+                m.redraw();
+              },
+            );
+          },
+        },
+        "Copy my notes",
+      ),
+      m(
+        "button.forge-pill",
+        {
+          onclick: () => {
+            downloadFile(text, "lpc-forge-review.txt", "text/plain");
+          },
+        },
+        "Save my notes as a file",
+      ),
+    ]),
+    ui.reviewNote ? m("p.forge-note", ui.reviewNote) : null,
+    m(
+      "p.forge-note",
+      "Your verdicts stay in this browser on this device until you copy or save them.",
+    ),
+    meta ? null : m("pre.forge-review-text", text),
+  ];
+}
+
 function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
   const { catalog, state, ui } = env;
   const worn = isWorn(state, meta, itemId);
@@ -1628,10 +2002,10 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
   ]
     .filter(Boolean)
     .join(" ");
-  return m(
+  const tile = m(
     "button.forge-tile",
     {
-      key: itemId,
+      key: reviewFlag(env, itemId, meta) ? undefined : itemId,
       "data-item": itemId,
       class: `${worn ? "is-on" : ""} ${fits && fitsHead ? "" : "is-unfit"}`,
       title: help,
@@ -1668,6 +2042,8 @@ function partTile(env: Env, itemId: string, meta: ItemLite, showSlot: boolean) {
         : null,
     ],
   );
+  const flag = reviewFlag(env, itemId, meta);
+  return flag ? m("div.forge-tile-wrap", { key: itemId }, [tile, flag]) : tile;
 }
 
 /** False until the character from the link is drawn, so nothing exports blank. */
@@ -2160,20 +2536,31 @@ function drawer(env: Env) {
   const close = () => {
     ui.drawer = null;
   };
-  return m("div.forge-drawer-wrap", { onclick: close }, [
-    m("aside.forge-drawer", { onclick: (e: Event) => e.stopPropagation() }, [
-      m(
-        "button.forge-drawer-close",
-        { onclick: close, "aria-label": "Close" },
-        "×",
-      ),
-      ui.drawer === "download"
-        ? downloadDrawer(env)
-        : ui.drawer === "filters"
-          ? filtersDrawer(env)
-          : aboutDrawer(),
-    ]),
-  ]);
+  // The review drawer leaves the character in view and usable behind it.
+  const isReview = ui.drawer === "review";
+  return m(
+    "div.forge-drawer-wrap",
+    {
+      class: isReview ? "is-review" : "",
+      onclick: isReview ? undefined : close,
+    },
+    [
+      m("aside.forge-drawer", { onclick: (e: Event) => e.stopPropagation() }, [
+        m(
+          "button.forge-drawer-close",
+          { onclick: close, "aria-label": "Close" },
+          "×",
+        ),
+        ui.drawer === "download"
+          ? downloadDrawer(env)
+          : ui.drawer === "filters"
+            ? filtersDrawer(env)
+            : ui.drawer === "review"
+              ? reviewDrawer(env)
+              : aboutDrawer(),
+      ]),
+    ],
+  );
 }
 
 export type ForgeAppAttrs = {
@@ -2214,6 +2601,11 @@ export const ForgeApp: m.Component<ForgeAppAttrs, ForgeAppState> = {
       tab: "parts",
       drawer: null,
       showUnfit: false,
+      reviews: readReviews(),
+      reviewItem: null,
+      onlyFlagged: false,
+      reviewNote: null,
+      flagged: null,
       animationOptions: { ...DEFAULT_ANIMATION_EXPORT_OPTIONS, scale: 2 },
       animationBusy: false,
       animationNote: "",

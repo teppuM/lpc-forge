@@ -19,12 +19,16 @@
     "sit",
     "emote",
     "climb",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "torso/armour/leather",
-      "notes": "adapted to v3 bases by bluecarrot16, reduced colors and climb/emote/jump by JaidynReiman",
+      "notes": "adapted to v3 bases by bluecarrot16, reduced colors and climb/emote/jump by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Johannes Sjölund (wulax)",
         "bluecarrot16",
@@ -43,7 +47,7 @@
     },
     {
       "file": "torso/armour/leather/female",
-      "notes": "recolor of torso/armour/leather/female/brown.png, adapted to v3 bases by bluecarrot16, reduced colors and climb/emote/jump by JaidynReiman",
+      "notes": "recolor of torso/armour/leather/female/brown.png, adapted to v3 bases by bluecarrot16, reduced colors and climb/emote/jump by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "Matthew Krohn (makrohn)",
@@ -65,7 +69,7 @@
     },
     {
       "file": "torso/armour/leather/teen",
-      "notes": "adapted to v3 bases by bluecarrot16, teen version by JaidynReiman adapted from Male and Female versions",
+      "notes": "adapted to v3 bases by bluecarrot16, teen version by JaidynReiman adapted from Male and Female versions Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "Matthew Krohn (makrohn)",
@@ -107,5 +111,10 @@
       ]
     }
   },
-  "type_name": "armour"
+  "type_name": "armour",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

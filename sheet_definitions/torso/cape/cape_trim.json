@@ -25,12 +25,19 @@
     "watering",
     "climb",
     "idle",
-    "emote"
+    "emote",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "cape/trim",
-      "notes": "isolated stripe from cape_trimmed, adapted to v3 bases by bluecarrot16 Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "isolated stripe from cape_trimmed, adapted to v3 bases by bluecarrot16 Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames to follow the head: jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"
@@ -55,5 +62,13 @@
       "all.lpcr"
     ]
   },
-  "type_name": "cape_trim"
+  "type_name": "cape_trim",
+  "unchecked_animations": [
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

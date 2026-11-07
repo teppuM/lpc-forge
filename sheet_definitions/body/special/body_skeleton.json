@@ -14,12 +14,21 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "body/bodies/skeleton",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "Napsio",
@@ -49,5 +58,15 @@
       "all.lpcr"
     ]
   },
-  "type_name": "body"
+  "type_name": "body",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

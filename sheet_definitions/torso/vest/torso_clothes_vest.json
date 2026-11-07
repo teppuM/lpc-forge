@@ -40,12 +40,20 @@
     "shoot",
     "hurt",
     "idle",
-    "emote"
+    "emote",
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "torso/clothes/vest",
-      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "Thane Brimhall (pennomi)",
@@ -66,7 +74,7 @@
     },
     {
       "file": "torso/clothes/vest/male/gray_striped.png",
-      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "bluecarrot16",
@@ -83,7 +91,7 @@
     },
     {
       "file": "torso/clothes/vest/male/gray.png",
-      "notes": "Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "Michael Whitlock (bigbeargames)",
         "bluecarrot16",
@@ -99,5 +107,14 @@
       ]
     }
   ],
-  "type_name": "vest"
+  "type_name": "vest",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

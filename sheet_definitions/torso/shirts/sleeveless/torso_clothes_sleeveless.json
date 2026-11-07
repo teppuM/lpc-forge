@@ -16,7 +16,7 @@
   "credits": [
     {
       "file": "torso/clothes/sleeveless/sleeveless/male",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "Matthew Krohn (makrohn)",
@@ -40,7 +40,7 @@
     },
     {
       "file": "torso/clothes/sleeveless/sleeveless/female",
-      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless by JaidynReiman, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Climb, Jump, Sit, Emote, Run, Combat idle, Backslash, Halfslash built from Original Sleeveless's frames and this part's own; not drawn by hand. See tools/fill_from_twin.py. Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "\"pirate shirt\" by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless by JaidynReiman, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16 Rebuilt from this part's own frames to match the body's pose: idle. Climb, Jump, Sit, Emote, Run, Combat idle, Backslash, Halfslash built from Original Sleeveless's frames and this part's own; not drawn by hand. See tools/fill_from_twin.py. Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "ElizaWy",
         "JaidynReiman",
@@ -82,6 +82,16 @@
     "jump",
     "sit",
     "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash",
+    "1h_slash"
+  ],
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
     "run",
     "combat",
     "1h_backslash",

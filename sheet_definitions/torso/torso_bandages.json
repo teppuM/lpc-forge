@@ -13,7 +13,7 @@
   "credits": [
     {
       "file": "torso/bandage",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Nila122"
       ],
@@ -37,6 +37,25 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
+  ],
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

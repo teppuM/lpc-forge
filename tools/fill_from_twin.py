@@ -57,6 +57,9 @@ if os.path.exists(MANIFEST):
     with open(MANIFEST, encoding="utf8", newline="") as f:
         with_twin_rows = list(csv.DictReader(f))
 MADE |= {(r["path"], r["sheet"]) for r in with_twin_rows}
+if os.path.exists(os.path.join(ROOT, "tools", "filled-from-body.csv")):
+    with open(os.path.join(ROOT, "tools", "filled-from-body.csv"), encoding="utf8", newline="") as f:
+        MADE |= {(r["path"], r["sheet"]) for r in csv.DictReader(f)}
 
 
 def definition(rel):

@@ -32,12 +32,22 @@
     "spellcast",
     "walk",
     "idle",
-    "emote"
+    "emote",
+    "thrust",
+    "shoot",
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "torso/waist/belt_mage",
-      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames guided by a map of the base body: thrust, shoot, climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "Luke Mehl"
       ],
@@ -50,5 +60,16 @@
       ]
     }
   ],
-  "type_name": "belt"
+  "type_name": "belt",
+  "unchecked_animations": [
+    "thrust",
+    "shoot",
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

@@ -12,7 +12,16 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "variants": [
     "default"
@@ -21,7 +30,7 @@
   "credits": [
     {
       "file": "chargen/add2/bloodytorso/bloodytorso_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "Benjamin K. Smith (BenCreating)",
         "Sander Frenken (castelonia)"
@@ -34,5 +43,15 @@
         "https://opengameart.org/content/lpc-zombie"
       ]
     }
+  ],
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

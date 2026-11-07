@@ -22,12 +22,16 @@
     "jump",
     "sit",
     "emote",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "feet/armour/plate",
-      "notes": "original by wulax, recolors by bigbeargames, edits for v3 base and recolors by bluecarrot16",
+      "notes": "original by wulax, recolors by bigbeargames, edits for v3 base and recolors by bluecarrot16 Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Matthew Krohn (makrohn)",
         "Johannes Sjölund (wulax)"
@@ -43,7 +47,7 @@
     },
     {
       "file": "feet/armour/plate/female",
-      "notes": "original by wulax, edited for female base by makrohn, recolors by bigbeargames, edits for v3 base and recolors by bluecarrot16",
+      "notes": "original by wulax, edited for female base by makrohn, recolors by bigbeargames, edits for v3 base and recolors by bluecarrot16 Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Matthew Krohn (makrohn)",
         "Johannes Sjölund (wulax)"
@@ -66,5 +70,10 @@
       "all.lpcr"
     ]
   },
-  "type_name": "shoes"
+  "type_name": "shoes",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

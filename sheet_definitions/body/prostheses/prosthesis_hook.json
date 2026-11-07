@@ -18,12 +18,20 @@
     "hurt",
     "watering",
     "idle",
-    "emote"
+    "emote",
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "body/prosthesis/hook",
-      "notes": "original by bluecarrot16, color reduced & emote by JaidynReiman",
+      "notes": "original by bluecarrot16, color reduced & emote by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"
@@ -47,5 +55,14 @@
       "all.lpcr"
     ]
   },
-  "type_name": "prosthesis_hand"
+  "type_name": "prosthesis_hand",
+  "unchecked_animations": [
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

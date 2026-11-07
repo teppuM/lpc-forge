@@ -80,6 +80,8 @@ export type ItemLite = {
   type_name: string;
   required: string[];
   animations: string[];
+  /** Animations rebuilt by a tool that a person has not looked at yet. */
+  unchecked_animations?: string[];
   recolors: PaletteRecolor[];
   matchBodyColor: boolean;
   variants: string[];

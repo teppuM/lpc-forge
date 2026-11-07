@@ -21,12 +21,16 @@
     "jump",
     "sit",
     "emote",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "shoulders/bauldron",
-      "notes": "Original by Nila122, climb/jump/sit/emote/run by JaidynReiman",
+      "notes": "Original by Nila122, climb/jump/sit/emote/run by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "Nila122",
         "JaidynReiman"
@@ -50,5 +54,10 @@
       "all.lpcr"
     ]
   },
-  "type_name": "bauldron"
+  "type_name": "bauldron",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

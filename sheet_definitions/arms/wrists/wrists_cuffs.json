@@ -21,12 +21,16 @@
     "jump",
     "sit",
     "emote",
-    "run"
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "arms/wrists/cuffs",
-      "notes": "Original by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman",
+      "notes": "Original by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"
@@ -40,7 +44,7 @@
     },
     {
       "file": "arms/wrists/cuffs/thin",
-      "notes": "Original by bluecarrot16, female/teen version by JaidynReiman",
+      "notes": "Original by bluecarrot16, female/teen version by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"
@@ -60,5 +64,10 @@
       "all.lpcr"
     ]
   },
-  "type_name": "wrists"
+  "type_name": "wrists",
+  "unchecked_animations": [
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }

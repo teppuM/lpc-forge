@@ -21,12 +21,17 @@
     "climb",
     "jump",
     "sit",
-    "emote"
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "feet/hoofs",
-      "notes": "original by Evert, color cleanup/minor fixes/climb/jump/sit/emote by JaidynReiman",
+      "notes": "original by Evert, color cleanup/minor fixes/climb/jump/sit/emote by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: run, combat idle, backslash, halfslash.",
       "authors": [
         "JaidynReiman",
         "Evert"
@@ -41,7 +46,7 @@
     },
     {
       "file": "feet/hoofs/thin",
-      "notes": "edited for v3 female bases by bluecarrot16, color cleanup/minor fixes/climb/jump/sit/emote by JaidynReiman",
+      "notes": "edited for v3 female bases by bluecarrot16, color cleanup/minor fixes/climb/jump/sit/emote by JaidynReiman Rebuilt from this part's own frames guided by a map of the base body: run, combat idle, backslash, halfslash.",
       "authors": [
         "JaidynReiman",
         "bluecarrot16",
@@ -70,5 +75,11 @@
   "aliases": {
     "Hoofs_hoofs": "olive"
   },
-  "type_name": "shoes"
+  "type_name": "shoes",
+  "unchecked_animations": [
+    "run",
+    "combat",
+    "1h_backslash",
+    "1h_halfslash"
+  ]
 }
