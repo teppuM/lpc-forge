@@ -23,12 +23,20 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "neck/charm",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the head: jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16"
       ],

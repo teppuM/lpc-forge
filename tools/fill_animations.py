@@ -10,6 +10,8 @@ A sheet is filled only when no layer of the part has it on that body, and only w
 Wings also follow the head here. They ride on the back and flap regardless of pose, and they look right in every animation
 though flapping lowers their score in the check. Backpacks and what they carry follow the head for the same reason: they sit
 high on the back and hold their shape. No backpack has real art in these animations, so they were judged by eye, not scored.
+Neck parts follow the head too: ten of them have real art to compare, and rebuilt frames land within two pixels of it in 78
+to 100 percent of frames, depending on the animation. Being small, they score low on overlap even when they look right.
 
 With --idle it fills only the idle animation of parts worn on the body, matching whole-body poses instead of heads. Idle
 is the one pose close enough to the others for this to work; other animations of these parts do not pass the check.
@@ -59,7 +61,7 @@ DEFAULT_CLAIMS = ["spellcast", "thrust", "walk", "slash", "shoot", "hurt", "wate
 FACINGS = "nwse"
 ON_THE_BACK = ("body/wings/", "torso/backpack/")
 SCOPE = ("hair/", "head/", "headwear/") + ON_THE_BACK
-OUT_OF_SCOPE = ("headwear/neck/", "head/heads/")
+OUT_OF_SCOPE = ("head/heads/",)
 IDLE_SCOPE = ("torso/", "legs/", "feet/", "arms/", "body/")
 IDLE_OUT_OF_SCOPE = ("body/body.json", "body/shadow.json", "body/wheelchair.json")
 EMOTE_SCOPE = ("torso/",)

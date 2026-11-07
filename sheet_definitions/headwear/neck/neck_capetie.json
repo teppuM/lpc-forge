@@ -21,12 +21,16 @@
     "jump",
     "run",
     "sit",
-    "emote"
+    "emote",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "neck/capetie",
-      "notes": "adapted to male body and v3 bases by bluecarrot16",
+      "notes": "adapted to male body and v3 bases by bluecarrot16 Rebuilt from this part's own frames to follow the head: combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "JaidynReiman"

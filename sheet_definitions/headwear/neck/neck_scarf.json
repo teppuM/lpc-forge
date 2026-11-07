@@ -22,12 +22,16 @@
     "run",
     "sit",
     "emote",
-    "climb"
+    "climb",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "neck/scarf",
-      "notes": "Original by Nila122, climb/sit/emote/jump/run animations by JaidynReiman",
+      "notes": "Original by Nila122, climb/sit/emote/jump/run animations by JaidynReiman Rebuilt from this part's own frames to follow the head: combat idle, backslash, halfslash.",
       "authors": [
         "Nila122",
         "JaidynReiman",

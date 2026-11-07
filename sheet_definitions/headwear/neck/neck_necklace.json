@@ -27,12 +27,21 @@
     "slash",
     "shoot",
     "hurt",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "neck/necklace",
-      "notes": "extra animations by bluecarrot16",
+      "notes": "extra animations by bluecarrot16 Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16",
         "Luke Mehl"

@@ -98,9 +98,8 @@ test("a download shows everyone a sheet's credit names", () => {
   assert.ok(checked > 0, "the check found sheet credits");
 });
 
-test("neck parts and the hurt animation are not rebuilt", () => {
-  for (const { part, sheet } of manifest()) {
-    assert.ok(!part.startsWith("headwear/neck/"), `${part} is outside what the check covers`);
+test("the hurt animation is not rebuilt", () => {
+  for (const { sheet } of manifest()) {
     assert.notEqual(sheet, "hurt");
   }
 });

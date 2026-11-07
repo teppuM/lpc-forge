@@ -21,12 +21,16 @@
     "jump",
     "run",
     "sit",
-    "emote"
+    "emote",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "credits": [
     {
       "file": "neck/jabot",
-      "notes": "",
+      "notes": "Rebuilt from this part's own frames to follow the head: combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16"
       ],
