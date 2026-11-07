@@ -51,7 +51,7 @@ lpctools is probably a more viable option along with masks, but these cutouts ar
 
 `fill_animations.py` gives head-worn parts the animations they lack, by moving the part's own frames to follow the head. With `--check` it hides sheets of complete parts, rebuilds them and scores them against the real art, which is how the method was chosen: it does not suit the hurt animation, neck parts or tails, and for other body-worn parts only the idle animation, filled with `--idle`, holds up. Every sheet it writes is listed in `filled-animations.csv`, so real art can replace it later, and each part's credits say so.
 
-It also fills wings in every missing animation, following the head, since wings ride on the back and flap regardless of pose. With `--emote` it fills the emote animation of torso parts without sleeves, following the torso. Other animations of clothes do not pass the check from a part's own frames, whether guided by the head, torso, waist, hips, shoulders, hands or whole body.
+It also fills wings in every missing animation, following the head, since wings ride on the back and flap regardless of pose. Backpacks and what they carry do the same, since they sit high on the back and hold their shape; no backpack has real art in those animations, so they were judged by eye rather than scored. With `--emote` it fills the emote animation of torso parts without sleeves, following the torso. Other animations of clothes do not pass the check from a part's own frames, whether guided by the head, torso, waist, hips, shoulders, hands or whole body.
 
 ### Filling from a near-identical part
 

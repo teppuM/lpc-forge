@@ -26,7 +26,7 @@
   "credits": [
     {
       "file": "backpack/basket",
-      "notes": "full submission is CC-BY-SA 3.0/GPL 3.0, but this item is CC0 Rebuilt from this part's own frames to match the body's pose: idle.",
+      "notes": "full submission is CC-BY-SA 3.0/GPL 3.0, but this item is CC0 Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the head: climb, jump, sit, emote, run, combat idle, backslash, halfslash.",
       "authors": [
         "bluecarrot16"
       ],
@@ -47,6 +47,15 @@
     "shoot",
     "hurt",
     "watering",
-    "idle"
+    "idle",
+    "climb",
+    "jump",
+    "sit",
+    "emote",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ]
 }

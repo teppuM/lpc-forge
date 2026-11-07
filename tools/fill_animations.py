@@ -8,7 +8,8 @@ licenses stand. Every sheet written is listed in tools/filled-animations.csv, so
 A sheet is filled only when no layer of the part has it on that body, and only when that body has the animation at all.
 
 Wings also follow the head here. They ride on the back and flap regardless of pose, and they look right in every animation
-though flapping lowers their score in the check.
+though flapping lowers their score in the check. Backpacks and what they carry follow the head for the same reason: they sit
+high on the back and hold their shape. No backpack has real art in these animations, so they were judged by eye, not scored.
 
 With --idle it fills only the idle animation of parts worn on the body, matching whole-body poses instead of heads. Idle
 is the one pose close enough to the others for this to work; other animations of these parts do not pass the check.
@@ -56,7 +57,8 @@ CLAIMS["backslash"] = ["1h_slash", "1h_backslash"]
 CLAIMS["halfslash"] = ["1h_halfslash"]
 DEFAULT_CLAIMS = ["spellcast", "thrust", "walk", "slash", "shoot", "hurt", "watering"]
 FACINGS = "nwse"
-SCOPE = ("hair/", "head/", "headwear/", "body/wings/")
+ON_THE_BACK = ("body/wings/", "torso/backpack/")
+SCOPE = ("hair/", "head/", "headwear/") + ON_THE_BACK
 OUT_OF_SCOPE = ("headwear/neck/", "head/heads/")
 IDLE_SCOPE = ("torso/", "legs/", "feet/", "arms/", "body/")
 IDLE_OUT_OF_SCOPE = ("body/body.json", "body/shadow.json", "body/wheelchair.json")
@@ -308,7 +310,7 @@ def planned_again():
     for r in rows:
         d = json.load(open(os.path.join(DEFS, r["part"]), encoding="utf8"))
         body = next(b for b in BODIES if r["path"] in layer_paths(d, b))
-        follows_head = r["part"].startswith(SCOPE) and not (r["part"].startswith("body/wings/") and r["sheet"] == "idle")
+        follows_head = r["part"].startswith(SCOPE) and not (r["part"].startswith(ON_THE_BACK) and r["sheet"] == "idle")
         guide = r["guide"] if r["guide"].startswith("torso ") else "head " + r["guide"] if follows_head or r["sheet"] == "emote" else r["guide"]
         wanted[(r["path"], r["sheet"])] = guide
         owner[r["path"]] = r["part"]

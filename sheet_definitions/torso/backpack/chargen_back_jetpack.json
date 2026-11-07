@@ -16,7 +16,15 @@
     "shoot",
     "hurt",
     "idle",
-    "emote"
+    "emote",
+    "climb",
+    "jump",
+    "sit",
+    "run",
+    "combat",
+    "1h_slash",
+    "1h_backslash",
+    "1h_halfslash"
   ],
   "recolors": {
     "color_1": {
@@ -46,7 +54,7 @@
   "credits": [
     {
       "file": "chargen/back/jetpack/jetpack_f",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames to follow the head: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "Benjamin K. Smith (BenCreating)"
       ],
@@ -60,7 +68,7 @@
     },
     {
       "file": "chargen/back/jetpack/jetpack_m",
-      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote.",
+      "notes": "Converted from pflat's LPC Character Generator: recolored from its shade format and split by animation. Rebuilt from this part's own frames to match the body's pose: idle. Rebuilt from this part's own frames to follow the torso: emote. Rebuilt from this part's own frames to follow the head: climb, jump, sit, run, combat idle, backslash, halfslash.",
       "authors": [
         "Benjamin K. Smith (BenCreating)"
       ],
